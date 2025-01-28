@@ -1,0 +1,9 @@
+# YAML file for Capella objects
+      # YAML file for system model relationships
+      schema:
+        primary_uuid: Unique identifier for the primary object
+        ref_uuid: Unique identifier for a referenced object
+    - name: Backup Pipeline
+      type: PhysicalLink
+      primary_uuid: f6fb0fe0-1fe0-4e69-8969-3c19ea08943e
+      description : 

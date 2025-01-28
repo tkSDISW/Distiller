@@ -1,0 +1,51 @@
+# YAML file for Capella objects
+      # YAML file for system model relationships
+      schema:
+        primary_uuid: Unique identifier for the primary object
+        ref_uuid: Unique identifier for a referenced object
+      - name: Drainage
+        type: ComponentExchange
+        primary_uuid: 68ab1776-6210-4874-b63c-345f4bff3778
+        description : 
+        source component:
+        - name: Evaporator
+          ref_uuid: 
+        target component:
+        - name: Drain
+          ref_uuid: 
+          allocated functional exchanges:
+           - name: Sludge
+           ref_uuid : 134d7320-3277-4493-99f2-e729116897d5
+    - name: Sludge
+      type: ExchangeItem
+      primary_uuid: c34b9a7f-cc48-4ed6-8c29-8c8b74240c41
+      description : 
+      elements:
+        - name: sludge
+          ref_uuid : 9dd1fa3c-4252-49a0-970f-e008d81f7ba7
+    - name: Sludge
+      type: FunctionalExchange
+      primary_uuid: 134d7320-3277-4493-99f2-e729116897d5
+      description : 
+      source function:
+          - name: Boil Water
+            ref_uuid: 65d2d364-202a-464f-a7f9-6b25863ae48f
+      target function:
+          - name: Drain Residue
+            ref_uuid: 8429f8e5-bd36-4638-81a3-1902870417c0
+      involving functional chains:
+        - name: Test chain - Distill and Distribute Water
+          ref_uuid : 0ba89261-3c27-474a-81fe-bc7a661f18c5
+        - name: Distill Water
+          ref_uuid : d1e25547-0705-4dba-9b8c-fe3b6fe66a7e
+    - name: sludge
+      type: ExchangeItemElement
+      primary_uuid: 9dd1fa3c-4252-49a0-970f-e008d81f7ba7
+      description : 
+      abstract type: 
+        - name Residue
+        ref_uuid : 01a07fc8-96e3-4866-a846-c76dfce0bac5
+    - name: Residue
+      type: Class
+      primary_uuid: 01a07fc8-96e3-4866-a846-c76dfce0bac5
+      description : 
