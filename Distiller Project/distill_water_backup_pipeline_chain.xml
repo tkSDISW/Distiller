@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SimulationArchitecture description="" name="distill_water_backup_pipeline_chain">
+   <Template description="" name="operator" style="Signal">
+      <ComposedPort name="CP_water_source">
+         <SimulationPort name="water_supply" style="Signal" type="SignalOutput" />
+      </ComposedPort>
+   <ComposedPort name="CP_heat_source">
+         <SimulationPort name="heat_supply" style="Signal" type="SignalOutput" />
+      </ComposedPort>
+   <Attribute name="MIC.ProvideFMU">false</Attribute>
+   <Attribute name="MIC.TimeStepUnit" />
+   <Attribute name="MIC.Uncertainty">1 - Under Development</Attribute>
+   <Attribute name="MIC.ResolutionMethod">ode1 - Euler</Attribute>
+   <Attribute name="MIC.ModelVersion" />
+   <Attribute name="MIC.TimeStepValue">0.0</Attribute>
+   <Attribute name="MIC.Notes">Edited by APN </Attribute>
+   <Attribute name="MIC.InputPedigree">1 - Under Development</Attribute>
+   <Attribute name="MIC.Robustness">1 - Under Development</Attribute>
+   <Attribute name="MIC.isEncapsulated">false</Attribute>
+   <Attribute name="MIC.ToolVersion" />
+   <Attribute name="MIC.OperatingSystem">Win64</Attribute>
+   <Attribute name="MIC.SpecificName" />
+   <Attribute name="MIC.Linearity">Linear model</Attribute>
+   <Attribute name="MIC.CreationDate" />
+   <Attribute name="MIC.GranularityLevel">System</Attribute>
+   <Attribute name="MIC.ModelVerification">1 - Under Development</Attribute>
+   <Attribute name="MIC.Model Variability">Continuous</Attribute>
+   <Attribute name="MIC.ToolName">AMEsim</Attribute>
+   <Attribute name="MIC.Real-Time Simulation" />
+   <Attribute name="MIC.MICStatus">Initialization</Attribute>
+   <Attribute name="MIC.EquationsType">{}</Attribute>
+   <Attribute name="MIC.CompilerName">8cc</Attribute>
+   <Attribute name="MIC.DistributedSimulation">false</Attribute>
+   <Attribute name="MIC.SimulationGoals" />
+   <Attribute name="MIC.HardwareRequirements">{}</Attribute>
+   <Attribute name="MIC.ModelDimension">0D</Attribute>
+   <Attribute name="MIC.ModelValidation">1 - Under Development</Attribute>
+   <Attribute name="MIC.TimeStepType">Variable</Attribute>
+   <Attribute name="MIC.History">1 - Under Development</Attribute>
+   <Attribute name="MIC.Complexity">Low</Attribute>
+   </Template>
+<Template description="" name="condenser" style="Signal">
+      <ComposedPort name="CP_water_source">
+         <SimulationPort name="dirty_water" style="Signal" type="SignalInput" />
+      </ComposedPort>
+   <ComposedPort name="CP_water_distribution_system">
+         <SimulationPort name="distilled_water" style="Signal" type="SignalOutput" />
+      </ComposedPort>
+   <ComposedPort name="CP_evaporator">
+         <SimulationPort name="steam" style="Signal" type="SignalInput" />
+      </ComposedPort>
+   <ComposedPort name="CP_splitter">
+         <SimulationPort name="hot_water_1" style="Signal" type="SignalOutput" />
+      </ComposedPort>
+   <Attribute name="MIC.ProvideFMU">false</Attribute>
+   <Attribute name="MIC.TimeStepUnit" />
+   <Attribute name="MIC.Uncertainty">1 - Under Development</Attribute>
+   <Attribute name="MIC.ResolutionMethod">ode1 - Euler</Attribute>
+   <Attribute name="MIC.ModelVersion" />
+   <Attribute name="MIC.TimeStepValue">0.0</Attribute>
+   <Attribute name="MIC.Notes">Edited by APN </Attribute>
+   <Attribute name="MIC.InputPedigree">1 - Under Development</Attribute>
+   <Attribute name="MIC.Robustness">1 - Under Development</Attribute>
+   <Attribute name="MIC.isEncapsulated">false</Attribute>
+   <Attribute name="MIC.ToolVersion" />
+   <Attribute name="MIC.OperatingSystem">Win64</Attribute>
+   <Attribute name="MIC.SpecificName" />
+   <Attribute name="MIC.Linearity">Linear model</Attribute>
+   <Attribute name="MIC.CreationDate" />
+   <Attribute name="MIC.GranularityLevel">System</Attribute>
+   <Attribute name="MIC.ModelVerification">1 - Under Development</Attribute>
+   <Attribute name="MIC.Model Variability">Continuous</Attribute>
+   <Attribute name="MIC.ToolName">AMEsim</Attribute>
+   <Attribute name="MIC.Real-Time Simulation" />
+   <Attribute name="MIC.MICStatus">Initialization</Attribute>
+   <Attribute name="MIC.EquationsType">{}</Attribute>
+   <Attribute name="MIC.CompilerName">8cc</Attribute>
+   <Attribute name="MIC.DistributedSimulation">false</Attribute>
+   <Attribute name="MIC.SimulationGoals" />
+   <Attribute name="MIC.HardwareRequirements">{}</Attribute>
+   <Attribute name="MIC.ModelDimension">0D</Attribute>
+   <Attribute name="MIC.ModelValidation">1 - Under Development</Attribute>
+   <Attribute name="MIC.TimeStepType">Variable</Attribute>
+   <Attribute name="MIC.History">1 - Under Development</Attribute>
+   <Attribute name="MIC.Complexity">Low</Attribute>
+   </Template>
+<Template description="" name="water_distribution_system" style="Signal">
+      <ComposedPort name="CP_condenser">
+         <SimulationPort name="distilled_water" style="Signal" type="SignalInput" />
+      </ComposedPort>
+   <ComposedPort name="CP_water_user">
+         <SimulationPort name="safe_drinking_water" style="Signal" type="SignalOutput" />
+      </ComposedPort>
+   <Attribute name="MIC.ProvideFMU">false</Attribute>
+   <Attribute name="MIC.TimeStepUnit" />
+   <Attribute name="MIC.Uncertainty">1 - Under Development</Attribute>
+   <Attribute name="MIC.ResolutionMethod">ode1 - Euler</Attribute>
+   <Attribute name="MIC.ModelVersion" />
+   <Attribute name="MIC.TimeStepValue">0.0</Attribute>
+   <Attribute name="MIC.Notes">Edited by APN </Attribute>
+   <Attribute name="MIC.InputPedigree">1 - Under Development</Attribute>
+   <Attribute name="MIC.Robustness">1 - Under Development</Attribute>
+   <Attribute name="MIC.isEncapsulated">false</Attribute>
+   <Attribute name="MIC.ToolVersion" />
+   <Attribute name="MIC.OperatingSystem">Win64</Attribute>
+   <Attribute name="MIC.SpecificName" />
+   <Attribute name="MIC.Linearity">Linear model</Attribute>
+   <Attribute name="MIC.CreationDate" />
+   <Attribute name="MIC.GranularityLevel">System</Attribute>
+   <Attribute name="MIC.ModelVerification">1 - Under Development</Attribute>
+   <Attribute name="MIC.Model Variability">Continuous</Attribute>
+   <Attribute name="MIC.ToolName">AMEsim</Attribute>
+   <Attribute name="MIC.Real-Time Simulation" />
+   <Attribute name="MIC.MICStatus">Initialization</Attribute>
+   <Attribute name="MIC.EquationsType">{}</Attribute>
+   <Attribute name="MIC.CompilerName">8cc</Attribute>
+   <Attribute name="MIC.DistributedSimulation">false</Attribute>
+   <Attribute name="MIC.SimulationGoals" />
+   <Attribute name="MIC.HardwareRequirements">{}</Attribute>
+   <Attribute name="MIC.ModelDimension">0D</Attribute>
+   <Attribute name="MIC.ModelValidation">1 - Under Development</Attribute>
+   <Attribute name="MIC.TimeStepType">Variable</Attribute>
+   <Attribute name="MIC.History">1 - Under Development</Attribute>
+   <Attribute name="MIC.Complexity">Low</Attribute>
+   </Template>
+<Template description="" name="water_source" style="Signal">
+      <ComposedPort name="CP_operator">
+         <SimulationPort name="water_supply" style="Signal" type="SignalInput" />
+      </ComposedPort>
+   <ComposedPort name="CP_condenser">
+         <SimulationPort name="dirty_water" style="Signal" type="SignalOutput" />
+      </ComposedPort>
+   <Attribute name="MIC.ProvideFMU">false</Attribute>
+   <Attribute name="MIC.TimeStepUnit" />
+   <Attribute name="MIC.Uncertainty">1 - Under Development</Attribute>
+   <Attribute name="MIC.ResolutionMethod">ode1 - Euler</Attribute>
+   <Attribute name="MIC.ModelVersion" />
+   <Attribute name="MIC.TimeStepValue">0.0</Attribute>
+   <Attribute name="MIC.Notes">Edited by APN </Attribute>
+   <Attribute name="MIC.InputPedigree">1 - Under Development</Attribute>
+   <Attribute name="MIC.Robustness">1 - Under Development</Attribute>
+   <Attribute name="MIC.isEncapsulated">false</Attribute>
+   <Attribute name="MIC.ToolVersion" />
+   <Attribute name="MIC.OperatingSystem">Win64</Attribute>
+   <Attribute name="MIC.SpecificName" />
+   <Attribute name="MIC.Linearity">Linear model</Attribute>
+   <Attribute name="MIC.CreationDate" />
+   <Attribute name="MIC.GranularityLevel">System</Attribute>
+   <Attribute name="MIC.ModelVerification">1 - Under Development</Attribute>
+   <Attribute name="MIC.Model Variability">Continuous</Attribute>
+   <Attribute name="MIC.ToolName">AMEsim</Attribute>
+   <Attribute name="MIC.Real-Time Simulation" />
+   <Attribute name="MIC.MICStatus">Initialization</Attribute>
+   <Attribute name="MIC.EquationsType">{}</Attribute>
+   <Attribute name="MIC.CompilerName">8cc</Attribute>
+   <Attribute name="MIC.DistributedSimulation">false</Attribute>
+   <Attribute name="MIC.SimulationGoals" />
+   <Attribute name="MIC.HardwareRequirements">{}</Attribute>
+   <Attribute name="MIC.ModelDimension">0D</Attribute>
+   <Attribute name="MIC.ModelValidation">1 - Under Development</Attribute>
+   <Attribute name="MIC.TimeStepType">Variable</Attribute>
+   <Attribute name="MIC.History">1 - Under Development</Attribute>
+   <Attribute name="MIC.Complexity">Low</Attribute>
+   </Template>
+<Template description="" name="splitter" style="Signal">
+      <ComposedPort name="CP_condenser">
+         <SimulationPort name="hot_water_1" style="Signal" type="SignalInput" />
+      </ComposedPort>
+   <ComposedPort name="CP_feed">
+         <SimulationPort name="hot_dirty_water" style="Signal" type="SignalOutput" />
+      </ComposedPort>
+   <Attribute name="MIC.ProvideFMU">false</Attribute>
+   <Attribute name="MIC.TimeStepUnit" />
+   <Attribute name="MIC.Uncertainty">1 - Under Development</Attribute>
+   <Attribute name="MIC.ResolutionMethod">ode1 - Euler</Attribute>
+   <Attribute name="MIC.ModelVersion" />
+   <Attribute name="MIC.TimeStepValue">0.0</Attribute>
+   <Attribute name="MIC.Notes">Edited by APN </Attribute>
+   <Attribute name="MIC.InputPedigree">1 - Under Development</Attribute>
+   <Attribute name="MIC.Robustness">1 - Under Development</Attribute>
+   <Attribute name="MIC.isEncapsulated">false</Attribute>
+   <Attribute name="MIC.ToolVersion" />
+   <Attribute name="MIC.OperatingSystem">Win64</Attribute>
+   <Attribute name="MIC.SpecificName" />
+   <Attribute name="MIC.Linearity">Linear model</Attribute>
+   <Attribute name="MIC.CreationDate" />
+   <Attribute name="MIC.GranularityLevel">System</Attribute>
+   <Attribute name="MIC.ModelVerification">1 - Under Development</Attribute>
+   <Attribute name="MIC.Model Variability">Continuous</Attribute>
+   <Attribute name="MIC.ToolName">AMEsim</Attribute>
+   <Attribute name="MIC.Real-Time Simulation" />
+   <Attribute name="MIC.MICStatus">Initialization</Attribute>
+   <Attribute name="MIC.EquationsType">{}</Attribute>
+   <Attribute name="MIC.CompilerName">8cc</Attribute>
+   <Attribute name="MIC.DistributedSimulation">false</Attribute>
+   <Attribute name="MIC.SimulationGoals" />
+   <Attribute name="MIC.HardwareRequirements">{}</Attribute>
+   <Attribute name="MIC.ModelDimension">0D</Attribute>
+   <Attribute name="MIC.ModelValidation">1 - Under Development</Attribute>
+   <Attribute name="MIC.TimeStepType">Variable</Attribute>
+   <Attribute name="MIC.History">1 - Under Development</Attribute>
+   <Attribute name="MIC.Complexity">Low</Attribute>
+   </Template>
+<Template description="" name="feed" style="Signal">
+      <ComposedPort name="CP_splitter">
+         <SimulationPort name="hot_dirty_water" style="Signal" type="SignalInput" />
+      </ComposedPort>
+   <ComposedPort name="CP_evaporator">
+         <SimulationPort name="hot_dirty_water_2" style="Signal" type="SignalOutput" />
+      </ComposedPort>
+   <Attribute name="MIC.ProvideFMU">false</Attribute>
+   <Attribute name="MIC.TimeStepUnit" />
+   <Attribute name="MIC.Uncertainty">1 - Under Development</Attribute>
+   <Attribute name="MIC.ResolutionMethod">ode1 - Euler</Attribute>
+   <Attribute name="MIC.ModelVersion" />
+   <Attribute name="MIC.TimeStepValue">0.0</Attribute>
+   <Attribute name="MIC.Notes">Edited by APN </Attribute>
+   <Attribute name="MIC.InputPedigree">1 - Under Development</Attribute>
+   <Attribute name="MIC.Robustness">1 - Under Development</Attribute>
+   <Attribute name="MIC.isEncapsulated">false</Attribute>
+   <Attribute name="MIC.ToolVersion" />
+   <Attribute name="MIC.OperatingSystem">Win64</Attribute>
+   <Attribute name="MIC.SpecificName" />
+   <Attribute name="MIC.Linearity">Linear model</Attribute>
+   <Attribute name="MIC.CreationDate" />
+   <Attribute name="MIC.GranularityLevel">System</Attribute>
+   <Attribute name="MIC.ModelVerification">1 - Under Development</Attribute>
+   <Attribute name="MIC.Model Variability">Continuous</Attribute>
+   <Attribute name="MIC.ToolName">AMEsim</Attribute>
+   <Attribute name="MIC.Real-Time Simulation" />
+   <Attribute name="MIC.MICStatus">Initialization</Attribute>
+   <Attribute name="MIC.EquationsType">{}</Attribute>
+   <Attribute name="MIC.CompilerName">8cc</Attribute>
+   <Attribute name="MIC.DistributedSimulation">false</Attribute>
+   <Attribute name="MIC.SimulationGoals" />
+   <Attribute name="MIC.HardwareRequirements">{}</Attribute>
+   <Attribute name="MIC.ModelDimension">0D</Attribute>
+   <Attribute name="MIC.ModelValidation">1 - Under Development</Attribute>
+   <Attribute name="MIC.TimeStepType">Variable</Attribute>
+   <Attribute name="MIC.History">1 - Under Development</Attribute>
+   <Attribute name="MIC.Complexity">Low</Attribute>
+   </Template>
+<Template description="" name="evaporator" style="Signal">
+      <ComposedPort name="CP_drain">
+         <SimulationPort name="sludge" style="Signal" type="SignalOutput" />
+      </ComposedPort>
+   <ComposedPort name="CP_heat_source">
+         <SimulationPort name="heat" style="Signal" type="SignalInput" />
+      </ComposedPort>
+   <ComposedPort name="CP_condenser">
+         <SimulationPort name="steam" style="Signal" type="SignalOutput" />
+      </ComposedPort>
+   <ComposedPort name="CP_feed">
+         <SimulationPort name="hot_dirty_water_2" style="Signal" type="SignalInput" />
+      </ComposedPort>
+   <Attribute name="MIC.ProvideFMU">false</Attribute>
+   <Attribute name="MIC.TimeStepUnit" />
+   <Attribute name="MIC.Uncertainty">1 - Under Development</Attribute>
+   <Attribute name="MIC.ResolutionMethod">ode1 - Euler</Attribute>
+   <Attribute name="MIC.ModelVersion" />
+   <Attribute name="MIC.TimeStepValue">0.0</Attribute>
+   <Attribute name="MIC.Notes">Edited by APN </Attribute>
+   <Attribute name="MIC.InputPedigree">1 - Under Development</Attribute>
+   <Attribute name="MIC.Robustness">1 - Under Development</Attribute>
+   <Attribute name="MIC.isEncapsulated">false</Attribute>
+   <Attribute name="MIC.ToolVersion" />
+   <Attribute name="MIC.OperatingSystem">Win64</Attribute>
+   <Attribute name="MIC.SpecificName" />
+   <Attribute name="MIC.Linearity">Linear model</Attribute>
+   <Attribute name="MIC.CreationDate" />
+   <Attribute name="MIC.GranularityLevel">System</Attribute>
+   <Attribute name="MIC.ModelVerification">1 - Under Development</Attribute>
+   <Attribute name="MIC.Model Variability">Continuous</Attribute>
+   <Attribute name="MIC.ToolName">AMEsim</Attribute>
+   <Attribute name="MIC.Real-Time Simulation" />
+   <Attribute name="MIC.MICStatus">Initialization</Attribute>
+   <Attribute name="MIC.EquationsType">{}</Attribute>
+   <Attribute name="MIC.CompilerName">8cc</Attribute>
+   <Attribute name="MIC.DistributedSimulation">false</Attribute>
+   <Attribute name="MIC.SimulationGoals" />
+   <Attribute name="MIC.HardwareRequirements">{}</Attribute>
+   <Attribute name="MIC.ModelDimension">0D</Attribute>
+   <Attribute name="MIC.ModelValidation">1 - Under Development</Attribute>
+   <Attribute name="MIC.TimeStepType">Variable</Attribute>
+   <Attribute name="MIC.History">1 - Under Development</Attribute>
+   <Attribute name="MIC.Complexity">Low</Attribute>
+   </Template>
+<Template description="" name="waste_management_system" style="Signal">
+      <ComposedPort name="CP_drain">
+         <SimulationPort name="residue" style="Signal" type="SignalInput" />
+      </ComposedPort>
+   <Attribute name="MIC.ProvideFMU">false</Attribute>
+   <Attribute name="MIC.TimeStepUnit" />
+   <Attribute name="MIC.Uncertainty">1 - Under Development</Attribute>
+   <Attribute name="MIC.ResolutionMethod">ode1 - Euler</Attribute>
+   <Attribute name="MIC.ModelVersion" />
+   <Attribute name="MIC.TimeStepValue">0.0</Attribute>
+   <Attribute name="MIC.Notes">Edited by APN </Attribute>
+   <Attribute name="MIC.InputPedigree">1 - Under Development</Attribute>
+   <Attribute name="MIC.Robustness">1 - Under Development</Attribute>
+   <Attribute name="MIC.isEncapsulated">false</Attribute>
+   <Attribute name="MIC.ToolVersion" />
+   <Attribute name="MIC.OperatingSystem">Win64</Attribute>
+   <Attribute name="MIC.SpecificName" />
+   <Attribute name="MIC.Linearity">Linear model</Attribute>
+   <Attribute name="MIC.CreationDate" />
+   <Attribute name="MIC.GranularityLevel">System</Attribute>
+   <Attribute name="MIC.ModelVerification">1 - Under Development</Attribute>
+   <Attribute name="MIC.Model Variability">Continuous</Attribute>
+   <Attribute name="MIC.ToolName">AMEsim</Attribute>
+   <Attribute name="MIC.Real-Time Simulation" />
+   <Attribute name="MIC.MICStatus">Initialization</Attribute>
+   <Attribute name="MIC.EquationsType">{}</Attribute>
+   <Attribute name="MIC.CompilerName">8cc</Attribute>
+   <Attribute name="MIC.DistributedSimulation">false</Attribute>
+   <Attribute name="MIC.SimulationGoals" />
+   <Attribute name="MIC.HardwareRequirements">{}</Attribute>
+   <Attribute name="MIC.ModelDimension">0D</Attribute>
+   <Attribute name="MIC.ModelValidation">1 - Under Development</Attribute>
+   <Attribute name="MIC.TimeStepType">Variable</Attribute>
+   <Attribute name="MIC.History">1 - Under Development</Attribute>
+   <Attribute name="MIC.Complexity">Low</Attribute>
+   </Template>
+<Template description="" name="heat_source" style="Signal">
+      <ComposedPort name="CP_operator">
+         <SimulationPort name="heat_supply" style="Signal" type="SignalInput" />
+      </ComposedPort>
+   <ComposedPort name="CP_evaporator">
+         <SimulationPort name="heat" style="Signal" type="SignalOutput" />
+      </ComposedPort>
+   <Attribute name="MIC.ProvideFMU">false</Attribute>
+   <Attribute name="MIC.TimeStepUnit" />
+   <Attribute name="MIC.Uncertainty">1 - Under Development</Attribute>
+   <Attribute name="MIC.ResolutionMethod">ode1 - Euler</Attribute>
+   <Attribute name="MIC.ModelVersion" />
+   <Attribute name="MIC.TimeStepValue">0.0</Attribute>
+   <Attribute name="MIC.Notes">Edited by APN </Attribute>
+   <Attribute name="MIC.InputPedigree">1 - Under Development</Attribute>
+   <Attribute name="MIC.Robustness">1 - Under Development</Attribute>
+   <Attribute name="MIC.isEncapsulated">false</Attribute>
+   <Attribute name="MIC.ToolVersion" />
+   <Attribute name="MIC.OperatingSystem">Win64</Attribute>
+   <Attribute name="MIC.SpecificName" />
+   <Attribute name="MIC.Linearity">Linear model</Attribute>
+   <Attribute name="MIC.CreationDate" />
+   <Attribute name="MIC.GranularityLevel">System</Attribute>
+   <Attribute name="MIC.ModelVerification">1 - Under Development</Attribute>
+   <Attribute name="MIC.Model Variability">Continuous</Attribute>
+   <Attribute name="MIC.ToolName">AMEsim</Attribute>
+   <Attribute name="MIC.Real-Time Simulation" />
+   <Attribute name="MIC.MICStatus">Initialization</Attribute>
+   <Attribute name="MIC.EquationsType">{}</Attribute>
+   <Attribute name="MIC.CompilerName">8cc</Attribute>
+   <Attribute name="MIC.DistributedSimulation">false</Attribute>
+   <Attribute name="MIC.SimulationGoals" />
+   <Attribute name="MIC.HardwareRequirements">{}</Attribute>
+   <Attribute name="MIC.ModelDimension">0D</Attribute>
+   <Attribute name="MIC.ModelValidation">1 - Under Development</Attribute>
+   <Attribute name="MIC.TimeStepType">Variable</Attribute>
+   <Attribute name="MIC.History">1 - Under Development</Attribute>
+   <Attribute name="MIC.Complexity">Low</Attribute>
+   </Template>
+<Template description="" name="drain" style="Signal">
+      <ComposedPort name="CP_evaporator">
+         <SimulationPort name="sludge" style="Signal" type="SignalInput" />
+      </ComposedPort>
+   <ComposedPort name="CP_waste_management_system">
+         <SimulationPort name="residue" style="Signal" type="SignalOutput" />
+      </ComposedPort>
+   <Attribute name="MIC.ProvideFMU">false</Attribute>
+   <Attribute name="MIC.TimeStepUnit" />
+   <Attribute name="MIC.Uncertainty">1 - Under Development</Attribute>
+   <Attribute name="MIC.ResolutionMethod">ode1 - Euler</Attribute>
+   <Attribute name="MIC.ModelVersion" />
+   <Attribute name="MIC.TimeStepValue">0.0</Attribute>
+   <Attribute name="MIC.Notes">Edited by APN </Attribute>
+   <Attribute name="MIC.InputPedigree">1 - Under Development</Attribute>
+   <Attribute name="MIC.Robustness">1 - Under Development</Attribute>
+   <Attribute name="MIC.isEncapsulated">false</Attribute>
+   <Attribute name="MIC.ToolVersion" />
+   <Attribute name="MIC.OperatingSystem">Win64</Attribute>
+   <Attribute name="MIC.SpecificName" />
+   <Attribute name="MIC.Linearity">Linear model</Attribute>
+   <Attribute name="MIC.CreationDate" />
+   <Attribute name="MIC.GranularityLevel">System</Attribute>
+   <Attribute name="MIC.ModelVerification">1 - Under Development</Attribute>
+   <Attribute name="MIC.Model Variability">Continuous</Attribute>
+   <Attribute name="MIC.ToolName">AMEsim</Attribute>
+   <Attribute name="MIC.Real-Time Simulation" />
+   <Attribute name="MIC.MICStatus">Initialization</Attribute>
+   <Attribute name="MIC.EquationsType">{}</Attribute>
+   <Attribute name="MIC.CompilerName">8cc</Attribute>
+   <Attribute name="MIC.DistributedSimulation">false</Attribute>
+   <Attribute name="MIC.SimulationGoals" />
+   <Attribute name="MIC.HardwareRequirements">{}</Attribute>
+   <Attribute name="MIC.ModelDimension">0D</Attribute>
+   <Attribute name="MIC.ModelValidation">1 - Under Development</Attribute>
+   <Attribute name="MIC.TimeStepType">Variable</Attribute>
+   <Attribute name="MIC.History">1 - Under Development</Attribute>
+   <Attribute name="MIC.Complexity">Low</Attribute>
+   </Template>
+<Template description="" name="water_user" style="Signal">
+      <ComposedPort name="CP_water_distribution_system">
+         <SimulationPort name="safe_drinking_water" style="Signal" type="SignalInput" />
+      </ComposedPort>
+   <Attribute name="MIC.ProvideFMU">false</Attribute>
+   <Attribute name="MIC.TimeStepUnit" />
+   <Attribute name="MIC.Uncertainty">1 - Under Development</Attribute>
+   <Attribute name="MIC.ResolutionMethod">ode1 - Euler</Attribute>
+   <Attribute name="MIC.ModelVersion" />
+   <Attribute name="MIC.TimeStepValue">0.0</Attribute>
+   <Attribute name="MIC.Notes">Edited by APN </Attribute>
+   <Attribute name="MIC.InputPedigree">1 - Under Development</Attribute>
+   <Attribute name="MIC.Robustness">1 - Under Development</Attribute>
+   <Attribute name="MIC.isEncapsulated">false</Attribute>
+   <Attribute name="MIC.ToolVersion" />
+   <Attribute name="MIC.OperatingSystem">Win64</Attribute>
+   <Attribute name="MIC.SpecificName" />
+   <Attribute name="MIC.Linearity">Linear model</Attribute>
+   <Attribute name="MIC.CreationDate" />
+   <Attribute name="MIC.GranularityLevel">System</Attribute>
+   <Attribute name="MIC.ModelVerification">1 - Under Development</Attribute>
+   <Attribute name="MIC.Model Variability">Continuous</Attribute>
+   <Attribute name="MIC.ToolName">AMEsim</Attribute>
+   <Attribute name="MIC.Real-Time Simulation" />
+   <Attribute name="MIC.MICStatus">Initialization</Attribute>
+   <Attribute name="MIC.EquationsType">{}</Attribute>
+   <Attribute name="MIC.CompilerName">8cc</Attribute>
+   <Attribute name="MIC.DistributedSimulation">false</Attribute>
+   <Attribute name="MIC.SimulationGoals" />
+   <Attribute name="MIC.HardwareRequirements">{}</Attribute>
+   <Attribute name="MIC.ModelDimension">0D</Attribute>
+   <Attribute name="MIC.ModelValidation">1 - Under Development</Attribute>
+   <Attribute name="MIC.TimeStepType">Variable</Attribute>
+   <Attribute name="MIC.History">1 - Under Development</Attribute>
+   <Attribute name="MIC.Complexity">Low</Attribute>
+   </Template>
+<BaseConnection fromComposedPort="CP_water_source" fromTemplate="operator" toComposedPort="CP_operator" toTemplate="water_source">
+      <SimulationConnection from="water_supply" to="water_supply" />
+   </BaseConnection>
+<BaseConnection fromComposedPort="CP_heat_source" fromTemplate="operator" toComposedPort="CP_operator" toTemplate="heat_source">
+      <SimulationConnection from="heat_supply" to="heat_supply" />
+   </BaseConnection>
+<BaseConnection fromComposedPort="CP_condenser" fromTemplate="water_source" toComposedPort="CP_water_source" toTemplate="condenser">
+      <SimulationConnection from="dirty_water" to="dirty_water" />
+   </BaseConnection>
+<BaseConnection fromComposedPort="CP_water_distribution_system" fromTemplate="condenser" toComposedPort="CP_condenser" toTemplate="water_distribution_system">
+      <SimulationConnection from="distilled_water" to="distilled_water" />
+   </BaseConnection>
+<BaseConnection fromComposedPort="CP_water_user" fromTemplate="water_distribution_system" toComposedPort="CP_water_distribution_system" toTemplate="water_user">
+      <SimulationConnection from="safe_drinking_water" to="safe_drinking_water" />
+   </BaseConnection>
+<BaseConnection fromComposedPort="CP_drain" fromTemplate="evaporator" toComposedPort="CP_evaporator" toTemplate="drain">
+      <SimulationConnection from="sludge" to="sludge" />
+   </BaseConnection>
+<BaseConnection fromComposedPort="CP_waste_management_system" fromTemplate="drain" toComposedPort="CP_drain" toTemplate="waste_management_system">
+      <SimulationConnection from="residue" to="residue" />
+   </BaseConnection>
+<BaseConnection fromComposedPort="CP_evaporator" fromTemplate="heat_source" toComposedPort="CP_heat_source" toTemplate="evaporator">
+      <SimulationConnection from="heat" to="heat" />
+   </BaseConnection>
+<BaseConnection fromComposedPort="CP_condenser" fromTemplate="evaporator" toComposedPort="CP_evaporator" toTemplate="condenser">
+      <SimulationConnection from="steam" to="steam" />
+   </BaseConnection>
+<BaseConnection fromComposedPort="CP_splitter" fromTemplate="condenser" toComposedPort="CP_condenser" toTemplate="splitter">
+      <SimulationConnection from="hot_water_1" to="hot_water_1" />
+   </BaseConnection>
+<BaseConnection fromComposedPort="CP_feed" fromTemplate="splitter" toComposedPort="CP_splitter" toTemplate="feed">
+      <SimulationConnection from="hot_dirty_water" to="hot_dirty_water" />
+   </BaseConnection>
+<BaseConnection fromComposedPort="CP_evaporator" fromTemplate="feed" toComposedPort="CP_feed" toTemplate="evaporator">
+      <SimulationConnection from="hot_dirty_water_2" to="hot_dirty_water_2" />
+   </BaseConnection>
+</SimulationArchitecture>
