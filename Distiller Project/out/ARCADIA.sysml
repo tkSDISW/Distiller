@@ -1,20 +1,30 @@
 library package ARCADIA {
-    import ScalarValues::*;
-    import Actions::JoinAction;
-    import Actions::MergeAction;
-    import Constraints::ConstraintCheck;
-    import MeasurementReferences::SimpleUnit;
+    /*Change below to add the word private prior to import*/
+    private import ScalarValues::*;
+    private import Actions::JoinAction;
+    private import Actions::MergeAction;
+    private import Constraints::ConstraintCheck;
+    private import MeasurementReferences::SimpleUnit;
 
     metadata def PackageMeta {
         attribute type : String;
         attribute summary : String;
     } 
 
+
     metadata def CapellaID {
-        alias selfId for elementId {
+        attribute eid : String {
             doc /*
                 * Alias for globally unique elementId identifier.
                 * This is intended to be set by the Capella adaptor tool, and it must not change during the lifetime of the annotated element
+                */
+        }
+ 
+        attribute sid : String [0..1] {
+            doc /*
+                * Globally unique elementId identifier of a source element used by Capella adaptor to create a corresponding annotated
+                * Capella element. This is intended to be set by the Capella adaptor tool, and it must not chang during the lifetime
+                * of the annotated element.
                 */
         }
     }
