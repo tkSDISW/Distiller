@@ -485,9 +485,8 @@
         <ownedExchangeItems xsi:type="org.polarsys.capella.core.data.information:ExchangeItem"
             id="2c59e714-4169-40fd-937e-e2cd350a0a01" name="Waste">
           <ownedElements xsi:type="org.polarsys.capella.core.data.information:ExchangeItemElement"
-              id="fd79f441-d383-4882-8249-bb889524e5c3" name="ExchangeItemElement 1"
-              abstractType="#15ad6a11-2ba1-47ed-978d-f20d465d5c51" direction="UNSET"
-              composite="true">
+              id="fd79f441-d383-4882-8249-bb889524e5c3" name="Waste" abstractType="#15ad6a11-2ba1-47ed-978d-f20d465d5c51"
+              direction="UNSET" composite="true">
             <ownedMinCard xsi:type="org.polarsys.capella.core.data.information.datavalue:LiteralNumericValue"
                 id="98ba16b0-5b28-4042-a492-4fe4a1d836a0" value="1"/>
             <ownedMaxCard xsi:type="org.polarsys.capella.core.data.information.datavalue:LiteralNumericValue"
