@@ -1,16 +1,21 @@
 library package ARCADIA {
-    /*Change below to add the word private prior to import*/
     private import ScalarValues::*;
     private import Actions::JoinAction;
     private import Actions::MergeAction;
     private import Constraints::ConstraintCheck;
     private import MeasurementReferences::SimpleUnit;
+    private import SysML::Dependency;
+
+    item def ItemPackage {
+        doc /*
+            * A special type of Package that can be under an element for ARCADIA/Capella
+            */
+    }
 
     metadata def PackageMeta {
         attribute type : String;
         attribute summary : String;
     } 
-
 
     metadata def CapellaID {
         attribute eid : String {
@@ -19,7 +24,7 @@ library package ARCADIA {
                 * This is intended to be set by the Capella adaptor tool, and it must not change during the lifetime of the annotated element
                 */
         }
- 
+
         attribute sid : String [0..1] {
             doc /*
                 * Globally unique elementId identifier of a source element used by Capella adaptor to create a corresponding annotated
@@ -42,59 +47,6 @@ library package ARCADIA {
         attribute ReqIFIdentifier : String;
     }
 
-    enum def ParameterDirection :> Integer {
-        doc /* specifies the direction in which data is passed along through a parameter
-        * [source: Capella study]
-        */
-
-        enum IN = 0 {
-            doc /* used when the parameter represents an input of the operation it is used in
-            * [source: Capella study]
-            */
-        }
-        enum OUT = 1 {
-            doc /* used when the parameter represents an output of the operation it is used in
-            * [source: Capella study]
-            */
-        }
-        enum INOUT = 2 {
-            doc /* used when the parameter represents both an input and on output of the operation it is used in
-            * [source: Capella study]
-            */
-        }
-        enum RETURN = 3 {
-            doc /* used when the parameter represents the return value of the operation it is used in
-            * [source: Capella study]
-            */
-        }
-        enum EXCEPTION = 4 {
-            doc /* the parameter is like an exception */
-        }
-        enum UNSET = 5 {
-            doc /* used when the CommunicationLink protocol is not yet set */
-        }
-    }
-    enum def PassingMode :> Integer {
-        doc /* specifies the data passing mechanism for parameters of an operation
-        * [source: Capella study]
-        */
-
-        enum UNSET = 0 {
-            doc /* used when the data passing mechanism is not precised
-            * [source: Capella study]
-            */
-        }
-        enum BY_REF = 1 {
-            doc /* used when the data is being passed by reference to the operation
-            * [source: Capella study]
-            */
-        }
-        enum BY_VALUE = 2 {
-            doc /* used when the data is being passed by value to the operation
-            * [source: Capella study]
-            */
-        }
-    }
     enum def AccessPolicy :> Integer {
         doc /**/
 
@@ -105,39 +57,125 @@ library package ARCADIA {
             doc /**/
         }
     }
-    enum def ControlNodeKind :> Integer {
+    enum def AggregationKind :> Integer {
+        doc /* defines the specific kind of a relationship, as per UML definitions
+        * [source: Capella study]
+        */
+
+        enum UNSET = 0 {
+            doc /* used when value is not defined by the user
+            * [source: Capella study]
+            */
+        }
+        enum ASSOCIATION = 1 {
+            doc /* An association specifies a semantic relationship that can occur between typed instances. It has at least two ends
+            * represented by properties, each of which is connected to the type of the end. More than one end of the association may
+            * have the same type.
+            * [source: UML superstructure v2.2]
+            * 
+            * Indicates that the property has no aggregation.
+            * [source: UML superstructure v2.2]
+            */
+        }
+        enum AGGREGATION = 2 {
+            doc /* An aggregation specifies a semantic relationship between a part and a whole. The part has a lifecycle of its own, and is potentially shared among several aggregators
+            * [source: Capella study]
+            * 
+            * Indicates that the property has a shared aggregation.
+            * [source: UML superstructure v2.2]
+            */
+        }
+        enum COMPOSITION = 3 {
+            doc /* A composition specifies a semantic relationship between whole and its parts. The parts lifecycles are tied to that of the whole, and they are not shared with any other aggregator.
+            * [source: Capella study]
+            * 
+            * Indicates that the property is aggregated compositely, i.e., the composite object has responsibility for the existence
+            * and storage of the composed objects.
+            * [source: UML superstructure v2.2]
+            */
+        }
+    }
+    enum def BinaryOperator :> Integer {
+        doc /* Specifies the kind of this binary operator */
+
+        enum UNSET = 0 {
+            doc /* Used when the binary operator is not initialized */
+        }
+        enum ADD = 1 {
+            doc /* Used when the binary operator refers to an addition */
+        }
+        enum MUL = 2 {
+            doc /* Used when the binary operator refers to a multiplication */
+        }
+        enum SUB = 3 {
+            doc /* Used when the binary operator refers to a substraction */
+        }
+        enum DIV = 4 {
+            doc /* Used when the binary operator refers to a division */
+        }
+        enum POW = 5 {
+            doc /* Used when the binary operator refers to a power operation */
+        }
+        enum MIN = 6 {
+            doc /* Used when the binary operator refers to a min operation */
+        }
+        enum MAX = 7 {
+            doc /* Used when the binary operator refers to a max operation */
+        }
+        enum EQU = 8 {
+            doc /* Used when the binary operator refers to an equal operation */
+        }
+        enum IOR = 9 {
+            doc /* Used when the binary operator refers to a logical inclusive OR operation */
+        }
+        enum XOR = 10 {
+            doc /* Used when the binary operator refers to a logical exclusive OR operation */
+        }
+        enum AND = 11 {
+            doc /* Used when the binary operator refers to a logical AND operation */
+        }
+    }
+    enum def CatalogElementKind :> Integer {
         doc /**/
 
-        enum OR = 0 {
+        enum REC = 0 {
             doc /**/
         }
-        enum AND = 1 {
+        enum RPL = 1 {
             doc /**/
         }
-        enum ITERATE = 2 {
+        enum REC_RPL = 2 {
+            doc /**/
+        }
+        enum GROUPING = 3 {
             doc /**/
         }
     }
-    enum def UnaryOperator :> Integer {
-        doc /* Specifies the kind of this unary operator */
+    enum def ChangeEventKind :> Integer {
+        doc /* ChangeEventKind is an enumeration type.
+        * [source:Capella study]
+        */
 
-        enum UNSET = 0 {
-            doc /* Used when the unary operator is not initialized */
+        enum WHEN = 0 {
+            doc /* A change event occurs when a Boolean-valued expression becomes true.
+            * [source:UML Superstructure v2.4]
+            */
         }
-        enum NOT = 1 {
-            doc /* Used when the unary operator refers to a NOT operation */
+    }
+    enum def CollectionKind :> Integer {
+        doc /* defines the specific kind of a Collection structure
+        * [source: Capella study]
+        */
+
+        enum ARRAY = 0 {
+            doc /* used when the collection is to be considered as an array of elements
+            * [source: Capella study]
+            */
         }
-        enum POS = 2 {
-            doc /* Used when the unary operator refers to a position operation */
-        }
-        enum VAL = 3 {
-            doc /* Used when the unary operator refers to a value operation */
-        }
-        enum SUC = 4 {
-            doc /* Used when the unary operator refers to a successor operation */
-        }
-        enum PRE = 5 {
-            doc /* Used when the unary operator refers to a predecessor operation */
+        enum SEQUENCE = 1 {
+            doc /* used when the collection is to be considered as a sequence (list) of elements
+            * [source: Capella study]
+            */
         }
     }
     enum def CommunicationLinkKind :> Integer {
@@ -179,103 +217,270 @@ library package ARCADIA {
             doc /* used when the CommunicationLink is used to describe a transmission of ExchangeItem */
         }
     }
-    enum def CatalogElementKind :> Integer {
+    enum def CommunicationLinkProtocol :> Integer {
+        doc /* enumeration listing the various possibilities for the protocol of the communication link */
+
+        enum UNSET = 0 {
+            doc /* used when the CommunicationLink protocol is not yet set */
+        }
+        enum UNICAST = 1 {
+            doc /* used when the CommunicationLink is used to describe a sending of ExchangeItem using the unicast protocol */
+        }
+        enum MULTICAST = 2 {
+            doc /* used when the CommunicationLink is used to describe a sending of ExchangeItem using the multicast protocol */
+        }
+        enum BROADCAST = 3 {
+            doc /* used when the CommunicationLink is used to describe a sending of ExchangeItem using the broadcast protocol */
+        }
+        enum SYNCHRONOUS = 4 {
+            doc /* used when the CommunicationLink is used to describe a call of ExchangeItem using the synchronous protocol */
+        }
+        enum ASYNCHRONOUS = 5 {
+            doc /* used when the CommunicationLink is used to describe a call of ExchangeItem using the asynchronous protocol */
+        }
+        enum READ = 6 {
+            doc /* used when the CommunicationLink is used to describe a access to the ExchangeItem by reading it */
+        }
+        enum ACCEPT = 7 {
+            doc /* used when the CommunicationLink is used to describe a access to the ExchangeItem by accepting it */
+        }
+    }
+    enum def ComponentExchangeKind :> Integer {
+        doc /* ConnectorKind is an enumeration of the following literal values:
+        * - assembly
+        * Indicates that the connector is an assembly connector.
+        * - delegation
+        * Indicates that the connector is a delegation connector.
+        * [source: UML superstructure v2.2]
+        */
+
+        enum UNSET = 0 {
+            doc /* Communication kind is not set
+            * [source: Capella study]
+            */
+        }
+        enum DELEGATION = 1 {
+            doc /* Indicates that the connector is a delegation connector.
+            * [source: UML superstructure v2.2]
+            */
+        }
+        enum ASSEMBLY = 2 {
+            doc /* Indicates that the connector is an assembly connector.
+            * [source: UML superstructure v2.2]
+            */
+        }
+        enum FLOW = 3 {
+            doc /* Describes a flow communication */
+        }
+    }
+    enum def ComponentPortKind :> Integer {
+        doc /* ComponentPortKind is an enumeration of the following literal values:
+        * standard:
+        * A port is an interaction point between a Block or sub-Block and its environment that supports Exchanges with other ports.
+        * flow:
+        * A FlowPorts is an interaction point through which input and/or output of items such as data, material, or energy may flow
+        */
+
+        enum STANDARD = 0 {
+            doc /* Describes a standard port :
+            * A port is an interaction point between a Block or sub-Block and its environment that supports Exchanges with other ports.
+            * [source: SysML glossary for SysML v1.0]
+            */
+        }
+        enum FLOW = 1 {
+            doc /* Describes a flow port :
+            * A FlowPorts is an interaction point through which input and/or output of items such as data, material, or energy may flow
+            * [source: SysML specification v1.1]
+            */
+        }
+    }
+    enum def ConfigurationItemKind :> Integer {
         doc /**/
 
-        enum REC = 0 {
+        enum Unset = 0 {
             doc /**/
         }
-        enum RPL = 1 {
+        enum COTSCI = 1 {
+            doc /* Commercial Off The Shelves Configuration Item */
+        }
+        enum CSCI = 2 {
+            doc /* Computer Software Configuration Item */
+        }
+        enum HWCI = 3 {
+            doc /* Hardware Configuration Item */
+        }
+        enum InterfaceCI = 4 {
+            doc /* Interface Configuration Item */
+        }
+        enum NDICI = 5 {
+            doc /* Non Developmental Configuration Item */
+        }
+        enum PrimeItemCI = 6 {
+            doc /* Prime Item Configuration Item */
+        }
+        enum SystemCI = 7 {
+            doc /* System Configuration Item */
+        }
+    }
+    enum def ControlNodeKind :> Integer {
+        doc /**/
+
+        enum OR = 0 {
             doc /**/
         }
-        enum REC_RPL = 2 {
+        enum AND = 1 {
             doc /**/
         }
-        enum GROUPING = 3 {
+        enum ITERATE = 2 {
             doc /**/
         }
     }
-    enum def SynchronismKind :> Integer {
-        doc /* specifies the synchronicity of an operation invocation
+    enum def DataExpressionCategory :> Integer {
+        doc /**/
+
+        enum scalar = 0 {
+            doc /**/
+        }
+        enum predicate = 1 {
+            doc /**/
+        }
+    }
+    enum def ElementKind :> Integer {
+        doc /* enumeration listing the various possibilities regarding the visibility of a feature of a class
         * [source: Capella study]
         */
 
-        enum UNSET = 0 {
-            doc /* used when the synchronicity of the operation is not precised
-            * [source: Capella study]
-            */
+        enum TYPE = 0 {
+            doc /* used when ExchangeItemElement is described as a type for its ExchangeItem */
         }
-        enum SYNCHRONOUS = 1 {
-            doc /* used to specify that the invocation of the operation is synchronous, e.g. does not complete before the actions performed by the operation are complete
-            * [source: Capella study]
-            */
-        }
-        enum ASYNCHRONOUS = 2 {
-            doc /* used to specify that the invocation of the operation is asynchronous, i.e. it is potentially completed before the actions performed in the operation are completed
-            * [source: Capella study]
-            */
+        enum MEMBER = 1 {
+            doc /* used when ExchangeItemElement is described as a member for its ExchangeItem */
         }
     }
-    enum def TransitionKind :> Integer {
-        doc /* TransitionKind is an enumeration type.
-        * [source:UML Superstructure v2.2]
-        */
-
-        enum internal = 0 {
-            doc /* kind=internal implies that the transition, if triggered, occurs without exiting or entering the source state. Thus, it does not
-            * cause a state change. This means that the entry or exit condition of the source state will not be invoked. An internal
-            * transition can be taken even if the state machine is in one or more regions nested within this state.
-            * [source:UML Superstructure v2.2]
-            */
-        }
-        enum local = 1 {
-            doc /* kind=local implies that the transition, if triggered, will not exit the composite (source) state, but it will apply to any state
-            * within the composite state, and these will be exited and entered.
-            * [source:UML Superstructure v2.2]
-            */
-        }
-        enum external = 2 {
-            doc /* kind=external implies that the transition, if triggered, will exit the composite (source) state.
-            * [source:UML Superstructure v2.2]
-            */
-        }
-    }
-    enum def AggregationKind :> Integer {
-        doc /* defines the specific kind of a relationship, as per UML definitions
-        * [source: Capella study]
+    enum def ExchangeMechanism :> Integer {
+        doc /* Enumeration of the different exchange mechanisms
+        * [source:Capella study]
         */
 
         enum UNSET = 0 {
-            doc /* used when value is not defined by the user
-            * [source: Capella study]
+            doc /* Exchange mechanism not defined */
+        }
+        enum FLOW = 1 {
+            doc /* Continuous supply of a data
+            * [Capella study]
             */
         }
-        enum ASSOCIATION = 1 {
-            doc /* An association specifies a semantic relationship that can occur between typed instances. It has at least two ends
-            * represented by properties, each of which is connected to the type of the end. More than one end of the association may
-            * have the same type.
-            * [source: UML superstructure v2.2]
-            * 
-            * Indicates that the property has no aggregation.
-            * [source: UML superstructure v2.2]
+        enum OPERATION = 2 {
+            doc /* Sporadic supply of a data with a returned data
+            * [Capella study]
             */
         }
-        enum AGGREGATION = 2 {
-            doc /* An aggregation specifies a semantic relationship between a part and a whole. The part has a lifecycle of its own, and is potentially shared among several aggregators
-            * [source: Capella study]
-            * 
-            * Indicates that the property has a shared aggregation.
-            * [source: UML superstructure v2.2]
+        enum EVENT = 3 {
+            doc /* Asynchronous information that is taken into account rapidly
+            * [Capella study]
             */
         }
-        enum COMPOSITION = 3 {
-            doc /* A composition specifies a semantic relationship between whole and its parts. The parts lifecycles are tied to that of the whole, and they are not shared with any other aggregator.
-            * [source: Capella study]
-            * 
-            * Indicates that the property is aggregated compositely, i.e., the composite object has responsibility for the existence
-            * and storage of the composed objects.
-            * [source: UML superstructure v2.2]
+        enum SHARED_DATA = 4 {
+            doc /* Data taken into account (reading or writing) without taking care of producers or consumers
+            * [Capella study]
             */
+        }
+    }
+    enum def FunctionKind :> Integer {
+        doc /**/
+
+        enum FUNCTION = 0 {
+            doc /**/
+        }
+        enum DUPLICATE = 1 {
+            doc /**/
+        }
+        enum GATHER = 2 {
+            doc /**/
+        }
+        enum SELECT = 3 {
+            doc /**/
+        }
+        enum SPLIT = 4 {
+            doc /**/
+        }
+        enum ROUTE = 5 {
+            doc /**/
+        }
+    }
+    enum def FunctionalChainKind :> Integer {
+        doc /* Enumeration of the different functional chains
+        * [source:Capella study]
+        */
+
+        enum SIMPLE = 0 {
+            doc /* simple functional chain */
+        }
+        enum COMPOSITE = 1 {
+            doc /* composite functional chain */
+        }
+        enum FRAGMENT = 2 {
+            doc /* fragment functional chain */
+        }
+    }
+    enum def InteractionOperatorKind :> Integer {
+        doc /* n/a */
+
+        enum UNSET = 11 {
+            doc /* n/a */
+        }
+        enum ALT = 0 {
+            doc /* n/a */
+        }
+        enum OPT = 1 {
+            doc /* n/a */
+        }
+        enum PAR = 2 {
+            doc /* n/a */
+        }
+        enum LOOP = 3 {
+            doc /* n/a */
+        }
+        enum CRITICAL = 4 {
+            doc /* n/a */
+        }
+        enum NEG = 5 {
+            doc /* n/a */
+        }
+        enum ASSERT = 6 {
+            doc /* n/a */
+        }
+        enum STRICT = 7 {
+            doc /* n/a */
+        }
+        enum SEQ = 8 {
+            doc /* n/a */
+        }
+        enum IGNORE = 9 {
+            doc /* n/a */
+        }
+        enum CONSIDER = 10 {
+            doc /* n/a */
+        }
+    }
+    enum def InterfaceDataType :> Integer {
+        doc /**/
+
+        enum floatArray = 0 {
+            doc /**/
+        }
+        enum uint8Array = 1 {
+            doc /**/
+        }
+    }
+    enum def LinkDirection :> Integer {
+        doc /**/
+
+        enum incoming = 0 {
+            doc /**/
+        }
+        enum outgoing = 1 {
+            doc /**/
         }
     }
     enum def MessageKind :> Integer {
@@ -322,151 +527,20 @@ library package ARCADIA {
             doc /* n/a */
         }
     }
-    enum def UnionKind :> Integer {
-        doc /* defines the specific kind of a Union structure
+    enum def NumericTypeKind :> Integer {
+        doc /* Specifies the kind of this numeric data type
         * [source: Capella study]
         */
 
-        enum UNION = 0 {
-            doc /* used when the structure represents a union
+        enum INTEGER = 0 {
+            doc /* Used when the numeric type refers to an integer value
             * [source: Capella study]
             */
         }
-        enum VARIANT = 1 {
-            doc /* used when the structure represents possible variants of the same data
+        enum FLOAT = 1 {
+            doc /* Used when the numeric type refers to a float value
             * [source: Capella study]
             */
-        }
-    }
-    enum def CommunicationLinkProtocol :> Integer {
-        doc /* enumeration listing the various possibilities for the protocol of the communication link */
-
-        enum UNSET = 0 {
-            doc /* used when the CommunicationLink protocol is not yet set */
-        }
-        enum UNICAST = 1 {
-            doc /* used when the CommunicationLink is used to describe a sending of ExchangeItem using the unicast protocol */
-        }
-        enum MULTICAST = 2 {
-            doc /* used when the CommunicationLink is used to describe a sending of ExchangeItem using the multicast protocol */
-        }
-        enum BROADCAST = 3 {
-            doc /* used when the CommunicationLink is used to describe a sending of ExchangeItem using the broadcast protocol */
-        }
-        enum SYNCHRONOUS = 4 {
-            doc /* used when the CommunicationLink is used to describe a call of ExchangeItem using the synchronous protocol */
-        }
-        enum ASYNCHRONOUS = 5 {
-            doc /* used when the CommunicationLink is used to describe a call of ExchangeItem using the asynchronous protocol */
-        }
-        enum READ = 6 {
-            doc /* used when the CommunicationLink is used to describe a access to the ExchangeItem by reading it */
-        }
-        enum ACCEPT = 7 {
-            doc /* used when the CommunicationLink is used to describe a access to the ExchangeItem by accepting it */
-        }
-    }
-    enum def FunctionalChainKind :> Integer {
-        doc /* Enumeration of the different functional chains
-        * [source:Capella study]
-        */
-
-        enum SIMPLE = 0 {
-            doc /* simple functional chain */
-        }
-        enum COMPOSITE = 1 {
-            doc /* composite functional chain */
-        }
-        enum FRAGMENT = 2 {
-            doc /* fragment functional chain */
-        }
-    }
-    enum def FunctionKind :> Integer {
-        doc /**/
-
-        enum FUNCTION = 0 {
-            doc /**/
-        }
-        enum DUPLICATE = 1 {
-            doc /**/
-        }
-        enum GATHER = 2 {
-            doc /**/
-        }
-        enum SELECT = 3 {
-            doc /**/
-        }
-        enum SPLIT = 4 {
-            doc /**/
-        }
-        enum ROUTE = 5 {
-            doc /**/
-        }
-    }
-    enum def ScenarioKind :> Integer {
-        doc /* none */
-
-        enum UNSET = 4 {
-            doc /* none */
-        }
-        enum INTERFACE = 0 {
-            doc /* none */
-        }
-        enum DATA_FLOW = 1 {
-            doc /* none */
-        }
-        enum INTERACTION = 2 {
-            doc /* none */
-        }
-        enum FUNCTIONAL = 3 {
-            doc /* none */
-        }
-    }
-    enum def TimeEventKind :> Integer {
-        doc /* TimeEventKind is an enumeration type.
-        * [source: Capella study]
-        */
-
-        enum AT = 0 {
-            doc /* An absolute time trigger is specified with the keyword 'at' followed by an expression that
-            * evaluates to a time value, such as 'Jan. 1, 2000, Noon'.
-            * [source: UML superstructure v2.4]
-            */
-        }
-        enum AFTER = 1 {
-            doc /* A relative time trigger is specified with the keyword 'after' followed by an expression that evaluates to a time value, such
-            * as 'after (5 seconds)'.
-            * [source: UML superstructure v2.4]
-            */
-        }
-    }
-    enum def ChangeEventKind :> Integer {
-        doc /* ChangeEventKind is an enumeration type.
-        * [source:Capella study]
-        */
-
-        enum WHEN = 0 {
-            doc /* A change event occurs when a Boolean-valued expression becomes true.
-            * [source:UML Superstructure v2.4]
-            */
-        }
-    }
-    enum def ObjectNodeOrderingKind :> Integer {
-        doc /* ObjectNodeOrderingKind is an enumeration indicating queuing order within a node
-        * [source: UML superstructure v2.2]
-        */
-
-        enum FIFO = 0 {
-            doc /* First In First Out ordering */
-        }
-        enum LIFO = 1 {
-            doc /* Last In First Out ordering */
-        }
-        enum ordered = 2 {
-            doc /* Indicates that object node tokens are ordered. */
-        }
-        enum unordered = 3 {
-            doc /* Indicates that object node tokens are unordered. */
         }
     }
     enum def ObjectNodeKind :> Integer {
@@ -490,18 +564,121 @@ library package ARCADIA {
             */
         }
     }
-    enum def NumericTypeKind :> Integer {
-        doc /* Specifies the kind of this numeric data type
+    enum def ObjectNodeOrderingKind :> Integer {
+        doc /* ObjectNodeOrderingKind is an enumeration indicating queuing order within a node
+        * [source: UML superstructure v2.2]
+        */
+
+        enum FIFO = 0 {
+            doc /* First In First Out ordering */
+        }
+        enum LIFO = 1 {
+            doc /* Last In First Out ordering */
+        }
+        enum ordered = 2 {
+            doc /* Indicates that object node tokens are ordered. */
+        }
+        enum unordered = 3 {
+            doc /* Indicates that object node tokens are unordered. */
+        }
+    }
+    enum def OrientationPortKind :> Integer {
+        doc /* ComponentPortKind is an enumeration of the following literal values:
+        * standard:
+        * A port is an interaction point between a Block or sub-Block and its environment that supports Exchanges with other ports.
+        * flow:
+        * A FlowPorts is an interaction point through which input and/or output of items such as data, material, or energy may flow
+        */
+
+        enum UNSET = 0 {
+            doc /* used when the port orientation is undefined */
+        }
+        enum IN = 1 {
+            doc /* used when the port represents an input of the component it is used in */
+        }
+        enum OUT = 2 {
+            doc /* used when the port represents an output of the component it is used in */
+        }
+        enum INOUT = 3 {
+            doc /* used when the port represents both an input and on output of the component it is used in */
+        }
+    }
+    enum def ParameterDirection :> Integer {
+        doc /* specifies the direction in which data is passed along through a parameter
         * [source: Capella study]
         */
 
-        enum INTEGER = 0 {
-            doc /* Used when the numeric type refers to an integer value
+        enum IN = 0 {
+            doc /* used when the parameter represents an input of the operation it is used in
             * [source: Capella study]
             */
         }
-        enum FLOAT = 1 {
-            doc /* Used when the numeric type refers to a float value
+        enum OUT = 1 {
+            doc /* used when the parameter represents an output of the operation it is used in
+            * [source: Capella study]
+            */
+        }
+        enum INOUT = 2 {
+            doc /* used when the parameter represents both an input and on output of the operation it is used in
+            * [source: Capella study]
+            */
+        }
+        enum RETURN = 3 {
+            doc /* used when the parameter represents the return value of the operation it is used in
+            * [source: Capella study]
+            */
+        }
+        enum EXCEPTION = 4 {
+            doc /* the parameter is like an exception */
+        }
+        enum UNSET = 5 {
+            doc /* used when the CommunicationLink protocol is not yet set */
+        }
+    }
+    enum def ParameterEffectKind :> Integer {
+        doc /* The datatype ParameterEffectKind is an enumeration that indicates the effect of a behavior on values passed in or out of
+        * its parameters
+        * [source: UML superstructure v2.2]
+        */
+
+        enum create = 2 {
+            doc /* referenced parameter value is being created upon behavior execution
+            * [source: Capella study]
+            */
+        }
+        enum read = 0 {
+            doc /* referenced parameter value is only being read upon behavior execution
+            * [source: Capella study]
+            */
+        }
+        enum update = 1 {
+            doc /* referenced parameter value is being updated upon behavior execution
+            * [source: Capella study]
+            */
+        }
+        enum delete = 3 {
+            doc /* referenced parameter value is being deleted upon behavior execution
+            * [source: Capella study]
+            */
+        }
+    }
+    enum def PassingMode :> Integer {
+        doc /* specifies the data passing mechanism for parameters of an operation
+        * [source: Capella study]
+        */
+
+        enum UNSET = 0 {
+            doc /* used when the data passing mechanism is not precised
+            * [source: Capella study]
+            */
+        }
+        enum BY_REF = 1 {
+            doc /* used when the data is being passed by reference to the operation
+            * [source: Capella study]
+            */
+        }
+        enum BY_VALUE = 2 {
+            doc /* used when the data is being passed by value to the operation
             * [source: Capella study]
             */
         }
@@ -582,6 +759,184 @@ library package ARCADIA {
             */
         }
     }
+    enum def PhysicalComponentNature :> Integer {
+        doc /* characterizes a physical component, with respect to its property of being a host of behavioral components, or a behavioral component
+        * [source: Capella study]
+        */
+
+        enum UNSET = 0 {
+            doc /* used when the physical component nature is not precised
+            * [source: Capella study]
+            */
+        }
+        enum BEHAVIOR = 1 {
+            doc /* used when the physical component nature is behavioral (typically, a piece of software)
+            * [source: Capella study]
+            */
+        }
+        enum NODE = 2 {
+            doc /* used when the physical component is a host for behavioral components (typically, a computing resource)
+            * [source: Capella study]
+            */
+        }
+    }
+    enum def RateKind :> Integer {
+        doc /* enumeration containing the possible caracterizations for the rate of a streaming parameter
+        * [source: Capella study]
+        */
+
+        enum Unspecified = 0 {
+            doc /* used when the rate kind is not precised
+            * [source: Capella study]
+            */
+        }
+        enum Continuous = 1 {
+            doc /* used when the rate characterizes a continuous flow
+            * [source: Capella study]
+            */
+        }
+        enum Discrete = 2 {
+            doc /* Used when the rate characterizes a discrete flow
+            * [source: Capella study]
+            */
+        }
+    }
+    enum def ScenarioKind :> Integer {
+        doc /* none */
+
+        enum UNSET = 4 {
+            doc /* none */
+        }
+        enum INTERFACE = 0 {
+            doc /* none */
+        }
+        enum DATA_FLOW = 1 {
+            doc /* none */
+        }
+        enum INTERACTION = 2 {
+            doc /* none */
+        }
+        enum FUNCTIONAL = 3 {
+            doc /* none */
+        }
+    }
+    enum def SynchronismKind :> Integer {
+        doc /* specifies the synchronicity of an operation invocation
+        * [source: Capella study]
+        */
+
+        enum UNSET = 0 {
+            doc /* used when the synchronicity of the operation is not precised
+            * [source: Capella study]
+            */
+        }
+        enum SYNCHRONOUS = 1 {
+            doc /* used to specify that the invocation of the operation is synchronous, e.g. does not complete before the actions performed by the operation are complete
+            * [source: Capella study]
+            */
+        }
+        enum ASYNCHRONOUS = 2 {
+            doc /* used to specify that the invocation of the operation is asynchronous, i.e. it is potentially completed before the actions performed in the operation are completed
+            * [source: Capella study]
+            */
+        }
+    }
+    enum def TimeEventKind :> Integer {
+        doc /* TimeEventKind is an enumeration type.
+        * [source: Capella study]
+        */
+
+        enum AT = 0 {
+            doc /* An absolute time trigger is specified with the keyword 'at' followed by an expression that
+            * evaluates to a time value, such as 'Jan. 1, 2000, Noon'.
+            * [source: UML superstructure v2.4]
+            */
+        }
+        enum AFTER = 1 {
+            doc /* A relative time trigger is specified with the keyword 'after' followed by an expression that evaluates to a time value, such
+            * as 'after (5 seconds)'.
+            * [source: UML superstructure v2.4]
+            */
+        }
+    }
+    enum def TimeUnits :> Integer {
+        doc /**/
+
+        enum s = 0 {
+            doc /**/
+        }
+        enum ms = 1 {
+            doc /**/
+        }
+        enum us = 2 {
+            doc /**/
+        }
+        enum ns = 3 {
+            doc /**/
+        }
+    }
+    enum def TransitionKind :> Integer {
+        doc /* TransitionKind is an enumeration type.
+        * [source:UML Superstructure v2.2]
+        */
+
+        enum internal = 0 {
+            doc /* kind=internal implies that the transition, if triggered, occurs without exiting or entering the source state. Thus, it does not
+            * cause a state change. This means that the entry or exit condition of the source state will not be invoked. An internal
+            * transition can be taken even if the state machine is in one or more regions nested within this state.
+            * [source:UML Superstructure v2.2]
+            */
+        }
+        enum local = 1 {
+            doc /* kind=local implies that the transition, if triggered, will not exit the composite (source) state, but it will apply to any state
+            * within the composite state, and these will be exited and entered.
+            * [source:UML Superstructure v2.2]
+            */
+        }
+        enum external = 2 {
+            doc /* kind=external implies that the transition, if triggered, will exit the composite (source) state.
+            * [source:UML Superstructure v2.2]
+            */
+        }
+    }
+    enum def UnaryOperator :> Integer {
+        doc /* Specifies the kind of this unary operator */
+
+        enum UNSET = 0 {
+            doc /* Used when the unary operator is not initialized */
+        }
+        enum NOT = 1 {
+            doc /* Used when the unary operator refers to a NOT operation */
+        }
+        enum POS = 2 {
+            doc /* Used when the unary operator refers to a position operation */
+        }
+        enum VAL = 3 {
+            doc /* Used when the unary operator refers to a value operation */
+        }
+        enum SUC = 4 {
+            doc /* Used when the unary operator refers to a successor operation */
+        }
+        enum PRE = 5 {
+            doc /* Used when the unary operator refers to a predecessor operation */
+        }
+    }
+    enum def UnionKind :> Integer {
+        doc /* defines the specific kind of a Union structure
+        * [source: Capella study]
+        */
+
+        enum UNION = 0 {
+            doc /* used when the structure represents a union
+            * [source: Capella study]
+            */
+        }
+        enum VARIANT = 1 {
+            doc /* used when the structure represents possible variants of the same data
+            * [source: Capella study]
+            */
+        }
+    }
     enum def VisibilityKind :> Integer {
         doc /* enumeration listing the various possibilities regarding the visibility of a feature of a class
         * [source: Capella study]
@@ -613,320 +968,12 @@ library package ARCADIA {
             */
         }
     }
-    enum def ComponentExchangeKind :> Integer {
-        doc /* ConnectorKind is an enumeration of the following literal values:
-        * - assembly
-        * Indicates that the connector is an assembly connector.
-        * - delegation
-        * Indicates that the connector is a delegation connector.
-        * [source: UML superstructure v2.2]
-        */
-
-        enum UNSET = 0 {
-            doc /* Communication kind is not set
-            * [source: Capella study]
-            */
-        }
-        enum DELEGATION = 1 {
-            doc /* Indicates that the connector is a delegation connector.
-            * [source: UML superstructure v2.2]
-            */
-        }
-        enum ASSEMBLY = 2 {
-            doc /* Indicates that the connector is an assembly connector.
-            * [source: UML superstructure v2.2]
-            */
-        }
-        enum FLOW = 3 {
-            doc /* Describes a flow communication */
-        }
-    }
-    enum def ComponentPortKind :> Integer {
-        doc /* ComponentPortKind is an enumeration of the following literal values:
-        * standard:
-        * A port is an interaction point between a Block or sub-Block and its environment that supports Exchanges with other ports.
-        * flow:
-        * A FlowPorts is an interaction point through which input and/or output of items such as data, material, or energy may flow
-        */
-
-        enum STANDARD = 0 {
-            doc /* Describes a standard port :
-            * A port is an interaction point between a Block or sub-Block and its environment that supports Exchanges with other ports.
-            * [source: SysML glossary for SysML v1.0]
-            */
-        }
-        enum FLOW = 1 {
-            doc /* Describes a flow port :
-            * A FlowPorts is an interaction point through which input and/or output of items such as data, material, or energy may flow
-            * [source: SysML specification v1.1]
-            */
-        }
-    }
-    enum def OrientationPortKind :> Integer {
-        doc /* ComponentPortKind is an enumeration of the following literal values:
-        * standard:
-        * A port is an interaction point between a Block or sub-Block and its environment that supports Exchanges with other ports.
-        * flow:
-        * A FlowPorts is an interaction point through which input and/or output of items such as data, material, or energy may flow
-        */
-
-        enum UNSET = 0 {
-            doc /* used when the port orientation is undefined */
-        }
-        enum IN = 1 {
-            doc /* used when the port represents an input of the component it is used in */
-        }
-        enum OUT = 2 {
-            doc /* used when the port represents an output of the component it is used in */
-        }
-        enum INOUT = 3 {
-            doc /* used when the port represents both an input and on output of the component it is used in */
-        }
-    }
-    enum def ParameterEffectKind :> Integer {
-        doc /* The datatype ParameterEffectKind is an enumeration that indicates the effect of a behavior on values passed in or out of
-        * its parameters
-        * [source: UML superstructure v2.2]
-        */
-
-        enum create = 2 {
-            doc /* referenced parameter value is being created upon behavior execution
-            * [source: Capella study]
-            */
-        }
-        enum read = 0 {
-            doc /* referenced parameter value is only being read upon behavior execution
-            * [source: Capella study]
-            */
-        }
-        enum update = 1 {
-            doc /* referenced parameter value is being updated upon behavior execution
-            * [source: Capella study]
-            */
-        }
-        enum delete = 3 {
-            doc /* referenced parameter value is being deleted upon behavior execution
-            * [source: Capella study]
-            */
-        }
-    }
-    enum def ExchangeMechanism :> Integer {
-        doc /* Enumeration of the different exchange mechanisms
-        * [source:Capella study]
-        */
-
-        enum UNSET = 0 {
-            doc /* Exchange mechanism not defined */
-        }
-        enum FLOW = 1 {
-            doc /* Continuous supply of a data
-            * [Capella study]
-            */
-        }
-        enum OPERATION = 2 {
-            doc /* Sporadic supply of a data with a returned data
-            * [Capella study]
-            */
-        }
-        enum EVENT = 3 {
-            doc /* Asynchronous information that is taken into account rapidly
-            * [Capella study]
-            */
-        }
-        enum SHARED_DATA = 4 {
-            doc /* Data taken into account (reading or writing) without taking care of producers or consumers
-            * [Capella study]
-            */
-        }
-    }
-    enum def ElementKind :> Integer {
-        doc /* enumeration listing the various possibilities regarding the visibility of a feature of a class
-        * [source: Capella study]
-        */
-
-        enum TYPE = 0 {
-            doc /* used when ExchangeItemElement is described as a type for its ExchangeItem */
-        }
-        enum MEMBER = 1 {
-            doc /* used when ExchangeItemElement is described as a member for its ExchangeItem */
-        }
-    }
-    enum def RateKind :> Integer {
-        doc /* enumeration containing the possible caracterizations for the rate of a streaming parameter
-        * [source: Capella study]
-        */
-
-        enum Unspecified = 0 {
-            doc /* used when the rate kind is not precised
-            * [source: Capella study]
-            */
-        }
-        enum Continuous = 1 {
-            doc /* used when the rate characterizes a continuous flow
-            * [source: Capella study]
-            */
-        }
-        enum Discrete = 2 {
-            doc /* Used when the rate characterizes a discrete flow
-            * [source: Capella study]
-            */
-        }
-    }
-    enum def CollectionKind :> Integer {
-        doc /* defines the specific kind of a Collection structure
-        * [source: Capella study]
-        */
-
-        enum ARRAY = 0 {
-            doc /* used when the collection is to be considered as an array of elements
-            * [source: Capella study]
-            */
-        }
-        enum SEQUENCE = 1 {
-            doc /* used when the collection is to be considered as a sequence (list) of elements
-            * [source: Capella study]
-            */
-        }
-    }
-    enum def BinaryOperator :> Integer {
-        doc /* Specifies the kind of this binary operator */
-
-        enum UNSET = 0 {
-            doc /* Used when the binary operator is not initialized */
-        }
-        enum ADD = 1 {
-            doc /* Used when the binary operator refers to an addition */
-        }
-        enum MUL = 2 {
-            doc /* Used when the binary operator refers to a multiplication */
-        }
-        enum SUB = 3 {
-            doc /* Used when the binary operator refers to a substraction */
-        }
-        enum DIV = 4 {
-            doc /* Used when the binary operator refers to a division */
-        }
-        enum POW = 5 {
-            doc /* Used when the binary operator refers to a power operation */
-        }
-        enum MIN = 6 {
-            doc /* Used when the binary operator refers to a min operation */
-        }
-        enum MAX = 7 {
-            doc /* Used when the binary operator refers to a max operation */
-        }
-        enum EQU = 8 {
-            doc /* Used when the binary operator refers to an equal operation */
-        }
-        enum IOR = 9 {
-            doc /* Used when the binary operator refers to a logical inclusive OR operation */
-        }
-        enum XOR = 10 {
-            doc /* Used when the binary operator refers to a logical exclusive OR operation */
-        }
-        enum AND = 11 {
-            doc /* Used when the binary operator refers to a logical AND operation */
-        }
-    }
-    enum def ConfigurationItemKind :> Integer {
-        doc /**/
-
-        enum Unset = 0 {
-            doc /**/
-        }
-        enum COTSCI = 1 {
-            doc /* Commercial Off The Shelves Configuration Item */
-        }
-        enum CSCI = 2 {
-            doc /* Computer Software Configuration Item */
-        }
-        enum HWCI = 3 {
-            doc /* Hardware Configuration Item */
-        }
-        enum InterfaceCI = 4 {
-            doc /* Interface Configuration Item */
-        }
-        enum NDICI = 5 {
-            doc /* Non Developmental Configuration Item */
-        }
-        enum PrimeItemCI = 6 {
-            doc /* Prime Item Configuration Item */
-        }
-        enum SystemCI = 7 {
-            doc /* System Configuration Item */
-        }
-    }
-    enum def InteractionOperatorKind :> Integer {
-        doc /* n/a */
-
-        enum UNSET = 11 {
-            doc /* n/a */
-        }
-        enum ALT = 0 {
-            doc /* n/a */
-        }
-        enum OPT = 1 {
-            doc /* n/a */
-        }
-        enum PAR = 2 {
-            doc /* n/a */
-        }
-        enum LOOP = 3 {
-            doc /* n/a */
-        }
-        enum CRITICAL = 4 {
-            doc /* n/a */
-        }
-        enum NEG = 5 {
-            doc /* n/a */
-        }
-        enum ASSERT = 6 {
-            doc /* n/a */
-        }
-        enum STRICT = 7 {
-            doc /* n/a */
-        }
-        enum SEQ = 8 {
-            doc /* n/a */
-        }
-        enum IGNORE = 9 {
-            doc /* n/a */
-        }
-        enum CONSIDER = 10 {
-            doc /* n/a */
-        }
-    }
-    enum def PhysicalComponentNature :> Integer {
-        doc /* characterizes a physical component, with respect to its property of being a host of behavioral components, or a behavioral component
-        * [source: Capella study]
-        */
-
-        enum UNSET = 0 {
-            doc /* used when the physical component nature is not precised
-            * [source: Capella study]
-            */
-        }
-        enum BEHAVIOR = 1 {
-            doc /* used when the physical component nature is behavioral (typically, a piece of software)
-            * [source: Capella study]
-            */
-        }
-        enum NODE = 2 {
-            doc /* used when the physical component is a host for behavioral components (typically, a computing resource)
-            * [source: Capella study]
-            */
-        }
-    }
 
     abstract constraint def AbstractConstraint :> Constraints::ConstraintCheck {
         doc /* specifies a constraint applying to a given set of model elements
         * [source: Capella study]
         */
-        attribute id : String {
-            doc /* the unique identifier for this element
-            * [source: Capella study]
-            */
-        }
+        
     }
 
     constraint def Constraint :> AbstractConstraint {
@@ -949,11 +996,6 @@ library package ARCADIA {
         * A property value is a named element that has a value. This value has no specific format, it is described as a string.
         * [Capella study]
         */
-        attribute id : String {
-            doc /* the unique identifier for this element
-            * [source: Capella study]
-            */
-        }
         attribute review : String {
             doc /* Review description on the Capella element */
         }
@@ -972,7 +1014,45 @@ library package ARCADIA {
         ref constraint ownedConstraints[0..*] ordered: AbstractConstraint;
     }
 
-    attribute def StringPropertyValue :> AbstractPropertyValue, String {
+    attribute def BooleanPropertyValue :> AbstractPropertyValue, Boolean {
+        doc /* It is a way to define extension properties for any capella elements
+        * A property value is a named element that has a value. This value has no specific format, it is described as a string.
+        * [Capella study]
+        */
+        
+        
+    }
+
+    abstract attribute def ConnectionData :> PropertyValueGroup {
+        doc /**/
+        attribute dataType : InterfaceDataType {
+            doc /**/
+        }
+        attribute length : Integer {
+            doc /**/
+        }
+        
+    }
+
+    attribute def EnumerationPropertyValue :> AbstractPropertyValue, EnumerationPropertyLiteral {
+        doc /* It is a way to define extension properties for any capella elements
+        * A property value is a named element that has a value. This value has no specific format, it is described as a string.
+        * [Capella study]
+        */
+        
+        ref attribute type[0..1] ordered: EnumerationPropertyType;
+        ref attribute value[0..1] ordered: EnumerationPropertyLiteral;
+    }
+
+    attribute def FixedData :> ConnectionData {
+        doc /**/
+        attribute defaultValue : Real {
+            doc /**/
+        }
+        
+    }
+
+    attribute def FloatPropertyValue :> AbstractPropertyValue, Real {
         doc /* It is a way to define extension properties for any capella elements
         * A property value is a named element that has a value. This value has no specific format, it is described as a string.
         * [Capella study]
@@ -990,43 +1070,32 @@ library package ARCADIA {
         
     }
 
-    attribute def BooleanPropertyValue :> AbstractPropertyValue, Boolean {
-        doc /* It is a way to define extension properties for any capella elements
-        * A property value is a named element that has a value. This value has no specific format, it is described as a string.
-        * [Capella study]
-        */
-        
-        
-    }
-
-    attribute def FloatPropertyValue :> AbstractPropertyValue, Real {
-        doc /* It is a way to define extension properties for any capella elements
-        * A property value is a named element that has a value. This value has no specific format, it is described as a string.
-        * [Capella study]
-        */
-        
+    attribute def Mass :> PropertyValueGroup {
+        doc /**/
+        attribute maxValue : Integer {
+            doc /**/
+        }
+        attribute minValue : Integer {
+            doc /**/
+        }
+        attribute value : Integer {
+            doc /**/
+        }
         
     }
 
-    attribute def EnumerationPropertyValue :> AbstractPropertyValue, EnumerationPropertyLiteral {
-        doc /* It is a way to define extension properties for any capella elements
-        * A property value is a named element that has a value. This value has no specific format, it is described as a string.
-        * [Capella study]
-        */
+    attribute def PartMass :> Mass {
+        doc /**/
+        attribute currentMass : Integer {
+            doc /**/
+        }
         
-        ref attribute type[0..1] ordered: EnumerationPropertyType;
-        ref attribute value[0..1] ordered: EnumerationPropertyLiteral;
     }
 
     attribute def PropertyValueGroup  {
         doc /* Package that contain property values
         * [Capella study]
         */
-        attribute id : String {
-            doc /* the unique identifier for this element
-            * [source: Capella study]
-            */
-        }
         attribute review : String {
             doc /* Review description on the Capella element */
         }
@@ -1045,16 +1114,34 @@ library package ARCADIA {
         ref constraint ownedConstraints[0..*] ordered: AbstractConstraint;
     }
 
+    attribute def RandomData :> ConnectionData {
+        doc /**/
+        attribute isRanged : Boolean {
+            doc /**/
+        }
+        attribute max : Real {
+            doc /**/
+        }
+        attribute min : Real {
+            doc /**/
+        }
+        
+    }
+
+    attribute def StringPropertyValue :> AbstractPropertyValue, String {
+        doc /* It is a way to define extension properties for any capella elements
+        * A property value is a named element that has a value. This value has no specific format, it is described as a string.
+        * [Capella study]
+        */
+        
+        
+    }
+
 
     attribute def EnumerationPropertyLiteral {
         doc /* A literal value, used in an EnumerationPropertyType
         * [Capella study]
         */
-        attribute id : String {
-            doc /* the unique identifier for this element
-            * [source: Capella study]
-            */
-        }
         attribute review : String {
             doc /* Review description on the Capella element */
         }
@@ -1080,15 +1167,60 @@ library package ARCADIA {
         */
     }
 
-    abstract item def StateEvent :> ElementExtension {
-        doc /* An event used in statemachine definition which occurs at a given condition.
-        * [source: Capella study]
-        */
-        attribute id : String {
-            doc /* the unique identifier for this element
-            * [source: Capella study]
-            */
+    abstract item def AIProcess :> Operation {
+        doc /**/
+        attribute channelsSize : Integer {
+            doc /**/
         }
+        attribute heightSize : Integer {
+            doc /**/
+        }
+        attribute widthSize : Integer {
+            doc /**/
+        }
+        
+    }
+
+    abstract occurrence def AbstractEvent  {
+        doc /* An event is the specification of some occurrence that may potentially trigger effects by an object
+        * [source: UML superstructure v2.2]
+        */
+        
+        ref constraint ownedConstraints[0..*] ordered: AbstractConstraint;
+    }
+
+    abstract item def AbstractExchangeItem :> ElementExtension {
+        doc /* Set of exchanged element (e.g. data, material...) expected or provided, exchanged between ports */
+        
+        ref constraint ownedConstraints[0..*] ordered: AbstractConstraint;
+    }
+
+    abstract item def AeExtensible :> ElementExtension {
+        doc /**/
+        
+        ref attribute propertyValues[0..*] ordered: AbstractPropertyValue;
+        ref constraint ownedConstraints[0..*] ordered: AbstractConstraint;
+    }
+
+    item def AveragePooling :> AIProcess {
+        doc /**/
+        attribute kernalSize : Integer {
+            doc /**/
+        }
+        attribute stride : Integer {
+            doc /**/
+        }
+        
+    }
+
+    item def BatchNormaliztion :> AIProcess {
+        doc /**/
+        
+        
+    }
+
+    item def BehaviorBlock :> ElementExtension {
+        doc /**/
         attribute review : String {
             doc /* Review description on the Capella element */
         }
@@ -1097,7 +1229,6 @@ library package ARCADIA {
             * [Capella study]
             */
         }
-        abstract ref allocation ownedStateEventRealizations[0..*] ordered: StateEventRealization;
         ref attribute appliedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
         ref attribute appliedPropertyValues[0..*] ordered: AbstractPropertyValue;
         ref attribute features[0..*] ordered: EnumerationPropertyLiteral;
@@ -1105,8 +1236,8 @@ library package ARCADIA {
         ref attribute ownedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
         ref attribute ownedPropertyValues[0..*] ordered: AbstractPropertyValue;
         ref attribute status[0..1] ordered: EnumerationPropertyLiteral;
-        ref constraint expression[0..1] ordered: Constraint;
         ref constraint ownedConstraints[0..*] ordered: AbstractConstraint;
+        ref item operations[1..*] ordered: Operation;
     }
 
     item def ChangeEvent :> StateEvent {
@@ -1123,30 +1254,65 @@ library package ARCADIA {
         
     }
 
-    item def TimeEvent :> StateEvent {
-        doc /* A time event specifies a point in time by an expression. The expression might be absolute or might be relative to some
-        * other point in time.
-        * [source: UML superstructure v2.4]
+    item def Class :> GeneralClass {
+        doc /* A class describes a set of objects that share the same specifications of features, constraints, and semantics
+        * [source: UML superstructure v2.2]
         */
-        attribute kind : TimeEventKind {
-            doc /* specifies the type of the state TimeEvent (see TimeEventKind)
+        attribute isPrimitive : Boolean {
+            doc /* indicates whether or not the class inherits from a parent class.
             * [source: Capella study]
             */
+        }
+        abstract ref allocation ownedInformationRealizations[0..*] ordered: InformationRealization;
+        ref state ownedStateMachines[0..*] ordered: StateMachine;
+    }
+
+    item def Convolution :> AIProcess {
+        doc /**/
+        attribute kernalSize : Integer {
+            doc /**/
         }
         
     }
 
-    abstract item def AbstractExchangeItem :> ElementExtension {
-        doc /* Set of exchanged element (e.g. data, material...) expected or provided, exchanged between ports */
-        attribute id : String {
-            doc /* the unique identifier for this element
-            * [source: Capella study]
-            */
+    item def CustomOperation :> Operation {
+        doc /**/
+        attribute function : String {
+            doc /**/
         }
-        ref constraint ownedConstraints[0..*] ordered: AbstractConstraint;
+        attribute headerFile : String {
+            doc /**/
+        }
+        attribute includesDir : String {
+            doc /**/
+        }
+        attribute sourcesDir : String {
+            doc /**/
+        }
+        
     }
 
-    item def ExchangeItem :> AbstractExchangeItem {
+    item def DataReceivedEvent :> RunnableEvent {
+        doc /**/
+        
+        ref port elements[0..*] ordered: FunctionInputPort;
+    }
+
+    item def DomainElement :> Class {
+        doc /* A reinterpretable representation of information in a formalized manner suitable for communication, interpretation, or processing.
+        * [source: Open Archival Information System (OAIS), IEC]
+        */
+        
+        
+    }
+
+    abstract occurrence def ElementExtension  {
+        doc /**/
+        
+        ref occurrence ownedExtensions[0..*] ordered: ElementExtension;
+    }
+
+    item def ExchangeItem :> AbstractEvent, AbstractExchangeItem {
         doc /* Defined by functional characteristics that exist at a common boundary with co-functioning items and allow systems equipment to be compatible.
         * An exchange item describes a required or produced data.
         * An exchange item has an exchange mechanism
@@ -1191,11 +1357,6 @@ library package ARCADIA {
         */
         attribute direction : ParameterDirection {
             doc /* specifies whether the parameter is an input, an output, or both.
-            * [source: Capella study]
-            */
-        }
-        attribute id : String {
-            doc /* the unique identifier for this element
             * [source: Capella study]
             */
         }
@@ -1245,15 +1406,85 @@ library package ARCADIA {
         ref occurrence abstractType[0..1];
     }
 
+    item def ExchangeItemInstance :> ElementExtension {
+        doc /**/
+        attribute aggregationKind : AggregationKind {
+            doc /* Specifies the kind of aggregation that applies to the Property
+            * [source: UML superstructure v2.2]
+            */
+        }
+        attribute isAbstract : Boolean {
+            doc /* specifies whether the Feature is abstract or concrete
+            * [source: Capella study]
+            */
+        }
+        attribute isDerived : Boolean {
+            doc /* Specifies whether the Property is derived, i.e., whether its value or values can be computed from other information
+            * [source: UML superstructure v2.2]
+            */
+        }
+        attribute isFinal : Boolean {
+            doc /* none */
+        }
+        attribute isMaxInclusive : Boolean {
+            doc /* specifies whether the max value of the range is included or not
+            * [source: Capella light-light study]
+            */
+        }
+        attribute isMinInclusive : Boolean {
+            doc /* specifies whether the min value of the range is included or not
+            * [source: Capella light-light study]
+            */
+        }
+        attribute isOrdered : Boolean {
+            doc /* For a multivalued multiplicity, this attribute specifies whether the values in an instantiation of this element are
+            * sequentially ordered
+            * [source: UML superstructure v2.2]
+            */
+        }
+        attribute isPartOfKey : Boolean {
+            doc /* specifies whether this Property is involved as a key to a table of values
+            * [source: Capella study]
+            */
+        }
+        attribute isReadOnly : Boolean {
+            doc /* If true, the attribute may only be read, and not written
+            * [source: UML superstructure v2.2]
+            */
+        }
+        attribute isStatic : Boolean {
+            doc /* Specifies whether the Feature is static
+            * [source: Capella study]
+            */
+        }
+        attribute isUnique : Boolean {
+            doc /* specifies whether or not this element is unique
+            * [source: Capella study]
+            */
+        }
+        attribute review : String {
+            doc /* Review description on the Capella element */
+        }
+        attribute summary : String {
+            doc /* Summary of the element
+            * [Capella study]
+            */
+        }
+        ref attribute appliedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
+        ref attribute appliedPropertyValues[0..*] ordered: AbstractPropertyValue;
+        ref attribute features[0..*] ordered: EnumerationPropertyLiteral;
+        ref attribute ownedEnumerationPropertyTypes[0..*] ordered: EnumerationPropertyType;
+        ref attribute ownedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
+        ref attribute ownedPropertyValues[0..*] ordered: AbstractPropertyValue;
+        ref attribute status[0..1] ordered: EnumerationPropertyLiteral;
+        ref constraint ownedConstraints[0..*] ordered: AbstractConstraint;
+        ref occurrence abstractType[0..1];
+    }
+
     abstract item def GeneralClass :> ElementExtension {
         doc /* an abstract concept allowing the nesting of classes in classes
         * [source: Capella study]
         */
-        attribute id : String {
-            doc /* the unique identifier for this element
-            * [source: Capella study]
-            */
-        }
         attribute isAbstract : Boolean {
             doc /* specifies whether this classifier is abstract or concrete
             * [source: Capella study]
@@ -1281,6 +1512,43 @@ library package ARCADIA {
         ref item nestedGeneralClasses[0..*] ordered: GeneralClass;
     }
 
+    item def HWIPDataReceivedEvent :> HWIPEvent {
+        doc /**/
+        
+        ref port elements[0..*] ordered: ComponentPort;
+    }
+
+    abstract item def HWIPEvent :> StateEvent {
+        doc /**/
+        
+        
+    }
+
+    item def HWIPTimingEvent :> HWIPEvent {
+        doc /**/
+        attribute period : Real {
+            doc /* Period in seconds [0.001..60] */
+        }
+        attribute unit : TimeUnits {
+            doc /**/
+        }
+        
+    }
+
+    item def HWIPTriggerEvent :> HWIPEvent {
+        doc /**/
+        attribute EventSrc : String {
+            doc /**/
+        }
+        
+    }
+
+    item def Hardmax :> AIProcess {
+        doc /**/
+        
+        
+    }
+
     item def InterfaceItem :> GeneralClass {
         doc /* An interface is a kind of classifier that represents a declaration of a set of coherent public features and obligations. An
         * interface specifies a contract; any instance of a classifier that realizes the interface must fulfill that contract.
@@ -1303,103 +1571,125 @@ library package ARCADIA {
         abstract ref allocation ownedInterfaceAllocations[0..*] ordered: InterfaceAllocation;
     }
 
-    item def Class :> GeneralClass {
-        doc /* A class describes a set of objects that share the same specifications of features, constraints, and semantics
-        * [source: UML superstructure v2.2]
-        */
-        attribute isPrimitive : Boolean {
-            doc /* indicates whether or not the class inherits from a parent class.
-            * [source: Capella study]
-            */
+    item def Latency :> Operation {
+        doc /**/
+        attribute LatencyTimeUnit : TimeUnits {
+            doc /**/
         }
-        abstract ref allocation ownedInformationRealizations[0..*] ordered: InformationRealization;
-        ref state ownedStateMachines[0..*] ordered: StateMachine;
-    }
-
-    item def DomainElement :> Class, GeneralClass {
-        doc /* A reinterpretable representation of information in a formalized manner suitable for communication, interpretation, or processing.
-        * [source: Open Archival Information System (OAIS), IEC]
-        */
-        
-        
-    }
-
-    item def Union :> Class, GeneralClass {
-        doc /* (not used) */
-        attribute kind : UnionKind {
-            doc /* specifies the type of the union
-            * [source: Capella study]
-            */
+        attribute value : Integer {
+            doc /**/
         }
         
     }
 
-    abstract occurrence def ElementExtension  {
+    abstract item def LibraryAbstractElement :> ElementExtension {
         doc /**/
         
-        ref occurrence ownedExtensions[0..*] ordered: ElementExtension;
+        
     }
 
-    item def ExchangeItemInstance :> ElementExtension {
+    item def LibraryReference :> LibraryAbstractElement {
         doc /**/
-        attribute aggregationKind : AggregationKind {
-            doc /* Specifies the kind of aggregation that applies to the Property
-            * [source: UML superstructure v2.2]
+        attribute accessPolicy : AccessPolicy {
+            doc /**/
+        }
+        ref item lib[1..1] ordered: ModelInformation;
+        ref item version[0..1] ordered: ModelVersion;
+    }
+
+    item def Load :> Operation {
+        doc /**/
+        attribute value : Integer {
+            doc /**/
+        }
+        
+    }
+
+    item def LogarithmOfSoftmax :> AIProcess {
+        doc /**/
+        
+        
+    }
+
+    item def MaxPooling :> AIProcess {
+        doc /**/
+        attribute kernalSize : Integer {
+            doc /**/
+        }
+        attribute stride : Integer {
+            doc /**/
+        }
+        
+    }
+
+    item def ModelInformation :> ElementExtension, LibraryAbstractElement {
+        doc /**/
+        
+        ref item ownedReferences[0..*] ordered: LibraryReference;
+        ref item version[0..1] ordered: ModelVersion;
+    }
+
+    item def ModelVersion :> LibraryAbstractElement {
+        doc /**/
+        attribute lastModifiedFileStamp : Real {
+            doc /**/
+        }
+        attribute majorVersionNumber : Integer {
+            doc /**/
+        }
+        attribute minorVersionNumber : Integer {
+            doc /**/
+        }
+        
+    }
+
+    abstract item def Operation :> ElementExtension {
+        doc /**/
+        attribute review : String {
+            doc /* Review description on the Capella element */
+        }
+        attribute summary : String {
+            doc /* Summary of the element
+            * [Capella study]
             */
         }
-        attribute id : String {
-            doc /* the unique identifier for this element
-            * [source: Capella study]
-            */
+        ref attribute appliedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
+        ref attribute appliedPropertyValues[0..*] ordered: AbstractPropertyValue;
+        ref attribute features[0..*] ordered: EnumerationPropertyLiteral;
+        ref attribute ownedEnumerationPropertyTypes[0..*] ordered: EnumerationPropertyType;
+        ref attribute ownedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
+        ref attribute ownedPropertyValues[0..*] ordered: AbstractPropertyValue;
+        ref attribute status[0..1] ordered: EnumerationPropertyLiteral;
+        ref constraint ownedConstraints[0..*] ordered: AbstractConstraint;
+    }
+
+    abstract item def PortConnection :> ElementExtension {
+        doc /**/
+        
+        ref attribute elements[0..*] ordered: ConnectionData;
+        ref constraint ownedConstraints[0..*] ordered: AbstractConstraint;
+    }
+
+    item def Read :> Operation {
+        doc /**/
+        attribute inputPort : String {
+            doc /**/
         }
-        attribute isAbstract : Boolean {
-            doc /* specifies whether the Feature is abstract or concrete
-            * [source: Capella study]
-            */
+        
+    }
+
+    abstract item def RunnableEvent :> StateEvent {
+        doc /**/
+        attribute behaviorSelected : String {
+            doc /**/
         }
-        attribute isDerived : Boolean {
-            doc /* Specifies whether the Property is derived, i.e., whether its value or values can be computed from other information
-            * [source: UML superstructure v2.2]
-            */
-        }
-        attribute isFinal : Boolean {
-            doc /* none */
-        }
-        attribute isMaxInclusive : Boolean {
-            doc /* specifies whether the max value of the range is included or not
-            * [source: Capella light-light study]
-            */
-        }
-        attribute isMinInclusive : Boolean {
-            doc /* specifies whether the min value of the range is included or not
-            * [source: Capella light-light study]
-            */
-        }
-        attribute isOrdered : Boolean {
-            doc /* For a multivalued multiplicity, this attribute specifies whether the values in an instantiation of this element are
-            * sequentially ordered
-            * [source: UML superstructure v2.2]
-            */
-        }
-        attribute isPartOfKey : Boolean {
-            doc /* specifies whether this Property is involved as a key to a table of values
-            * [source: Capella study]
-            */
-        }
-        attribute isReadOnly : Boolean {
-            doc /* If true, the attribute may only be read, and not written
-            * [source: UML superstructure v2.2]
-            */
-        }
-        attribute isStatic : Boolean {
-            doc /* Specifies whether the Feature is static
-            * [source: Capella study]
-            */
-        }
-        attribute isUnique : Boolean {
-            doc /* specifies whether or not this element is unique
-            * [source: Capella study]
-            */
+        
+    }
+
+    item def SelectedSocs :> ElementExtension {
+        doc /**/
+        attribute GeneralName : String {
+            doc /**/
         }
         attribute review : String {
             doc /* Review description on the Capella element */
@@ -1417,52 +1707,81 @@ library package ARCADIA {
         ref attribute ownedPropertyValues[0..*] ordered: AbstractPropertyValue;
         ref attribute status[0..1] ordered: EnumerationPropertyLiteral;
         ref constraint ownedConstraints[0..*] ordered: AbstractConstraint;
-        ref occurrence abstractType[0..1];
     }
 
-
-    abstract state def IState :> ElementExtension {
-        doc /* A vertex is an abstraction of a node in a state machine graph. In general, it can be the source or destination of any number
-        * of transitions.
-        * [source:UML Superstructure v2.2]
+    abstract item def StateEvent :> AbstractEvent {
+        doc /* An event used in statemachine definition which occurs at a given condition.
+        * [source: Capella study]
         */
-        attribute id : String {
-            doc /* the unique identifier for this element
+        attribute review : String {
+            doc /* Review description on the Capella element */
+        }
+        attribute summary : String {
+            doc /* Summary of the element
+            * [Capella study]
+            */
+        }
+        abstract ref allocation ownedStateEventRealizations[0..*] ordered: StateEventRealization;
+        ref attribute appliedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
+        ref attribute appliedPropertyValues[0..*] ordered: AbstractPropertyValue;
+        ref attribute features[0..*] ordered: EnumerationPropertyLiteral;
+        ref attribute ownedEnumerationPropertyTypes[0..*] ordered: EnumerationPropertyType;
+        ref attribute ownedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
+        ref attribute ownedPropertyValues[0..*] ordered: AbstractPropertyValue;
+        ref attribute status[0..1] ordered: EnumerationPropertyLiteral;
+        ref constraint expression[0..1] ordered: Constraint;
+    }
+
+    item def TimeEvent :> StateEvent {
+        doc /* A time event specifies a point in time by an expression. The expression might be absolute or might be relative to some
+        * other point in time.
+        * [source: UML superstructure v2.4]
+        */
+        attribute kind : TimeEventKind {
+            doc /* specifies the type of the state TimeEvent (see TimeEventKind)
             * [source: Capella study]
             */
         }
-        ref constraint ownedConstraints[0..*] ordered: AbstractConstraint;
-        ref state exploitedStates[0..*] ordered: IState;
-        ref state referencedStates[0..*] ordered: IState;
-    }
-
-    state def State :> AbstractState, IState {
-        doc /* A state models a situation during which some (usually implicit) invariant condition holds.
-        * [source: UML superstructure v2.2]
-        * 
-        * A condition of a system or element, as defined by some of its properties, which can enable system behaviors and/or structure to occur. Note: The enabled behavior may include no actions, such as associated with a wait state. Also, the condition that defines the state may be dependent on one or more previous states
-        * [source: UML for SE RFP]
-        */
-        
-        ref constraint stateInvariant[0..1] ordered: AbstractConstraint;
-        ref state ownedConnectionPoints[0..*] ordered: Pseudostate;
-    }
-
-    state def Mode :> AbstractState, IState, State {
-        doc /* A condition which characterizes an expected behaviour through the set of functions or elements available at a point in time. */
-        
         
     }
 
-    state def FinalState :> AbstractState, IState, State {
-        doc /* A special kind of state signifying that the enclosing region is completed. If the enclosing region is directly contained in a
-        * state machine and all other regions in the state machine also are completed, then it means that the entire state machine is
-        * completed.
-        * [source: UML superstructure v2.2]
-        */
-        
+    item def TimingEvent :> RunnableEvent {
+        doc /**/
+        attribute period : Real {
+            doc /* Period in seconds [1..60] */
+        }
+        attribute unit : TimeUnits {
+            doc /**/
+        }
         
     }
+
+    item def TransposedConvolution :> AIProcess {
+        doc /**/
+        attribute kernalSize : Integer {
+            doc /**/
+        }
+        
+    }
+
+    item def Union :> Class {
+        doc /* (not used) */
+        attribute kind : UnionKind {
+            doc /* specifies the type of the union
+            * [source: Capella study]
+            */
+        }
+        
+    }
+
+    item def Write :> Operation {
+        doc /**/
+        attribute outputPort : String {
+            doc /**/
+        }
+        
+    }
+
 
     abstract state def AbstractState :> IState {
         doc /* an abstract base class to define various kinds of states (typically real states and pseudo states)
@@ -1477,6 +1796,7 @@ library package ARCADIA {
             */
         }
         abstract ref allocation ownedAbstractStateRealizations[0..*] ordered: AbstractStateRealization;
+        ref action ownedTransitions[0..*] ordered: StateTransition;
         ref attribute appliedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
         ref attribute appliedPropertyValues[0..*] ordered: AbstractPropertyValue;
         ref attribute features[0..*] ordered: EnumerationPropertyLiteral;
@@ -1488,34 +1808,7 @@ library package ARCADIA {
         ref state ownedStates[0..*] ordered: AbstractState;
     }
 
-    abstract state def Pseudostate :> AbstractState, IState {
-        doc /* A pseudostate is an abstraction that encompasses different types of transient vertices in the state machine graph.
-        * [source: UML superstructure v2.2]
-        */
-        
-        
-    }
-
-    state def JoinPseudoState :> AbstractState, IState, Pseudostate {
-        doc /* join vertices serve to merge several transitions emanating from source vertices in different orthogonal regions. The
-        * transitions entering a join vertex cannot have guards or triggers
-        * [source: UML superstructure v2.2]
-        */
-        
-        
-    }
-
-    state def ForkPseudoState :> AbstractState, IState, Pseudostate {
-        doc /* fork vertices serve to split an incoming transition into two or more transitions terminating on orthogonal target vertices
-        * (i.e., vertices in different regions of a composite state). The segments outgoing from a fork vertex must not have guards
-        * or triggers.
-        * [source: UML superstructure v2.2]
-        */
-        
-        
-    }
-
-    state def ChoicePseudoState :> AbstractState, IState, Pseudostate {
+    state def ChoicePseudoState :> Pseudostate {
         doc /* choice vertices which, when reached, result in the dynamic evaluation of the guards of the triggers of its outgoing
         * transitions. This realizes a dynamic conditional branch. It allows splitting of transitions into multiple outgoing paths
         * such that the decision on which path to take may be a function of the results of prior actions performed in the same runto-
@@ -1526,29 +1819,7 @@ library package ARCADIA {
         
     }
 
-    state def TerminatePseudoState :> AbstractState, IState, Pseudostate {
-        doc /* Entering a terminate pseudostate implies that the execution of this state machine by means of its context object is
-        * terminated. The state machine does not exit any states nor does it perform any exit actions other than those associated
-        * with the transition leading to the terminate pseudostate
-        * [source: UML superstructure v2.2]
-        */
-        
-        
-    }
-
-    state def ShallowHistoryPseudoState :> AbstractState, IState, Pseudostate {
-        doc /* Shallow history represents the most recent active substate of its containing state (but not the substates of that substate).
-        * A composite state can have at most one shallow history vertex. A transition coming into the shallow history vertex is
-        * equivalent to a transition coming into the most recent active substate of a state. At most one transition may originate
-        * from the history connector to the default shallow history state. This transition is taken in case the composite state had
-        * never been active before. The entry action of the state represented by the shallow history is performed.
-        * [source: UML superstructure v2.4]
-        */
-        
-        
-    }
-
-    state def DeepHistoryPseudoState :> AbstractState, IState, Pseudostate {
+    state def DeepHistoryPseudoState :> Pseudostate {
         doc /* Deep history represents the most recent active configuration of the composite state that directly contains this
         * pseudostate (e.g., the state configuration that was active when the composite state was last exited). A composite state
         * can have at most one deep history vertex. At most one transition may originate from the history connector to the default
@@ -1561,7 +1832,7 @@ library package ARCADIA {
         
     }
 
-    state def EntryPointPseudoState :> AbstractState, IState, Pseudostate {
+    state def EntryPointPseudoState :> Pseudostate {
         doc /* An entry point pseudostate is an entry point of a state machine or composite state. In each region of the state machine or
         * composite state it has at most a single transition to a vertex within the same region.
         * [source: UML superstructure v2.4]
@@ -1570,7 +1841,7 @@ library package ARCADIA {
         
     }
 
-    state def ExitPointPseudoState :> AbstractState, IState, Pseudostate {
+    state def ExitPointPseudoState :> Pseudostate {
         doc /* An exit point pseudostate is an exit point of a state machine or composite state. Entering an exit point within any region
         * of the composite state or state machine referenced by a submachine state implies the exit of this composite state or
         * submachine state and the triggering of the transition that has this exit point as source in the state machine enclosing the
@@ -1581,6 +1852,93 @@ library package ARCADIA {
         
     }
 
+    state def FinalState :> State {
+        doc /* A special kind of state signifying that the enclosing region is completed. If the enclosing region is directly contained in a
+        * state machine and all other regions in the state machine also are completed, then it means that the entire state machine is
+        * completed.
+        * [source: UML superstructure v2.2]
+        */
+        
+        
+    }
+
+    state def ForkPseudoState :> Pseudostate {
+        doc /* fork vertices serve to split an incoming transition into two or more transitions terminating on orthogonal target vertices
+        * (i.e., vertices in different regions of a composite state). The segments outgoing from a fork vertex must not have guards
+        * or triggers.
+        * [source: UML superstructure v2.2]
+        */
+        
+        
+    }
+
+    abstract state def IState :> ElementExtension {
+        doc /* A vertex is an abstraction of a node in a state machine graph. In general, it can be the source or destination of any number
+        * of transitions.
+        * [source:UML Superstructure v2.2]
+        */
+        
+        ref constraint ownedConstraints[0..*] ordered: AbstractConstraint;
+        ref state exploitedStates[0..*] ordered: IState;
+        ref state referencedStates[0..*] ordered: IState;
+    }
+
+    state def InitialPseudoState :> Pseudostate {
+        doc /* An initial pseudostate represents a default vertex that is the source for a single transition to the default state of a composite state. There can be at most one initial vertex in a region. The outgoing transition from the initial vertex may
+        * have a behavior, but not a trigger or guard.
+        * [source: UML superstructure v2.2]
+        */
+        
+        
+    }
+
+    state def JoinPseudoState :> Pseudostate {
+        doc /* join vertices serve to merge several transitions emanating from source vertices in different orthogonal regions. The
+        * transitions entering a join vertex cannot have guards or triggers
+        * [source: UML superstructure v2.2]
+        */
+        
+        
+    }
+
+    state def Mode :> State {
+        doc /* A condition which characterizes an expected behaviour through the set of functions or elements available at a point in time. */
+        
+        
+    }
+
+    abstract state def Pseudostate :> AbstractState {
+        doc /* A pseudostate is an abstraction that encompasses different types of transient vertices in the state machine graph.
+        * [source: UML superstructure v2.2]
+        */
+        
+        
+    }
+
+    state def ShallowHistoryPseudoState :> Pseudostate {
+        doc /* Shallow history represents the most recent active substate of its containing state (but not the substates of that substate).
+        * A composite state can have at most one shallow history vertex. A transition coming into the shallow history vertex is
+        * equivalent to a transition coming into the most recent active substate of a state. At most one transition may originate
+        * from the history connector to the default shallow history state. This transition is taken in case the composite state had
+        * never been active before. The entry action of the state represented by the shallow history is performed.
+        * [source: UML superstructure v2.4]
+        */
+        
+        
+    }
+
+    state def State :> AbstractState {
+        doc /* A state models a situation during which some (usually implicit) invariant condition holds.
+        * [source: UML superstructure v2.2]
+        * 
+        * A condition of a system or element, as defined by some of its properties, which can enable system behaviors and/or structure to occur. Note: The enabled behavior may include no actions, such as associated with a wait state. Also, the condition that defines the state may be dependent on one or more previous states
+        * [source: UML for SE RFP]
+        */
+        
+        ref constraint stateInvariant[0..1] ordered: AbstractConstraint;
+        ref state ownedConnectionPoints[0..*] ordered: Pseudostate;
+    }
+
     state def StateMachine :> ElementExtension {
         doc /* State machines can be used to express the behavior of part of a system. Behavior is modeled as a traversal of a graph of
         * state nodes interconnected by one or more joined transition arcs that are triggered by the dispatching of series of (event)
@@ -1588,11 +1946,6 @@ library package ARCADIA {
         * state machine.
         * [source: UML superstructure v2.2]
         */
-        attribute id : String {
-            doc /* the unique identifier for this element
-            * [source: Capella study]
-            */
-        }
         attribute isControlOperator : Boolean {
             doc /* Tells whether the type of this behavior node is to be treated as control
             * [source: UML superstructure v2.2]
@@ -1617,134 +1970,55 @@ library package ARCADIA {
         ref state ownedConnectionPoints[0..*] ordered: Pseudostate;
     }
 
-
-    port def PhysicalPort :> AbstractPort {
-        doc /* A port on a physical component
-        * [source: Capella study]
-        */
-        attribute aggregationKind : AggregationKind {
-            doc /* Specifies the kind of aggregation that applies to the Property
-            * [source: UML superstructure v2.2]
-            */
-        }
-        attribute isAbstract : Boolean {
-            doc /* specifies whether the Feature is abstract or concrete
-            * [source: Capella study]
-            */
-        }
-        attribute isDerived : Boolean {
-            doc /* Specifies whether the Property is derived, i.e., whether its value or values can be computed from other information
-            * [source: UML superstructure v2.2]
-            */
-        }
-        attribute isFinal : Boolean {
-            doc /* none */
-        }
-        attribute isMaxInclusive : Boolean {
-            doc /* specifies whether the max value of the range is included or not
-            * [source: Capella light-light study]
-            */
-        }
-        attribute isMinInclusive : Boolean {
-            doc /* specifies whether the min value of the range is included or not
-            * [source: Capella light-light study]
-            */
-        }
-        attribute isOrdered : Boolean {
-            doc /* For a multivalued multiplicity, this attribute specifies whether the values in an instantiation of this element are
-            * sequentially ordered
-            * [source: UML superstructure v2.2]
-            */
-        }
-        attribute isPartOfKey : Boolean {
-            doc /* specifies whether this Property is involved as a key to a table of values
-            * [source: Capella study]
-            */
-        }
-        attribute isReadOnly : Boolean {
-            doc /* If true, the attribute may only be read, and not written
-            * [source: UML superstructure v2.2]
-            */
-        }
-        attribute isStatic : Boolean {
-            doc /* Specifies whether the Feature is static
-            * [source: Capella study]
-            */
-        }
-        attribute isUnique : Boolean {
-            doc /* specifies whether or not this element is unique
-            * [source: Capella study]
-            */
-        }
-        abstract ref allocation ownedComponentPortAllocations[0..*] ordered: ComponentPortAllocation;
-        abstract ref allocation ownedPhysicalPortRealizations[0..*] ordered: PhysicalPortRealization;
-        ref occurrence abstractType[0..1];
-    }
-
-    port def FunctionInputPort :> AbstractPort, FunctionPort {
-        doc /* an input interface of its owning function, to receive functional exchanges from other functions
-        * [source: Capella study]
-        */
-        attribute isControl : Boolean {
-            doc /* Tells whether the pins provide data to the actions, or just controls when it executes it.
-            * [source: UML superstructure v2.2]
-            */
-        }
-        attribute isControlType : Boolean {
-            doc /* Tells whether the type of the object node is to be treated as control
-            * [source: UML superstructure v2.2]
-            */
-        }
-        attribute kindOfNode : ObjectNodeKind {
-            doc /* characterizes the node */
-        }
-        attribute ordering : ObjectNodeOrderingKind {
-            doc /* Tells whether and how the tokens in the object node are ordered for selection to traverse edges outgoing from the
-            * object node
-            * [source: UML superstructure v2.2]
-            */
-        }
-        ref item incomingExchangeItems[0..*] ordered: ExchangeItem;
-        ref state inState[0..*] ordered: IState;
-    }
-
-    port def FunctionOutputPort :> AbstractPort, FunctionPort {
-        doc /* an output interface of its owning function, to be the origin of functional exchanges towards other functions
-        * [source: Capella study]
-        */
-        attribute isControl : Boolean {
-            doc /* Tells whether the pins provide data to the actions, or just controls when it executes it.
-            * [source: UML superstructure v2.2]
-            */
-        }
-        attribute isControlType : Boolean {
-            doc /* Tells whether the type of the object node is to be treated as control
-            * [source: UML superstructure v2.2]
-            */
-        }
-        attribute kindOfNode : ObjectNodeKind {
-            doc /* characterizes the node */
-        }
-        attribute ordering : ObjectNodeOrderingKind {
-            doc /* Tells whether and how the tokens in the object node are ordered for selection to traverse edges outgoing from the
-            * object node
-            * [source: UML superstructure v2.2]
-            */
-        }
-        ref item outgoingExchangeItems[0..*] ordered: ExchangeItem;
-        ref state inState[0..*] ordered: IState;
-    }
-
-    abstract port def FunctionPort :> AbstractPort {
-        doc /* A port is an interaction point between a block or part and its environment that is connected with other ports via connectors
-        * [source: SysML specification v1.1]
-        * 
-        * Base abstract class for actual port implementations
-        * [source: Capella study]
+    state def TerminatePseudoState :> Pseudostate {
+        doc /* Entering a terminate pseudostate implies that the execution of this state machine by means of its context object is
+        * terminated. The state machine does not exit any states nor does it perform any exit actions other than those associated
+        * with the transition leading to the terminate pseudostate
+        * [source: UML superstructure v2.2]
         */
         
-        ref occurrence abstractType[0..1];
-        ref port representedComponentPort[0..1] ordered: ComponentPort;
+        
+    }
+
+
+    abstract port def AbstractPort :> ElementExtension {
+        doc /* A port is an interaction point between a block or part and its environment that
+        * is connected with other ports via connectors
+        * [source: SysML specification v1.1]
+        */
+        attribute review : String {
+            doc /* Review description on the Capella element */
+        }
+        attribute summary : String {
+            doc /* Summary of the element
+            * [Capella study]
+            */
+        }
+        abstract ref allocation ownedPortAllocations[0..*] ordered: PortAllocation;
+        abstract ref allocation ownedPortRealizations[0..*] ordered: PortRealization;
+        ref attribute appliedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
+        ref attribute appliedPropertyValues[0..*] ordered: AbstractPropertyValue;
+        ref attribute features[0..*] ordered: EnumerationPropertyLiteral;
+        ref attribute ownedEnumerationPropertyTypes[0..*] ordered: EnumerationPropertyType;
+        ref attribute ownedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
+        ref attribute ownedPropertyValues[0..*] ordered: AbstractPropertyValue;
+        ref attribute status[0..1] ordered: EnumerationPropertyLiteral;
+        ref constraint ownedConstraints[0..*] ordered: AbstractConstraint;
+        ref item providedInterfaces[0..*] ordered: InterfaceItem;
+        ref item requiredInterfaces[0..*] ordered: InterfaceItem;
+        ref state ownedProtocols[0..*] ordered: StateMachine;
+    }
+
+    abstract port def AeBusConnection :> ComponentPort, PortConnection {
+        doc /**/
+        
+        
+    }
+
+    port def CanBusConnection :> AeBusConnection, ElementExtension {
+        doc /**/
+        
+        
     }
 
     port def ComponentPort :> AbstractPort {
@@ -1814,41 +2088,178 @@ library package ARCADIA {
         ref occurrence abstractType[0..1];
     }
 
-    abstract port def AbstractPort :> ElementExtension {
-        doc /* A port is an interaction point between a block or part and its environment that
-        * is connected with other ports via connectors
-        * [source: SysML specification v1.1]
+    port def EthSwitchConnection :> AeBusConnection, ElementExtension {
+        doc /**/
+        
+        
+    }
+
+    port def FunctionInputPort :> FunctionPort {
+        doc /* an input interface of its owning function, to receive functional exchanges from other functions
+        * [source: Capella study]
         */
-        attribute id : String {
-            doc /* the unique identifier for this element
+        attribute isControl : Boolean {
+            doc /* Tells whether the pins provide data to the actions, or just controls when it executes it.
+            * [source: UML superstructure v2.2]
+            */
+        }
+        attribute isControlType : Boolean {
+            doc /* Tells whether the type of the object node is to be treated as control
+            * [source: UML superstructure v2.2]
+            */
+        }
+        attribute kindOfNode : ObjectNodeKind {
+            doc /* characterizes the node */
+        }
+        attribute ordering : ObjectNodeOrderingKind {
+            doc /* Tells whether and how the tokens in the object node are ordered for selection to traverse edges outgoing from the
+            * object node
+            * [source: UML superstructure v2.2]
+            */
+        }
+        ref item incomingExchangeItems[0..*] ordered: ExchangeItem;
+        ref state inState[0..*] ordered: IState;
+    }
+
+    port def FunctionOutputPort :> FunctionPort {
+        doc /* an output interface of its owning function, to be the origin of functional exchanges towards other functions
+        * [source: Capella study]
+        */
+        attribute isControl : Boolean {
+            doc /* Tells whether the pins provide data to the actions, or just controls when it executes it.
+            * [source: UML superstructure v2.2]
+            */
+        }
+        attribute isControlType : Boolean {
+            doc /* Tells whether the type of the object node is to be treated as control
+            * [source: UML superstructure v2.2]
+            */
+        }
+        attribute kindOfNode : ObjectNodeKind {
+            doc /* characterizes the node */
+        }
+        attribute ordering : ObjectNodeOrderingKind {
+            doc /* Tells whether and how the tokens in the object node are ordered for selection to traverse edges outgoing from the
+            * object node
+            * [source: UML superstructure v2.2]
+            */
+        }
+        ref item outgoingExchangeItems[0..*] ordered: ExchangeItem;
+        ref state inState[0..*] ordered: IState;
+    }
+
+    abstract port def FunctionPort :> AbstractEvent, AbstractPort {
+        doc /* A port is an interaction point between a block or part and its environment that is connected with other ports via connectors
+        * [source: SysML specification v1.1]
+        * 
+        * Base abstract class for actual port implementations
+        * [source: Capella study]
+        */
+        
+        ref occurrence abstractType[0..1];
+        ref port representedComponentPort[0..1] ordered: ComponentPort;
+    }
+
+    port def PhysicalPort :> AbstractPort {
+        doc /* A port on a physical component
+        * [source: Capella study]
+        */
+        attribute aggregationKind : AggregationKind {
+            doc /* Specifies the kind of aggregation that applies to the Property
+            * [source: UML superstructure v2.2]
+            */
+        }
+        attribute isAbstract : Boolean {
+            doc /* specifies whether the Feature is abstract or concrete
             * [source: Capella study]
             */
         }
-        attribute review : String {
-            doc /* Review description on the Capella element */
-        }
-        attribute summary : String {
-            doc /* Summary of the element
-            * [Capella study]
+        attribute isDerived : Boolean {
+            doc /* Specifies whether the Property is derived, i.e., whether its value or values can be computed from other information
+            * [source: UML superstructure v2.2]
             */
         }
-        abstract ref allocation ownedPortAllocations[0..*] ordered: PortAllocation;
-        abstract ref allocation ownedPortRealizations[0..*] ordered: PortRealization;
-        ref attribute appliedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
-        ref attribute appliedPropertyValues[0..*] ordered: AbstractPropertyValue;
-        ref attribute features[0..*] ordered: EnumerationPropertyLiteral;
-        ref attribute ownedEnumerationPropertyTypes[0..*] ordered: EnumerationPropertyType;
-        ref attribute ownedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
-        ref attribute ownedPropertyValues[0..*] ordered: AbstractPropertyValue;
-        ref attribute status[0..1] ordered: EnumerationPropertyLiteral;
-        ref constraint ownedConstraints[0..*] ordered: AbstractConstraint;
-        ref item providedInterfaces[0..*] ordered: InterfaceItem;
-        ref item requiredInterfaces[0..*] ordered: InterfaceItem;
-        ref state ownedProtocols[0..*] ordered: StateMachine;
+        attribute isFinal : Boolean {
+            doc /* none */
+        }
+        attribute isMaxInclusive : Boolean {
+            doc /* specifies whether the max value of the range is included or not
+            * [source: Capella light-light study]
+            */
+        }
+        attribute isMinInclusive : Boolean {
+            doc /* specifies whether the min value of the range is included or not
+            * [source: Capella light-light study]
+            */
+        }
+        attribute isOrdered : Boolean {
+            doc /* For a multivalued multiplicity, this attribute specifies whether the values in an instantiation of this element are
+            * sequentially ordered
+            * [source: UML superstructure v2.2]
+            */
+        }
+        attribute isPartOfKey : Boolean {
+            doc /* specifies whether this Property is involved as a key to a table of values
+            * [source: Capella study]
+            */
+        }
+        attribute isReadOnly : Boolean {
+            doc /* If true, the attribute may only be read, and not written
+            * [source: UML superstructure v2.2]
+            */
+        }
+        attribute isStatic : Boolean {
+            doc /* Specifies whether the Feature is static
+            * [source: Capella study]
+            */
+        }
+        attribute isUnique : Boolean {
+            doc /* specifies whether or not this element is unique
+            * [source: Capella study]
+            */
+        }
+        abstract ref allocation ownedComponentPortAllocations[0..*] ordered: ComponentPortAllocation;
+        abstract ref allocation ownedPhysicalPortRealizations[0..*] ordered: PhysicalPortRealization;
+        ref occurrence abstractType[0..1];
+    }
+
+    port def UCIEPort :> PhysicalPort {
+        doc /**/
+        attribute chipletLinkLatency : Real {
+            doc /**/
+        }
+        attribute chipletLinkLatencyTimeUnit : TimeUnits {
+            doc /**/
+        }
+        attribute linkFrequency : Real {
+            doc /**/
+        }
+        attribute linkWidth : Real {
+            doc /**/
+        }
+        attribute logicalIfDelay : Real {
+            doc /**/
+        }
+        attribute logicalIfDelayTimeUnit : TimeUnits {
+            doc /**/
+        }
+        attribute physicalIfDelay : Real {
+            doc /**/
+        }
+        attribute physicalIfDelayTimeUnit : TimeUnits {
+            doc /**/
+        }
+        attribute protocolConvLatency : Real {
+            doc /**/
+        }
+        attribute protocolConvLatencyTimeUnit : TimeUnits {
+            doc /**/
+        }
+        
     }
 
 
-    abstract action def AbstractFunction :> ElementExtension {
+    abstract action def AbstractFunction :> AbstractEvent {
         doc /* Specifies an operation or an action that is performed by an entity.
         * 
         * A transformation of inputs to outputs that may include the creation, monitoring, modification or destruction of elements, or a null transformation.
@@ -1864,11 +2275,6 @@ library package ARCADIA {
         }
         attribute condition : String {
             doc /**/
-        }
-        attribute id : String {
-            doc /* the unique identifier for this element
-            * [source: Capella study]
-            */
         }
         attribute isAbstract : Boolean {
             doc /* specifies whether the Feature is abstract or concrete
@@ -1943,7 +2349,6 @@ library package ARCADIA {
         ref attribute status[0..1] ordered: EnumerationPropertyLiteral;
         ref constraint localPostcondition[0..1] ordered: AbstractConstraint;
         ref constraint localPrecondition[0..1] ordered: AbstractConstraint;
-        ref constraint ownedConstraints[0..*] ordered: AbstractConstraint;
         ref occurrence abstractType[0..1];
         ref occurrence context[0..1];
         ref port arguments[0..*];
@@ -1953,45 +2358,10 @@ library package ARCADIA {
         ref state availableInStates[0..*] ordered: State;
     }
 
-    action def PhysicalFunction :> AbstractFunction {
-        doc /* Function applied at physical level
-        * [source: Capella study]
-        */
-        
-        
-    }
-
-    action def LogicalFunction :> AbstractFunction {
-        doc /* Function at Logical level */
-        
-        
-    }
-
-    action def SystemFunction :> AbstractFunction {
-        doc /* Function at System level
-        * [source: Capella study]
-        */
-        
-        
-    }
-
-    action def OperationalActivity :> AbstractFunction {
-        doc /* Any process step or function performed, both mental and physical, toward achieving some objective. A task is a "formal" activity (see also task).
-        * [source: Sys EM, EIA/IS-731.1]
-        */
-        
-        
-    }
-
     action def FunctionalChain :> ElementExtension {
         doc /* A functional chain is a set of Functions, activated through an activation graph (or path) and carrying non functional properties such as latency, criticity level ...
         * It provides a high-level description of a contribution of the system, users or external entities to an operational capability.
         */
-        attribute id : String {
-            doc /* the unique identifier for this element
-            * [source: Capella study]
-            */
-        }
         attribute kind : FunctionalChainKind {
             doc /* Defines the kind of this FunctionalChain */
         }
@@ -2019,8 +2389,86 @@ library package ARCADIA {
         ref state availableInStates[0..*] ordered: State;
     }
 
+    action def LogicalFunction :> AbstractFunction {
+        doc /* Function at Logical level */
+        
+        ref item ownedLogicalFunctionPkgs[0..*] ordered: ItemPackage;
+    }
+
+    action def OperationalActivity :> AbstractFunction {
+        doc /* Any process step or function performed, both mental and physical, toward achieving some objective. A task is a "formal" activity (see also task).
+        * [source: Sys EM, EIA/IS-731.1]
+        */
+        
+        ref item ownedOperationalActivityPkgs[0..*] ordered: ItemPackage;
+    }
+
     action def OperationalProcess :> FunctionalChain {
         doc /* An Operational Process is a logical organization of activities to fulfill an operational capability. */
+        
+        
+    }
+
+    action def PhysicalFunction :> AbstractFunction {
+        doc /* Function applied at physical level
+        * [source: Capella study]
+        */
+        
+        ref item ownedPhysicalFunctionPkgs[0..*] ordered: ItemPackage;
+    }
+
+    action def RunnableEntity :> PhysicalFunction {
+        doc /**/
+        
+        ref item behaviorBlock[0..*] ordered: BehaviorBlock;
+        ref item events[0..*] ordered: RunnableEvent;
+    }
+
+    action def StateTransition :> ElementExtension {
+        doc /* A transition is a directed relationship between a source vertex and a target vertex. It may be part of a compound
+        * transition, which takes the state machine from one state configuration to another, representing the complete response of
+        * the state machine to an occurrence of an event of a particular type.
+        * [source: UML superstructure v2.2]
+        */
+        attribute kind : TransitionKind {
+            doc /* specifies the type of the state transition (see TransitionKind)
+            * [source: Capella study]
+            */
+        }
+        attribute review : String {
+            doc /* Review description on the Capella element */
+        }
+        attribute summary : String {
+            doc /* Summary of the element
+            * [Capella study]
+            */
+        }
+        attribute triggerDescription : String {
+            doc /* describes the trigger associated to the transition
+            * [source: Capella study]
+            */
+        }
+        abstract ref allocation ownedStateTransitionRealizations[0..*] ordered: StateTransitionRealization;
+        ref attribute appliedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
+        ref attribute appliedPropertyValues[0..*] ordered: AbstractPropertyValue;
+        ref attribute features[0..*] ordered: EnumerationPropertyLiteral;
+        ref attribute ownedEnumerationPropertyTypes[0..*] ordered: EnumerationPropertyType;
+        ref attribute ownedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
+        ref attribute ownedPropertyValues[0..*] ordered: AbstractPropertyValue;
+        ref attribute status[0..1] ordered: EnumerationPropertyLiteral;
+        ref constraint ownedConstraints[0..*] ordered: AbstractConstraint;
+    }
+
+    action def SystemFunction :> AbstractFunction {
+        doc /* Function at System level
+        * [source: Capella study]
+        */
+        
+        ref item ownedSystemFunctionPkgs[0..*] ordered: ItemPackage;
+    }
+
+    action def AND :> ControlNode, Actions::JoinAction {
+        doc /**/
         
         
     }
@@ -2029,10 +2477,8 @@ library package ARCADIA {
         doc /* used to control the flow of executions of represented functions in a functional chain
         * [source: Capella study]
         */
-        attribute id : String {
-            doc /* the unique identifier for this element
-            * [source: Capella study]
-            */
+        attribute kind : ControlNodeKind {
+            doc /**/
         }
         attribute review : String {
             doc /* Review description on the Capella element */
@@ -2052,7 +2498,7 @@ library package ARCADIA {
         ref constraint ownedConstraints[0..*] ordered: AbstractConstraint;
     }
 
-    action def AND :> ControlNode, Actions::JoinAction {
+    action def IT :> ControlNode {
         doc /**/
         
         
@@ -2064,22 +2510,156 @@ library package ARCADIA {
         
     }
 
-    action def IT :> ControlNode {
+
+    abstract part def AbstractConceptItem :> Component {
+        doc /* Constitutive element of a Concept.
+        * [source: Capella study]
+        */
+        
+        
+    }
+
+    abstract part def AeBus :> PhysicalComponent {
         doc /**/
         
         
     }
 
+    part def AePreBuiltApplication :> AeStructure {
+        doc /**/
+        attribute Path : String {
+            doc /**/
+        }
+        
+    }
+
+    abstract part def AeStructure :> PhysicalComponent {
+        doc /**/
+        
+        
+    }
+
+    part def CPart :> ElementExtension {
+        doc /* In SysML, a Part is an owned property of a Block
+        * [source: SysML glossary for SysML v1.0]
+        */
+        attribute aggregationKind : AggregationKind {
+            doc /* Specifies the kind of aggregation that applies to the Property
+            * [source: UML superstructure v2.2]
+            */
+        }
+        attribute isAbstract : Boolean {
+            doc /* specifies whether the Feature is abstract or concrete
+            * [source: Capella study]
+            */
+        }
+        attribute isDerived : Boolean {
+            doc /* Specifies whether the Property is derived, i.e., whether its value or values can be computed from other information
+            * [source: UML superstructure v2.2]
+            */
+        }
+        attribute isFinal : Boolean {
+            doc /* none */
+        }
+        attribute isMaxInclusive : Boolean {
+            doc /* specifies whether the max value of the range is included or not
+            * [source: Capella light-light study]
+            */
+        }
+        attribute isMinInclusive : Boolean {
+            doc /* specifies whether the min value of the range is included or not
+            * [source: Capella light-light study]
+            */
+        }
+        attribute isOrdered : Boolean {
+            doc /* For a multivalued multiplicity, this attribute specifies whether the values in an instantiation of this element are
+            * sequentially ordered
+            * [source: UML superstructure v2.2]
+            */
+        }
+        attribute isPartOfKey : Boolean {
+            doc /* specifies whether this Property is involved as a key to a table of values
+            * [source: Capella study]
+            */
+        }
+        attribute isReadOnly : Boolean {
+            doc /* If true, the attribute may only be read, and not written
+            * [source: UML superstructure v2.2]
+            */
+        }
+        attribute isStatic : Boolean {
+            doc /* Specifies whether the Feature is static
+            * [source: Capella study]
+            */
+        }
+        attribute isUnique : Boolean {
+            doc /* specifies whether or not this element is unique
+            * [source: Capella study]
+            */
+        }
+        attribute review : String {
+            doc /* Review description on the Capella element */
+        }
+        attribute summary : String {
+            doc /* Summary of the element
+            * [Capella study]
+            */
+        }
+        abstract ref allocation ownedDeploymentLinks[0..*] ordered: AbstractDeploymentLink;
+        ref attribute appliedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
+        ref attribute appliedPropertyValues[0..*] ordered: AbstractPropertyValue;
+        ref attribute features[0..*] ordered: EnumerationPropertyLiteral;
+        ref attribute ownedEnumerationPropertyTypes[0..*] ordered: EnumerationPropertyType;
+        ref attribute ownedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
+        ref attribute ownedPropertyValues[0..*] ordered: AbstractPropertyValue;
+        ref attribute status[0..1] ordered: EnumerationPropertyLiteral;
+        ref constraint ownedConstraints[0..*] ordered: AbstractConstraint;
+        ref occurrence abstractType[0..1];
+    }
+
+    part def CanBus :> AeBus {
+        doc /**/
+        attribute baudRate : Integer {
+            doc /**/
+        }
+        attribute canType : String {
+            doc /**/
+        }
+        
+    }
+
+    part def CapabilityConfiguration :> AbstractConceptItem {
+        doc /* one of the possible configurations of an operational capability
+        * [source: Capella study]
+        */
+        
+        ref use case configuredCapability[0..1] ordered: OperationalCapability;
+    }
+
+    part def Chiplet :> AeStructure {
+        doc /**/
+        attribute Endpoint_DMA_Frequency : Real {
+            doc /**/
+        }
+        attribute Eth_Mode : String {
+            doc /**/
+        }
+        attribute Frequency : Real {
+            doc /**/
+        }
+        attribute Mode : String {
+            doc /**/
+        }
+        attribute Width : Integer {
+            doc /**/
+        }
+        
+    }
 
     abstract part def Component :> ElementExtension {
         doc /* An entity, with discrete structure within the system, that interacts with other Components of the system, thereby contributing at its lowest level to the system properties and characteristics.
         * [source: Sys EM , ISO/IEC CD 15288]
         */
-        attribute id : String {
-            doc /* the unique identifier for this element
-            * [source: Capella study]
-            */
-        }
         attribute isAbstract : Boolean {
             doc /* specifies whether this classifier is abstract or concrete
             * [source: Capella study]
@@ -2113,6 +2693,9 @@ library package ARCADIA {
         ref attribute ownedPropertyValues[0..*] ordered: AbstractPropertyValue;
         ref attribute status[0..1] ordered: EnumerationPropertyLiteral;
         ref constraint ownedConstraints[0..*] ordered: AbstractConstraint;
+        ref item ownedAbstractCapabilityPkg[0..1] ordered: ItemPackage;
+        ref item ownedDataPkg[0..1] ordered: ItemPackage;
+        ref item ownedInterfacePkg[0..1] ordered: ItemPackage;
         ref state ownedStateMachines[0..*] ordered: StateMachine;
     }
 
@@ -2125,7 +2708,144 @@ library package ARCADIA {
             doc /**/
         }
         abstract ref allocation ownedPhysicalArtifactRealizations[0..*] ordered: PhysicalArtifactRealization;
+        ref item ownedConfigurationItemPkgs[0..*] ordered: ItemPackage;
         ref part ownedConfigurationItems[0..*] ordered: ConfigurationItem;
+    }
+
+    part def CpuCluster :> AeExtensible, AeStructure {
+        doc /**/
+        attribute AffineTasks : String {
+            doc /**/
+        }
+        attribute CoresPerCluster : String {
+            doc /**/
+        }
+        attribute OsType : String {
+            doc /**/
+        }
+        attribute ShowUart : String {
+            doc /**/
+        }
+        attribute archFamily : String {
+            doc /**/
+        }
+        attribute frequency : Integer {
+            doc /**/
+        }
+        
+    }
+
+    part def CpuCore :> AeStructure {
+        doc /**/
+        attribute coreID : String {
+            doc /**/
+        }
+        
+    }
+
+    part def ECU :> AeStructure {
+        doc /**/
+        
+        
+    }
+
+    part def Entity :> AbstractConceptItem {
+        doc /* An Operational Entity is a thing or entity that occurs in the real world of which information is required about fact that need to be known.
+        * An Operational Entity can be for instance: A operational node, an actor, an equipment...
+        */
+        
+        abstract ref allocation ownedRoleAllocations[0..*] ordered: RoleAllocation;
+        abstract ref interface ownedCommunicationMeans[0..*] ordered: CommunicationMean :> Interfaces::interfaces;
+        ref part actualLocation[0..1] ordered: Location;
+        ref part ownedEntities[0..*] ordered: Entity;
+    }
+
+    part def EthSwitch :> AeBus {
+        doc /**/
+        
+        
+    }
+
+    part def EventBasedTrigger :> Triggers {
+        doc /**/
+        attribute EventSrc : String {
+            doc /**/
+        }
+        
+    }
+
+    part def GenericHardware :> AeStructure {
+        doc /**/
+        attribute AxiPriority : Integer {
+            doc /**/
+        }
+        attribute Frequency : Integer {
+            doc /**/
+        }
+        attribute InternalMemory : String {
+            doc /**/
+        }
+        attribute clockTreePower : Real {
+            doc /**/
+        }
+        attribute delayPower : Real {
+            doc /**/
+        }
+        attribute powerPerNominalClock : Integer {
+            doc /**/
+        }
+        attribute sequentialPower : Real {
+            doc /**/
+        }
+        attribute splitPower : Real {
+            doc /**/
+        }
+        attribute staticPower : Real {
+            doc /**/
+        }
+        
+    }
+
+    part def HWAnalysis :> AeStructure {
+        doc /**/
+        attribute AllSocs : String {
+            doc /**/
+        }
+        ref item HWSelectedSocs[0..*] ordered: SelectedSocs;
+    }
+
+    part def InternalBehaviors :> SwcPartialMapping {
+        doc /**/
+        
+        ref item events[0..1] ordered: HWIPEvent;
+        ref item operations[1..*] ordered: Operation;
+    }
+
+    part def Location :> AbstractConceptItem {
+        doc /* a physical place where specific entities can be located.
+        * [source: Capella study]
+        */
+        attribute locationDescription : String {
+            doc /* a textual description of this location
+            * [source: Capella study]
+            */
+        }
+        ref part locatedEntities[0..*] ordered: Entity;
+    }
+
+    part def LogicalComponent :> Component {
+        doc /* Logical Components are the artifacts enabling decomposition of the system as a "white box", independently from any technological solutions. Logical components are identified according to logical abstractions (i.e. functional grouping, logical interfaces) */
+        
+        ref item ownedLogicalComponentPkgs[0..*] ordered: ItemPackage;
+        ref part ownedLogicalComponents[0..*] ordered: LogicalComponent;
+    }
+
+    part def NetworkAnalysis :> AeStructure {
+        doc /**/
+        attribute EnableCanBus_Eth : String {
+            doc /**/
+        }
+        
     }
 
     part def PhysicalComponent :> Component {
@@ -2143,10 +2863,11 @@ library package ARCADIA {
             */
         }
         abstract ref allocation ownedDeploymentLinks[0..*] ordered: AbstractDeploymentLink;
+        ref item ownedPhysicalComponentPkgs[0..*] ordered: ItemPackage;
         ref part ownedPhysicalComponents[0..*] ordered: PhysicalComponent;
     }
 
-    part def PhysicalNode :> Component, PhysicalComponent {
+    part def PhysicalNode :> PhysicalComponent {
         doc /* a physical resource hosting behavioral components, and required for their execution or expected behavior
         * [source: Arcadia encyclopedia]
         */
@@ -2154,10 +2875,48 @@ library package ARCADIA {
         
     }
 
-    part def LogicalComponent :> Component {
-        doc /* Logical Components are the artifacts enabling decomposition of the system as a "white box", independently from any technological solutions. Logical components are identified according to logical abstractions (i.e. functional grouping, logical interfaces) */
+    part def PowerAnalysis :> AeStructure {
+        doc /**/
+        attribute AllSocs : String {
+            doc /**/
+        }
+        ref item PowerSelectedSocs[0..*] ordered: SelectedSocs;
+    }
+
+    part def SWAnalysis :> AeStructure {
+        doc /**/
+        attribute AllSocs : String {
+            doc /**/
+        }
+        ref item SWSelectedSocs[0..*] ordered: SelectedSocs;
+    }
+
+    part def Soc :> AeStructure {
+        doc /**/
+        attribute Endpoint_DMA_Frequency : Real {
+            doc /**/
+        }
+        attribute Eth_Mode : String {
+            doc /**/
+        }
+        attribute Frequency : Real {
+            doc /**/
+        }
+        attribute Mode : String {
+            doc /**/
+        }
+        attribute Width : Integer {
+            doc /**/
+        }
         
-        ref part ownedLogicalComponents[0..*] ordered: LogicalComponent;
+    }
+
+    part def SwcPartialMapping :> AeStructure {
+        doc /**/
+        attribute swcName : String {
+            doc /**/
+        }
+        
     }
 
     part def SystemComponent :> Component {
@@ -2169,96 +2928,29 @@ library package ARCADIA {
             * [source: Capella light-light study]
             */
         }
+        ref item ownedSystemComponentPkgs[0..*] ordered: ItemPackage;
         ref part ownedSystemComponents[0..*] ordered: SystemComponent;
     }
 
-    part def Entity :> AbstractConceptItem, Component {
-        doc /* An Operational Entity is a thing or entity that occurs in the real world of which information is required about fact that need to be known.
-        * An Operational Entity can be for instance: A operational node, an actor, an equipment...
-        */
-        
-        abstract ref allocation ownedRoleAllocations[0..*] ordered: RoleAllocation;
-        abstract ref interface ownedCommunicationMeans[0..*] ordered: CommunicationMean :> Interfaces::interfaces;
-        ref part actualLocation[0..1] ordered: Location;
-        ref part ownedEntities[0..*] ordered: Entity;
-    }
-
-    abstract part def AbstractConceptItem :> Component {
-        doc /* Constitutive element of a Concept.
-        * [source: Capella study]
-        */
-        
-        
-    }
-
-    part def Location :> AbstractConceptItem, Component {
-        doc /* a physical place where specific entities can be located.
-        * [source: Capella study]
-        */
-        attribute locationDescription : String {
-            doc /* a textual description of this location
-            * [source: Capella study]
-            */
+    part def TimeBasedTrigger :> Triggers {
+        doc /**/
+        attribute Period : Real {
+            doc /**/
         }
-        ref part locatedEntities[0..*] ordered: Entity;
-    }
-
-    part def CapabilityConfiguration :> AbstractConceptItem, Component {
-        doc /* one of the possible configurations of an operational capability
-        * [source: Capella study]
-        */
         
-        ref use case configuredCapability[0..1] ordered: OperationalCapability;
     }
 
-
-    use case def Mission :> ElementExtension {
-        doc /* Operational goal. It must be satisfied by usage of System capabilities.
-        * 
-        * A mission can be compared to a UML UseCase : A use case is the specification of a set of actions performed by a system, which yields an observable result that is,
-        * typically, of value for one or more actors or other stakeholders of the system.
-        * [source: UML superstructure v2.2]
-        */
-        attribute id : String {
-            doc /* the unique identifier for this element
-            * [source: Capella study]
-            */
-        }
-        attribute review : String {
-            doc /* Review description on the Capella element */
-        }
-        attribute summary : String {
-            doc /* Summary of the element
-            * [Capella study]
-            */
-        }
-        ref attribute appliedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
-        ref attribute appliedPropertyValues[0..*] ordered: AbstractPropertyValue;
-        ref attribute features[0..*] ordered: EnumerationPropertyLiteral;
-        ref attribute ownedEnumerationPropertyTypes[0..*] ordered: EnumerationPropertyType;
-        ref attribute ownedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
-        ref attribute ownedPropertyValues[0..*] ordered: AbstractPropertyValue;
-        ref attribute status[0..1] ordered: EnumerationPropertyLiteral;
-        ref constraint ownedConstraints[0..*] ordered: AbstractConstraint;
-    }
-
-    use case def CapabilityRealization :> AbstractCapability {
-        doc /* a realization of a capability of the above abstraction level
-        * [source: Capella study]
-        */
+    abstract part def Triggers :> AeStructure {
+        doc /**/
         
         
     }
+
 
     abstract use case def AbstractCapability :> ElementExtension {
         doc /* Base class for Capabilities (Capability and Capability Realization)
         * [source:UML Superstructure v2.2]
         */
-        attribute id : String {
-            doc /* the unique identifier for this element
-            * [source: Capella study]
-            */
-        }
         attribute review : String {
             doc /* Review description on the Capella element */
         }
@@ -2279,6 +2971,7 @@ library package ARCADIA {
         ref constraint ownedConstraints[0..*] ordered: AbstractConstraint;
         ref constraint postCondition[0..1] ordered: Constraint;
         ref constraint preCondition[0..1] ordered: Constraint;
+        ref item ownedPropertyValuePkgs[0..*] ordered: ItemPackage;
         ref state availableInStates[0..*] ordered: State;
     }
 
@@ -2286,6 +2979,39 @@ library package ARCADIA {
         doc /* Ability of an organisation, system or process to provide a service that supports the achievement of high-level operational goals */
         
         
+    }
+
+    use case def CapabilityRealization :> AbstractCapability {
+        doc /* a realization of a capability of the above abstraction level
+        * [source: Capella study]
+        */
+        
+        
+    }
+
+    use case def Mission :> ElementExtension {
+        doc /* Operational goal. It must be satisfied by usage of System capabilities.
+        * 
+        * A mission can be compared to a UML UseCase : A use case is the specification of a set of actions performed by a system, which yields an observable result that is,
+        * typically, of value for one or more actors or other stakeholders of the system.
+        * [source: UML superstructure v2.2]
+        */
+        attribute review : String {
+            doc /* Review description on the Capella element */
+        }
+        attribute summary : String {
+            doc /* Summary of the element
+            * [Capella study]
+            */
+        }
+        ref attribute appliedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
+        ref attribute appliedPropertyValues[0..*] ordered: AbstractPropertyValue;
+        ref attribute features[0..*] ordered: EnumerationPropertyLiteral;
+        ref attribute ownedEnumerationPropertyTypes[0..*] ordered: EnumerationPropertyType;
+        ref attribute ownedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
+        ref attribute ownedPropertyValues[0..*] ordered: AbstractPropertyValue;
+        ref attribute status[0..1] ordered: EnumerationPropertyLiteral;
+        ref constraint ownedConstraints[0..*] ordered: AbstractConstraint;
     }
 
     use case def OperationalCapability :> AbstractCapability {
@@ -2305,15 +3031,50 @@ library package ARCADIA {
     }
 
 
-    connection def SequenceLink :> ElementExtension{
-        doc /* express precedence between executions of represented functions
+    metadata def GenericTrace :> Trace {
+        doc /* a Trace relationship (in the UML sense) to which can be associated a set of key/value pairs characterizing the trace.
         * [source: Capella study]
         */
-        attribute id : String {
-            doc /* the unique identifier for this element
-            * [source: Capella study]
-            */
-        }
+        
+        
+    }
+
+    metadata def JustificationLink :> GenericTrace {
+        doc /* specialized trace to keep track of relationships between source elements of a transformation, and destination elements.
+        * [source: Capella study]
+        */
+        
+        
+    }
+
+    metadata def MergeLink :> Trace {
+        doc /* a specific kind of trace, indicating an operation of merge between two entities, for example two scenarios, merged into one in the refinement process towards the lower abstraction level
+        * [source: Capella study]
+        */
+        
+        
+    }
+
+    metadata def RefinementLink :> Trace {
+        doc /* a kind of trace between a model element at a given design level, and a model element at a low design level, refining the source element.
+        * [source: Capella study]
+        */
+        
+        
+    }
+
+    metadata def RequirementsTrace :> Trace {
+        doc /* a specialized kind of Trace to indicate the relationship between two Requirements
+        * [source: Capella study]
+        */
+        
+        
+    }
+
+    metadata def Trace :> ElementExtension {
+        doc /* A dependency that indicates a historical or process relationship between two elements that represent the same concept without specific rules for deriving one from the other. Trace dependencies are used to track requirements and changes across models.
+        * [source: SysML glossary for SysML v1.0]
+        */
         attribute review : String {
             doc /* Review description on the Capella element */
         }
@@ -2322,7 +3083,6 @@ library package ARCADIA {
             * [Capella study]
             */
         }
-        abstract ref connection links[0..*] ordered: FunctionalChainInvolvementLink :> Connections::connections;
         ref attribute appliedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
         ref attribute appliedPropertyValues[0..*] ordered: AbstractPropertyValue;
         ref attribute features[0..*] ordered: EnumerationPropertyLiteral;
@@ -2330,28 +3090,23 @@ library package ARCADIA {
         ref attribute ownedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
         ref attribute ownedPropertyValues[0..*] ordered: AbstractPropertyValue;
         ref attribute status[0..1] ordered: EnumerationPropertyLiteral;
-        ref constraint condition[0..1] ordered: Constraint;
         ref constraint ownedConstraints[0..*] ordered: AbstractConstraint;
-        import SequenceFunctions::notEmpty;
-        
-        end action source;
-        end action target;
-        
-        succession succ[0..1] first source.start then target.start;
-        
-        calc calccondition { return : ScalarValues::Boolean default true; }
-        
-        assert constraint { notEmpty(succ) == calccondition() }
+        ref :>> annotatedElement : SysML::Dependency;
     }
+
+    metadata def TransfoLink :> GenericTrace {
+        doc /* specialized trace to keep track of relationships between source elements of a transformation, and destination elements.
+        * [source: Capella study]
+        */
+        
+        
+    }
+
+
     connection def FunctionalChainInvolvementLink :> ElementExtension{
         doc /* specifies the involvement of a model element in form of link in a functional chain
         * [source: Capella study]
         */
-        attribute id : String {
-            doc /* the unique identifier for this element
-            * [source: Capella study]
-            */
-        }
         attribute review : String {
             doc /* Review description on the Capella element */
         }
@@ -2384,20 +3139,129 @@ library package ARCADIA {
         end target : OperationalActivity;
 
     }
+    connection def SequenceLink :> ElementExtension{
+        doc /* express precedence between executions of represented functions
+        * [source: Capella study]
+        */
+        attribute review : String {
+            doc /* Review description on the Capella element */
+        }
+        attribute summary : String {
+            doc /* Summary of the element
+            * [Capella study]
+            */
+        }
+        abstract ref connection links[0..*] ordered: FunctionalChainInvolvementLink :> Connections::connections;
+        ref attribute appliedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
+        ref attribute appliedPropertyValues[0..*] ordered: AbstractPropertyValue;
+        ref attribute features[0..*] ordered: EnumerationPropertyLiteral;
+        ref attribute ownedEnumerationPropertyTypes[0..*] ordered: EnumerationPropertyType;
+        ref attribute ownedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
+        ref attribute ownedPropertyValues[0..*] ordered: AbstractPropertyValue;
+        ref attribute status[0..1] ordered: EnumerationPropertyLiteral;
+        ref constraint condition[0..1] ordered: Constraint;
+        ref constraint ownedConstraints[0..*] ordered: AbstractConstraint;
+        private import SequenceFunctions::notEmpty;
+        
+        end action source;
+        end action target;
+        
+        succession succ[0..1] first source.start then target.start;
+        
+        calc calccondition { return : ScalarValues::Boolean default true; }
+        
+        assert constraint { notEmpty(succ) == calccondition() }
+    }
 
-    interface def FunctionalExchange :> ElementExtension {
+    interface def CommunicationLink :> ElementExtension {
+        doc /* describes a link of communication using exchange items */
+        attribute interfaceName : String {
+            doc /**/
+        }
+        attribute kind : CommunicationLinkKind {
+            doc /* refer to CommunicationLinkKind description */
+        }
+        attribute protocol : CommunicationLinkProtocol {
+            doc /* refer to CommunicationLinkProtocol description */
+        }
+        attribute review : String {
+            doc /* Review description on the Capella element */
+        }
+        attribute summary : String {
+            doc /* Summary of the element
+            * [Capella study]
+            */
+        }
+        ref attribute appliedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
+        ref attribute appliedPropertyValues[0..*] ordered: AbstractPropertyValue;
+        ref attribute features[0..*] ordered: EnumerationPropertyLiteral;
+        ref attribute ownedEnumerationPropertyTypes[0..*] ordered: EnumerationPropertyType;
+        ref attribute ownedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
+        ref attribute ownedPropertyValues[0..*] ordered: AbstractPropertyValue;
+        ref attribute status[0..1] ordered: EnumerationPropertyLiteral;
+        ref constraint ownedConstraints[0..*] ordered: AbstractConstraint;
+        ref item exchangeItem[0..1] ordered: ExchangeItem;
+
+        end port source;
+        end port target;
+
+    }
+    interface def CommunicationMean :> ComponentExchange {
+        doc /* the mean by which two specific operational entities are able to exchange information
+        * [source: Capella study]
+        */
+        
+        
+
+    }
+    interface def ComponentExchange :> AbstractEvent {
+        doc /* a specialized version of an exchange specification, dedicated to characterize exchanges between components
+        * [source: Capella study]
+        */
+        attribute interfaceName : String {
+            doc /**/
+        }
+        attribute isOriented : Boolean {
+            doc /* describes the orientation of the connection. The connection can be oriented or not */
+        }
+        attribute kind : ComponentExchangeKind {
+            doc /* Kind of the connection */
+        }
+        attribute review : String {
+            doc /* Review description on the Capella element */
+        }
+        attribute summary : String {
+            doc /* Summary of the element
+            * [Capella study]
+            */
+        }
+        abstract ref allocation ownedComponentExchangeFunctionalExchangeAllocations[0..*] ordered: ComponentExchangeFunctionalExchangeAllocation;
+        abstract ref allocation ownedComponentExchangeRealizations[0..*] ordered: ComponentExchangeRealization;
+        ref attribute appliedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
+        ref attribute appliedPropertyValues[0..*] ordered: AbstractPropertyValue;
+        ref attribute features[0..*] ordered: EnumerationPropertyLiteral;
+        ref attribute ownedEnumerationPropertyTypes[0..*] ordered: EnumerationPropertyType;
+        ref attribute ownedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
+        ref attribute ownedPropertyValues[0..*] ordered: AbstractPropertyValue;
+        ref attribute status[0..1] ordered: EnumerationPropertyLiteral;
+        ref item convoyedInformations[0..*] ordered: AbstractExchangeItem;
+
+        end port source;
+        end port target;
+
+    }
+    interface def DirectPortConnection :> ComponentExchange, PortConnection {
+        doc /**/
+        
+        
+
+    }
+    interface def FunctionalExchange :> AbstractEvent {
         doc /* an exchange between two functions of the system
         * [source: Capella study]
         */
-        attribute id : String {
-            doc /* the unique identifier for this element
-            * [source: Capella study]
-            */
-        }
         attribute interfaceName : String {
-            doc /* The name of the NamedElement
-            * [source: UML superstructure v2.2]
-            */
+            doc /**/
         }
         attribute isMulticast : Boolean {
             doc /* Tells whether the objects in the flow are passed by multicasting
@@ -2430,7 +3294,6 @@ library package ARCADIA {
         ref attribute ownedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
         ref attribute ownedPropertyValues[0..*] ordered: AbstractPropertyValue;
         ref attribute status[0..1] ordered: EnumerationPropertyLiteral;
-        ref constraint ownedConstraints[0..*] ordered: AbstractConstraint;
         ref item exchangedItems[0..*] ordered: ExchangeItem;
 
         end port source;
@@ -2440,74 +3303,12 @@ library package ARCADIA {
             from source to target;
 
     }
-    interface def ComponentExchange :> ElementExtension {
-        doc /* a specialized version of an exchange specification, dedicated to characterize exchanges between components
-        * [source: Capella study]
-        */
-        attribute id : String {
-            doc /* the unique identifier for this element
-            * [source: Capella study]
-            */
-        }
-        attribute interfaceName : String {
-            doc /* The name of the NamedElement
-            * [source: UML superstructure v2.2]
-            */
-        }
-        attribute isOriented : Boolean {
-            doc /* describes the orientation of the connection. The connection can be oriented or not */
-        }
-        attribute kind : ComponentExchangeKind {
-            doc /* Kind of the connection */
-        }
-        attribute review : String {
-            doc /* Review description on the Capella element */
-        }
-        attribute summary : String {
-            doc /* Summary of the element
-            * [Capella study]
-            */
-        }
-        abstract ref allocation ownedComponentExchangeFunctionalExchangeAllocations[0..*] ordered: ComponentExchangeFunctionalExchangeAllocation;
-        abstract ref allocation ownedComponentExchangeRealizations[0..*] ordered: ComponentExchangeRealization;
-        ref attribute appliedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
-        ref attribute appliedPropertyValues[0..*] ordered: AbstractPropertyValue;
-        ref attribute features[0..*] ordered: EnumerationPropertyLiteral;
-        ref attribute ownedEnumerationPropertyTypes[0..*] ordered: EnumerationPropertyType;
-        ref attribute ownedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
-        ref attribute ownedPropertyValues[0..*] ordered: AbstractPropertyValue;
-        ref attribute status[0..1] ordered: EnumerationPropertyLiteral;
-        ref constraint ownedConstraints[0..*] ordered: AbstractConstraint;
-        ref item convoyedInformations[0..*] ordered: AbstractExchangeItem;
-
-        end port source;
-        end port target;
-
-    }
-    interface def CommunicationMean :> ComponentExchange {
-        doc /* the mean by which two specific operational entities are able to exchange information
-        * [source: Capella study]
-        */
-        
-        
-
-        end port source;
-        end port target;
-
-    }
     interface def PhysicalLink :> ElementExtension {
         doc /* the representation of the physical medium connecting two physical interfaces
         * [source: Capella study]
         */
-        attribute id : String {
-            doc /* the unique identifier for this element
-            * [source: Capella study]
-            */
-        }
         attribute interfaceName : String {
-            doc /* The name of the NamedElement
-            * [source: UML superstructure v2.2]
-            */
+            doc /**/
         }
         attribute review : String {
             doc /* Review description on the Capella element */
@@ -2533,309 +3334,11 @@ library package ARCADIA {
         end port target;
 
     }
-    interface def CommunicationLink :> ElementExtension {
-        doc /* describes a link of communication using exchange items */
-        attribute id : String {
-            doc /* the unique identifier for this element
-            * [source: Capella study]
-            */
-        }
-        attribute kind : CommunicationLinkKind {
-            doc /* refer to CommunicationLinkKind description */
-        }
-        attribute protocol : CommunicationLinkProtocol {
-            doc /* refer to CommunicationLinkProtocol description */
-        }
-        attribute review : String {
-            doc /* Review description on the Capella element */
-        }
-        attribute summary : String {
-            doc /* Summary of the element
-            * [Capella study]
-            */
-        }
-        ref attribute appliedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
-        ref attribute appliedPropertyValues[0..*] ordered: AbstractPropertyValue;
-        ref attribute features[0..*] ordered: EnumerationPropertyLiteral;
-        ref attribute ownedEnumerationPropertyTypes[0..*] ordered: EnumerationPropertyType;
-        ref attribute ownedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
-        ref attribute ownedPropertyValues[0..*] ordered: AbstractPropertyValue;
-        ref attribute status[0..1] ordered: EnumerationPropertyLiteral;
-        ref constraint ownedConstraints[0..*] ordered: AbstractConstraint;
-        ref item exchangeItem[0..1] ordered: ExchangeItem;
+    interface def UCIEConnection :> PhysicalLink {
+        doc /**/
+        
+        
 
-        end port source;
-        end port target;
-
-    }
-
-    allocation def AbstractStateRealization :> CapellaAllocation {
-        doc /* an AbstractStateRealization is a specific kind of allocation link between two AbstractStates (typically of different design levels, or of different nature)
-        * [source: Capella study]
-        */
-        
-        
-    }
-
-    allocation def StateTransitionRealization :> CapellaAllocation {
-        doc /* a StateTransitionRealization is a specific kind of allocation link between two StateTransitions (typically of different design levels, or of different nature)
-        * [source: Capella study]
-        */
-        
-        
-    }
-
-    allocation def StateEventRealization :> CapellaAllocation {
-        doc /* a StateEventRealization is a specific kind of realization link between two StateEvent (typically of different design levels, or of different nature)
-        * [source: Capella study]
-        */
-        
-        
-    }
-
-    abstract allocation def CapellaAllocation :> ElementExtension {
-        doc /* Allocation is similar to SysML Allocate concept : It is a mechanism for associating elements of different types, or in
-        * different hierarchies, at an abstract level. Allocate is used for assessing user model consistency and directing future design
-        * activity. It is expected that an "allocate" relationship between model elements is a precursor to a more concrete
-        * relationship between the elements, their properties, operations, attributes, or sub-classes.
-        * [source:SysML v1.1]
-        */
-        attribute id : String {
-            doc /* the unique identifier for this element
-            * [source: Capella study]
-            */
-        }
-        attribute review : String {
-            doc /* Review description on the Capella element */
-        }
-        attribute summary : String {
-            doc /* Summary of the element
-            * [Capella study]
-            */
-        }
-        ref attribute appliedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
-        ref attribute appliedPropertyValues[0..*] ordered: AbstractPropertyValue;
-        ref attribute features[0..*] ordered: EnumerationPropertyLiteral;
-        ref attribute ownedEnumerationPropertyTypes[0..*] ordered: EnumerationPropertyType;
-        ref attribute ownedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
-        ref attribute ownedPropertyValues[0..*] ordered: AbstractPropertyValue;
-        ref attribute status[0..1] ordered: EnumerationPropertyLiteral;
-        ref constraint ownedConstraints[0..*] ordered: AbstractConstraint;
-    }
-
-    abstract allocation def ArchitectureAllocation :> CapellaAllocation {
-        doc /* Mediator class between BlockArchitecture elements, to represent an allocation link
-        * [source: Capella study]
-        */
-        
-        
-    }
-
-    allocation def ComponentRealization :> CapellaAllocation {
-        doc /* Mediator class between Component elements, representing the realization link between these elements
-        * [source: Capella light-light study]
-        */
-        
-        
-    }
-
-    abstract allocation def InterfaceAllocation :> CapellaAllocation {
-        doc /* Mediator class between an Interface and an element that allocates to/from it.
-        * [source: Capella study]
-        */
-        
-        
-    }
-
-    allocation def PhysicalLinkRealization :> CapellaAllocation {
-        doc /* n/a */
-        
-        
-    }
-
-    allocation def PhysicalPathRealization :> CapellaAllocation {
-        doc /* n/a */
-        
-        
-    }
-
-    allocation def PhysicalPortRealization :> CapellaAllocation {
-        doc /* n/a */
-        
-        
-    }
-
-    abstract allocation def AbstractFunctionAllocation :> CapellaAllocation {
-        doc /* a base class for deriving allocation relationships between a function, and some other model element
-        * [source: Capella study]
-        */
-        
-        
-    }
-
-    allocation def ComponentFunctionalAllocation :> AbstractFunctionAllocation, CapellaAllocation {
-        doc /* a allocation link between a function and a component
-        * [source: Capella study]
-        */
-        
-        
-        end function:AbstractFunction;
-        end component:Component;
-    }
-
-    allocation def FunctionalChainRealization :> CapellaAllocation {
-        doc /* an allocation link between two Functional Chains */
-        
-        
-    }
-
-    abstract allocation def ExchangeSpecificationRealization :> CapellaAllocation {
-        doc /* Base class for deriving specific realization links between exchange specifications and the model elements that realize them.
-        * [source: Capella study]
-        */
-        
-        
-    }
-
-    allocation def FunctionalExchangeRealization :> CapellaAllocation {
-        doc /* a realization link between a functional exchange, and the (typically higher level) functional exchange that it realizes
-        * [source: Capella study]
-        */
-        
-        
-    }
-
-    allocation def FunctionRealization :> AbstractFunctionAllocation, CapellaAllocation {
-        doc /* an allocation link between a function, and the function that it realizes
-        * [source: Capella study]
-        */
-        
-        
-    }
-
-    allocation def ComponentExchangeAllocation :> CapellaAllocation {
-        doc /* Mediator class implementing an allocation relationship, between a component exchange, and the element that allocates it
-        * [source: Capella study]
-        */
-        
-        
-    }
-
-    allocation def ComponentExchangeFunctionalExchangeAllocation :> AbstractFunctionAllocation, CapellaAllocation {
-        doc /* allocation link between a connection and a functional exchange
-        * [source: Capella study]
-        */
-        
-        
-        end functionalExchange:FunctionalExchange;
-        end componentExchange:ComponentExchange;
-    }
-
-    allocation def ComponentExchangeRealization :> CapellaAllocation, ExchangeSpecificationRealization {
-        doc /* an allocation link between a connection, and another (typically lower level) connection that realizes it */
-        
-        
-    }
-
-    allocation def ComponentPortAllocation :> CapellaAllocation {
-        doc /* specific kind of allocation link, between two Ports.
-        * [source: Capella study]
-        */
-        
-        
-        end allocatedPort:AbstractPort;
-        end allocatingPort:AbstractPort;
-    }
-
-    allocation def OperationAllocation :> CapellaAllocation {
-        doc /* Mediator class supporting the implementation of the allocation link between two Operations
-        * [source: Capella study]
-        */
-        
-        
-    }
-
-    allocation def PortRealization :> CapellaAllocation {
-        doc /* a PortRealization is a specific kind of allocation link between two Ports (typically of different design levels, or of different nature)
-        * [source: Capella study]
-        */
-        
-        
-    }
-
-    allocation def PortAllocation :> CapellaAllocation {
-        doc /* specific kind of allocation link, between two Ports.
-        * [source: Capella study]
-        */
-        
-        
-        end allocatedPort:AbstractPort;
-        end allocatingPort:AbstractPort;
-    }
-
-    allocation def InformationRealization :> CapellaAllocation {
-        doc /* Realization link between two information items */
-        
-        
-    }
-
-    allocation def ExchangeItemRealization :> CapellaAllocation {
-        doc /* Allocation link between exchange items and operation(s) of an interface that support them
-        * [source: Capella study]
-        */
-        
-        
-    }
-
-    allocation def PhysicalArchitectureRealization :> ArchitectureAllocation, CapellaAllocation {
-        doc /* Realization link betwen an EPBS architecture and a physical architecture
-        * [source:Capella study]
-        * 
-        * Realization is a specialized abstraction relationship between two sets of model elements, one representing a specification
-        * (the supplier) and the other represents an implementation of the latter (the client). Realization can be used to model
-        * stepwise refinement, optimizations, transformations, templates, model synthesis, framework composition, etc.
-        * [source: UML superstructure v2.2]
-        */
-        
-        
-    }
-
-    allocation def PhysicalArtifactRealization :> CapellaAllocation {
-        doc /* Realization link betwen a Configuration Item and a physical artifact */
-        
-        
-    }
-
-    allocation def LogicalArchitectureRealization :> ArchitectureAllocation, CapellaAllocation {
-        doc /* mediator class supporting the implementation of the allocation link between a physical architecture, and the logical architecture(s) that it realizes
-        * [source: Capella study]
-        */
-        
-        
-    }
-
-    allocation def LogicalInterfaceRealization :> CapellaAllocation, InterfaceAllocation {
-        doc /* mediator class supporting the implementation of the allocation link between a physical interface, and the logical interface(s) that it realizes
-        * [source: Capella study]
-        */
-        
-        
-    }
-
-    allocation def SystemAnalysisRealization :> ArchitectureAllocation, CapellaAllocation {
-        doc /* a realisation link between a system analysis and a logical architecture
-        * [source: Capella study]
-        */
-        
-        
-    }
-
-    allocation def ContextInterfaceRealization :> CapellaAllocation, InterfaceAllocation {
-        doc /* an allocation link between an interface at the logical level, and the system-level interface that it realizes
-        * [source: Capella study]
-        */
-        
-        
     }
 
     allocation def AbstractCapabilityRealization :> CapellaAllocation {
@@ -2846,20 +3349,39 @@ library package ARCADIA {
         
     }
 
-    allocation def ScenarioRealization :> CapellaAllocation {
-        doc /* an allocation link between a scenario, and the scenario that it realizes */
+    abstract allocation def AbstractDeploymentLink :> ElementExtension {
+        doc /* the link between a physical element, and the physical target onto which it is deployed
+        * [source: Capella study]
+        */
+        attribute review : String {
+            doc /* Review description on the Capella element */
+        }
+        attribute summary : String {
+            doc /* Summary of the element
+            * [Capella study]
+            */
+        }
+        ref attribute appliedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
+        ref attribute appliedPropertyValues[0..*] ordered: AbstractPropertyValue;
+        ref attribute features[0..*] ordered: EnumerationPropertyLiteral;
+        ref attribute ownedEnumerationPropertyTypes[0..*] ordered: EnumerationPropertyType;
+        ref attribute ownedPropertyValueGroups[0..*] ordered: PropertyValueGroup;
+        ref attribute ownedPropertyValues[0..*] ordered: AbstractPropertyValue;
+        ref attribute status[0..1] ordered: EnumerationPropertyLiteral;
+        ref constraint ownedConstraints[0..*] ordered: AbstractConstraint;
+    }
+
+    abstract allocation def AbstractFunctionAllocation :> CapellaAllocation {
+        doc /* a base class for deriving allocation relationships between a function, and some other model element
+        * [source: Capella study]
+        */
         
         
     }
 
-    allocation def OperationalAnalysisRealization :> ArchitectureAllocation, CapellaAllocation {
-        doc /* Realization link betwen a system analysis and an operational analysis
-        * [source:Capella study]
-        * 
-        * Realization is a specialized abstraction relationship between two sets of model elements, one representing a specification
-        * (the supplier) and the other represents an implementation of the latter (the client). Realization can be used to model
-        * stepwise refinement, optimizations, transformations, templates, model synthesis, framework composition, etc.
-        * [source:UML superstructure v2.2]
+    allocation def AbstractStateRealization :> CapellaAllocation {
+        doc /* an AbstractStateRealization is a specific kind of allocation link between two AbstractStates (typically of different design levels, or of different nature)
+        * [source: Capella study]
         */
         
         
@@ -2873,23 +3395,21 @@ library package ARCADIA {
         
     }
 
-    allocation def RoleAllocation :> CapellaAllocation {
-        doc /* Allocation link between an operational role and an operational entity
+    abstract allocation def ArchitectureAllocation :> CapellaAllocation {
+        doc /* Mediator class between BlockArchitecture elements, to represent an allocation link
         * [source: Capella study]
         */
         
         
     }
 
-    abstract allocation def AbstractDeploymentLink :> ElementExtension {
-        doc /* the link between a physical element, and the physical target onto which it is deployed
-        * [source: Capella study]
+    abstract allocation def CapellaAllocation :> ElementExtension {
+        doc /* Allocation is similar to SysML Allocate concept : It is a mechanism for associating elements of different types, or in
+        * different hierarchies, at an abstract level. Allocate is used for assessing user model consistency and directing future design
+        * activity. It is expected that an "allocate" relationship between model elements is a precursor to a more concrete
+        * relationship between the elements, their properties, operations, attributes, or sub-classes.
+        * [source:SysML v1.1]
         */
-        attribute id : String {
-            doc /* the unique identifier for this element
-            * [source: Capella study]
-            */
-        }
         attribute review : String {
             doc /* Review description on the Capella element */
         }
@@ -2908,37 +3428,85 @@ library package ARCADIA {
         ref constraint ownedConstraints[0..*] ordered: AbstractConstraint;
     }
 
-    allocation def InstanceDeploymentLink :> AbstractDeploymentLink {
-        doc /* link between a physical object and its deployment element
+    allocation def ComponentExchangeAllocation :> CapellaAllocation {
+        doc /* Mediator class implementing an allocation relationship, between a component exchange, and the element that allocates it
         * [source: Capella study]
         */
         
         
     }
 
-    allocation def PartDeploymentLink :> AbstractDeploymentLink {
-        doc /* link between a part and its deployment element */
-        
-        
-        end deployed:PhysicalComponent;
-        end deploying:PhysicalComponent;
-    }
-
-    allocation def TypeDeploymentLink :> AbstractDeploymentLink {
-        doc /* deployment link between a data type and the model element that deploys it
+    allocation def ComponentExchangeFunctionalExchangeAllocation :> AbstractFunctionAllocation {
+        doc /* allocation link between a connection and a functional exchange
         * [source: Capella study]
         */
         
         
+        end functionalExchange:FunctionalExchange;
+        end componentExchange:ComponentExchange;
+    }
+
+    allocation def ComponentExchangeRealization :> ExchangeSpecificationRealization {
+        doc /* an allocation link between a connection, and another (typically lower level) connection that realizes it */
+        
+        
+    }
+
+    allocation def ComponentFunctionalAllocation :> AbstractFunctionAllocation {
+        doc /* a allocation link between a function and a component
+        * [source: Capella study]
+        */
+        
+        
+        end function:AbstractFunction;
+        end component:Component;
+    }
+
+    allocation def ComponentPortAllocation :> CapellaAllocation {
+        doc /* specific kind of allocation link, between two Ports.
+        * [source: Capella study]
+        */
+        
+        
+        end allocatedPort:AbstractPort;
+        end allocatingPort:AbstractPort;
+    }
+
+    allocation def ComponentRealization :> CapellaAllocation {
+        doc /* Mediator class between Component elements, representing the realization link between these elements
+        * [source: Capella light-light study]
+        */
+        
+        
+    }
+
+    allocation def ContextInterfaceRealization :> InterfaceAllocation {
+        doc /* an allocation link between an interface at the logical level, and the system-level interface that it realizes
+        * [source: Capella study]
+        */
+        
+        
+    }
+
+    allocation def CoreRunnableMapping :> ComponentFunctionalAllocation {
+        doc /* Details the relation between CpuCore and RunnableEntity */
+        attribute load : Integer {
+            doc /**/
+        }
+        attribute priority : Integer {
+            doc /**/
+        }
+        
+    }
+
+    allocation def DataAccess :> PortAllocation {
+        doc /**/
+        
+        ref attribute targets[0..*] ordered: ConnectionData;
     }
 
     allocation def ExchangeItemAllocation :> ElementExtension {
         doc /* Allocation link between exchange items and interface that support them */
-        attribute id : String {
-            doc /* the unique identifier for this element
-            * [source: Capella study]
-            */
-        }
         attribute isFinal : Boolean {
             doc /* none */
         }
@@ -2967,6 +3535,212 @@ library package ARCADIA {
         ref item allocatedItems[0..1] ordered: ExchangeItem;
         end allocatedItem:ExchangeItem;
         end allocatingInterface:InterfaceItem;
+    }
+
+    allocation def ExchangeItemRealization :> CapellaAllocation {
+        doc /* Allocation link between exchange items and operation(s) of an interface that support them
+        * [source: Capella study]
+        */
+        
+        
+    }
+
+    abstract allocation def ExchangeSpecificationRealization :> CapellaAllocation {
+        doc /* Base class for deriving specific realization links between exchange specifications and the model elements that realize them.
+        * [source: Capella study]
+        */
+        
+        
+    }
+
+    allocation def FunctionRealization :> AbstractFunctionAllocation {
+        doc /* an allocation link between a function, and the function that it realizes
+        * [source: Capella study]
+        */
+        
+        
+    }
+
+    allocation def FunctionalChainRealization :> CapellaAllocation {
+        doc /* an allocation link between two Functional Chains */
+        
+        
+    }
+
+    allocation def FunctionalExchangeRealization :> CapellaAllocation {
+        doc /* a realization link between a functional exchange, and the (typically higher level) functional exchange that it realizes
+        * [source: Capella study]
+        */
+        
+        
+    }
+
+    allocation def InformationRealization :> CapellaAllocation {
+        doc /* Realization link between two information items */
+        
+        
+    }
+
+    allocation def InstanceDeploymentLink :> AbstractDeploymentLink {
+        doc /* link between a physical object and its deployment element
+        * [source: Capella study]
+        */
+        
+        
+    }
+
+    abstract allocation def InterfaceAllocation :> CapellaAllocation {
+        doc /* Mediator class between an Interface and an element that allocates to/from it.
+        * [source: Capella study]
+        */
+        
+        
+    }
+
+    allocation def LogicalArchitectureRealization :> ArchitectureAllocation {
+        doc /* mediator class supporting the implementation of the allocation link between a physical architecture, and the logical architecture(s) that it realizes
+        * [source: Capella study]
+        */
+        
+        
+    }
+
+    allocation def LogicalInterfaceRealization :> InterfaceAllocation {
+        doc /* mediator class supporting the implementation of the allocation link between a physical interface, and the logical interface(s) that it realizes
+        * [source: Capella study]
+        */
+        
+        
+    }
+
+    allocation def OperationAllocation :> CapellaAllocation {
+        doc /* Mediator class supporting the implementation of the allocation link between two Operations
+        * [source: Capella study]
+        */
+        
+        
+    }
+
+    allocation def OperationalAnalysisRealization :> ArchitectureAllocation {
+        doc /* Realization link betwen a system analysis and an operational analysis
+        * [source:Capella study]
+        * 
+        * Realization is a specialized abstraction relationship between two sets of model elements, one representing a specification
+        * (the supplier) and the other represents an implementation of the latter (the client). Realization can be used to model
+        * stepwise refinement, optimizations, transformations, templates, model synthesis, framework composition, etc.
+        * [source:UML superstructure v2.2]
+        */
+        
+        
+    }
+
+    allocation def PartDeploymentLink :> AbstractDeploymentLink {
+        doc /* link between a part and its deployment element */
+        
+        
+        end deployedElement:PhysicalComponent;
+        end location:PhysicalComponent;
+    }
+
+    allocation def PhysicalArchitectureRealization :> ArchitectureAllocation {
+        doc /* Realization link betwen an EPBS architecture and a physical architecture
+        * [source:Capella study]
+        * 
+        * Realization is a specialized abstraction relationship between two sets of model elements, one representing a specification
+        * (the supplier) and the other represents an implementation of the latter (the client). Realization can be used to model
+        * stepwise refinement, optimizations, transformations, templates, model synthesis, framework composition, etc.
+        * [source: UML superstructure v2.2]
+        */
+        
+        
+    }
+
+    allocation def PhysicalArtifactRealization :> CapellaAllocation {
+        doc /* Realization link betwen a Configuration Item and a physical artifact */
+        
+        
+    }
+
+    allocation def PhysicalLinkRealization :> CapellaAllocation {
+        doc /* n/a */
+        
+        
+    }
+
+    allocation def PhysicalPathRealization :> CapellaAllocation {
+        doc /* n/a */
+        
+        
+    }
+
+    allocation def PhysicalPortRealization :> CapellaAllocation {
+        doc /* n/a */
+        
+        
+    }
+
+    allocation def PortAllocation :> CapellaAllocation {
+        doc /* specific kind of allocation link, between two Ports.
+        * [source: Capella study]
+        */
+        
+        
+        end allocatedPort:AbstractPort;
+        end allocatingPort:AbstractPort;
+    }
+
+    allocation def PortRealization :> CapellaAllocation {
+        doc /* a PortRealization is a specific kind of allocation link between two Ports (typically of different design levels, or of different nature)
+        * [source: Capella study]
+        */
+        
+        
+    }
+
+    allocation def RoleAllocation :> CapellaAllocation {
+        doc /* Allocation link between an operational role and an operational entity
+        * [source: Capella study]
+        */
+        
+        
+    }
+
+    allocation def ScenarioRealization :> CapellaAllocation {
+        doc /* an allocation link between a scenario, and the scenario that it realizes */
+        
+        
+    }
+
+    allocation def StateEventRealization :> CapellaAllocation {
+        doc /* a StateEventRealization is a specific kind of realization link between two StateEvent (typically of different design levels, or of different nature)
+        * [source: Capella study]
+        */
+        
+        
+    }
+
+    allocation def StateTransitionRealization :> CapellaAllocation {
+        doc /* a StateTransitionRealization is a specific kind of allocation link between two StateTransitions (typically of different design levels, or of different nature)
+        * [source: Capella study]
+        */
+        
+        
+    }
+
+    allocation def SystemAnalysisRealization :> ArchitectureAllocation {
+        doc /* a realisation link between a system analysis and a logical architecture
+        * [source: Capella study]
+        */
+        
+        
+    }
+
+    allocation def TypeDeploymentLink :> AbstractDeploymentLink {
+        doc /* deployment link between a data type and the model element that deploys it
+        * [source: Capella study]
+        */
+        
+        
     }
 
 
