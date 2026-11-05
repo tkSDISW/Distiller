@@ -149,7 +149,7 @@
             <ownedOperationalActivities xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
                 id="83aa4672-e8f6-4818-95f2-947117aa93d7" name="Use Water"/>
             <ownedOperationalActivities xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-                id="0f42fe23-4571-40bf-8c2a-85fec0858ed2" name="Maintain and Serivce System"/>
+                id="0f42fe23-4571-40bf-8c2a-85fec0858ed2" name="Maintain and Service System"/>
             <ownedOperationalActivities xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
                 id="3054b92d-f5f5-4bc5-ad93-c59d92eac122" name="Install System"/>
             <ownedOperationalActivities xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
@@ -624,7 +624,7 @@
               sourceElement="#78a7e857-4fb1-4e50-bfc6-6af1025c7b12"/>
         </ownedEntities>
         <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="876e28d7-3e33-47e7-84b6-678c73f262b7"
-            name="Deploymeny Personnel" actor="true" human="true">
+            name="Deployment Personnel" actor="true" human="true">
           <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
               id="d94b577d-4edb-4d97-8a32-ce97720349e5" targetElement="#3054b92d-f5f5-4bc5-ad93-c59d92eac122"
               sourceElement="#876e28d7-3e33-47e7-84b6-678c73f262b7"/>
@@ -835,7 +835,7 @@
                 sourceElement="#81f67204-9e0d-4e9a-ad8e-292405c3a9d3"/>
           </ownedFunctionalExchanges>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="31c9484d-7da6-47b5-a0ab-6be7393929f7" name="Maintainance" target="#389537d0-eb08-4792-9355-690ee801ddac"
+              id="31c9484d-7da6-47b5-a0ab-6be7393929f7" name="Maintenance" target="#389537d0-eb08-4792-9355-690ee801ddac"
               source="#04da85ef-d654-466f-b436-16ba71c6b3a6">
             <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
                 id="953c2f35-4aaf-4526-aaab-3d620456d7b4" targetElement="#70a4b5c7-4899-4145-8d1c-1218fc62149e"
@@ -981,7 +981,7 @@
                   sourceElement="#213addae-a25f-4815-9f28-97296107a24b"/>
             </ownedSystemFunctions>
             <ownedSystemFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
-                id="34da1612-55b9-4c2d-96e1-c248406c6fa9" name="Maintain and Serivce System">
+                id="34da1612-55b9-4c2d-96e1-c248406c6fa9" name="Maintain and Service System">
               <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
                   id="04da85ef-d654-466f-b436-16ba71c6b3a6" name="outMaintainance"/>
               <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
@@ -2075,7 +2075,7 @@
               sourceElement="#b613413d-6fdf-4b55-986d-6943332e0521"/>
         </ownedSystemComponents>
         <ownedSystemComponents xsi:type="org.polarsys.capella.core.data.ctx:SystemComponent"
-            id="711dc360-add7-41f5-a7a7-01233e18a7a5" name="Water USer" actor="true"
+            id="711dc360-add7-41f5-a7a7-01233e18a7a5" name="Water User" actor="true"
             human="true">
           <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
               id="c56d4781-7575-4ab4-bee0-ae4914e7c151" targetElement="#87971a35-3a30-4488-bae2-810e31603774"
@@ -2357,7 +2357,7 @@
                 sourceElement="#404da265-10b8-45b6-afe1-37adddb71c71"/>
           </ownedFunctionalExchanges>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="bc9cd606-27ff-4908-b9cf-53309f86348d" name="Maintainance" target="#2e738b3a-10fc-4e90-aa6e-4437b88f010c"
+              id="bc9cd606-27ff-4908-b9cf-53309f86348d" name="Maintenance" target="#2e738b3a-10fc-4e90-aa6e-4437b88f010c"
               source="#f0e01e61-1481-4d90-92ba-d3e0ca6d0a04">
             <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
                 id="e303db2a-1fba-43af-821b-ae1da093a100" targetElement="#31c9484d-7da6-47b5-a0ab-6be7393929f7"
@@ -2606,7 +2606,7 @@
                   sourceElement="#593350ad-48e2-407c-8abb-2912c00515a8"/>
             </ownedLogicalFunctions>
             <ownedLogicalFunctions xsi:type="org.polarsys.capella.core.data.la:LogicalFunction"
-                id="ecd7277e-bc43-4e59-8c28-274d03de985f" name="Maintain and Serivce System">
+                id="ecd7277e-bc43-4e59-8c28-274d03de985f" name="Maintain and Service System">
               <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
                   id="f0e01e61-1481-4d90-92ba-d3e0ca6d0a04" name="outMaintainance">
                 <ownedPortRealizations xsi:type="org.polarsys.capella.core.data.information:PortRealization"
@@ -3403,7 +3403,7 @@
               sourceElement="#91e447c8-67c7-46dc-bad1-385f741314ee"/>
         </ownedLogicalComponents>
         <ownedLogicalComponents xsi:type="org.polarsys.capella.core.data.la:LogicalComponent"
-            id="4a2ee10f-c636-4b4f-afb4-1f2b13ba51cd" name="Water USer" actor="true"
+            id="4a2ee10f-c636-4b4f-afb4-1f2b13ba51cd" name="Water User" actor="true"
             human="true">
           <ownedTraces xsi:type="org.polarsys.capella.core.data.capellacommon:TransfoLink"
               id="33d8b6e7-953f-4220-8c0f-13540b850e69" targetElement="#c56d4781-7575-4ab4-bee0-ae4914e7c151"
@@ -3733,7 +3733,7 @@
                 sourceElement="#d86eee53-1e17-472a-a454-779e07b4c76b"/>
           </ownedFunctionalExchanges>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="39ffbf26-a32f-4c23-a317-101ee271ae8f" name="Maintainance" target="#621e9484-df98-4f39-9857-bed5c466a7e6"
+              id="39ffbf26-a32f-4c23-a317-101ee271ae8f" name="Maintenance" target="#621e9484-df98-4f39-9857-bed5c466a7e6"
               source="#67814301-19a9-40e9-94a7-1609f8d3ce23">
             <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
                 id="485aafca-a893-49e0-941b-3434355b9345" targetElement="#bc9cd606-27ff-4908-b9cf-53309f86348d"
@@ -3954,7 +3954,7 @@
                   sourceElement="#21683378-bce6-477f-bc4c-313ae74ea43b"/>
             </ownedPhysicalFunctions>
             <ownedPhysicalFunctions xsi:type="org.polarsys.capella.core.data.pa:PhysicalFunction"
-                id="45dd6711-f199-4341-b480-f1ff23ba763f" name="Maintain and Serivce System">
+                id="45dd6711-f199-4341-b480-f1ff23ba763f" name="Maintain and Service System">
               <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
                   id="67814301-19a9-40e9-94a7-1609f8d3ce23" name="outMaintainance">
                 <ownedPortRealizations xsi:type="org.polarsys.capella.core.data.information:PortRealization"
@@ -4524,7 +4524,7 @@
               source="#d332e99c-7ccb-4ac8-b779-4af1707df118" target="#54e57a28-d100-470d-8458-e59758fc41d5"
               kind="FLOW"/>
           <ownedComponentExchanges xsi:type="org.polarsys.capella.core.data.fa:ComponentExchange"
-              id="99161e49-e6a0-421d-954a-926fdda252f3" name="Dirt Water Feed" source="#2be03be3-69cc-4b96-8d25-117782a3e1c2"
+              id="99161e49-e6a0-421d-954a-926fdda252f3" name="Dirty Water Feed" source="#2be03be3-69cc-4b96-8d25-117782a3e1c2"
               target="#6aa42781-e835-4f58-9062-f4b74c1f08f3" kind="FLOW">
             <ownedComponentExchangeFunctionalExchangeAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentExchangeFunctionalExchangeAllocation"
                 id="d7b4558c-a380-4ab5-b149-fdf2ceb14aec" targetElement="#4babf37b-7c92-4d8e-b68f-bb3643e0d97c"
@@ -5275,7 +5275,7 @@
               sourceElement="#8a1d15df-7fd5-40ab-a682-3dcfa1c39f18"/>
         </ownedPhysicalComponents>
         <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
-            id="252a19de-cc1d-4897-9639-930a64a425a7" name="Water USer" actor="true"
+            id="252a19de-cc1d-4897-9639-930a64a425a7" name="Water User" actor="true"
             human="true" nature="NODE">
           <ownedTraces xsi:type="org.polarsys.capella.core.data.capellacommon:TransfoLink"
               id="d79c5ae6-6f6d-4eef-853d-7787ab2e5ecf" targetElement="#f0d15466-3152-41a1-bc24-084a4f7ae594"
