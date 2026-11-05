@@ -550,7 +550,7 @@
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="4a696683-460f-496b-8486-fc782ebf2eb5"
             name="Maintenance Personnel" abstractType="#78a7e857-4fb1-4e50-bfc6-6af1025c7b12"/>
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="53cdbb8e-082b-44a3-a527-5909830ad1e6"
-            name="Deploymeny Personnel" abstractType="#876e28d7-3e33-47e7-84b6-678c73f262b7"/>
+            name="Deployment Personnel" abstractType="#876e28d7-3e33-47e7-84b6-678c73f262b7"/>
         <ownedComponentExchanges xsi:type="org.polarsys.capella.core.data.oa:CommunicationMean"
             id="af7891c5-7436-4534-b03e-6a75d6bc6b74" name="Operator Control" source="#a5554521-7541-48e3-9515-99b20e084924"
             target="#94b19c2d-827e-4a2a-9862-dc32e1ef27df">
@@ -1800,7 +1800,7 @@
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="77b61d9c-dd47-4b5a-a462-ccf19c66d440"
             name="Water Distribution System" abstractType="#b613413d-6fdf-4b55-986d-6943332e0521"/>
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="66de44b9-4e31-4e75-afcc-c86f01f011f1"
-            name="Water USer" abstractType="#711dc360-add7-41f5-a7a7-01233e18a7a5"/>
+            name="Water User" abstractType="#711dc360-add7-41f5-a7a7-01233e18a7a5"/>
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="d74be5ef-13bb-4b8d-8591-cd86a2d54d7b"
             name="Waste Management System" abstractType="#152c7606-aafb-4142-b07a-15c70958f7a8"/>
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="eddcb9b0-94f5-4fe3-8085-fe240c2c4edf"
@@ -2912,7 +2912,7 @@
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="8e3bd06f-641c-4546-a43d-f67b20d3b0d9"
             name="Water Distribution System" abstractType="#91e447c8-67c7-46dc-bad1-385f741314ee"/>
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="6384c5d9-6116-4089-a7fb-f75e2f425a31"
-            name="Water USer" abstractType="#4a2ee10f-c636-4b4f-afb4-1f2b13ba51cd"/>
+            name="Water User" abstractType="#4a2ee10f-c636-4b4f-afb4-1f2b13ba51cd"/>
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="7cabd6a1-3236-454a-b043-22f373f03c4a"
             name="Waste Management System" abstractType="#dd444e3c-8338-4e5b-9343-f16dc3434fdf"/>
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="3dd22111-ff9e-4c9f-be38-7b4601b54b4b"
@@ -4355,7 +4355,7 @@
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="07c45558-3817-4b97-83d4-f113c6a86678"
             name="Water Distribution System" abstractType="#8a1d15df-7fd5-40ab-a682-3dcfa1c39f18"/>
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="49dcd966-0044-4de4-b21f-2bc98a592321"
-            name="Water USer" abstractType="#252a19de-cc1d-4897-9639-930a64a425a7"/>
+            name="Water User" abstractType="#252a19de-cc1d-4897-9639-930a64a425a7"/>
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="3392f3ee-ab42-40d5-884a-3b1f2e595101"
             name="Waste Management System" abstractType="#29d79e41-48b5-4503-84af-29958d820f1f"/>
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="8abf5a65-b7f8-409e-872f-04013ef1b9f7"
@@ -4806,7 +4806,11 @@
                   sourceElement="#0ec4d575-6eeb-4ac7-9af6-9ae1d08c7cbf"/>
             </ownedPhysicalLinks>
             <ownedPhysicalLinks xsi:type="org.polarsys.capella.core.data.cs:PhysicalLink"
-                id="7d01eaa0-15e4-4d3b-a8d8-6281604f30a0" name="Drainage Pipe" linkEnds="#3a3ff614-450e-4377-bf40-d305f275ad03 #087cedc5-8c5f-4f02-95c3-a10e3edfe8c6"/>
+                id="7d01eaa0-15e4-4d3b-a8d8-6281604f30a0" name="Drainage Pipe" linkEnds="#3a3ff614-450e-4377-bf40-d305f275ad03 #087cedc5-8c5f-4f02-95c3-a10e3edfe8c6">
+              <ownedComponentExchangeAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentExchangeAllocation"
+                  id="0cd09f33-c332-41a2-81f0-3c591c0d79e2" targetElement="#743ea180-df8f-425e-b272-c8312387b4f3"
+                  sourceElement="#7d01eaa0-15e4-4d3b-a8d8-6281604f30a0"/>
+            </ownedPhysicalLinks>
             <ownedPhysicalLinks xsi:type="org.polarsys.capella.core.data.cs:PhysicalLink"
                 id="16f1f463-4068-4754-b761-c013629c789e" name="Condenser-Splitter Pipe"
                 linkEnds="#595428e6-ed20-49bc-b62c-4e933c616db6 #3fa140a4-d378-4623-81f6-98d0227a0d3e">
@@ -4831,7 +4835,11 @@
                     sourceElement="#e294c4a0-0ae2-42a5-a6aa-fca33142b5e9"/>
               </ownedFeatures>
               <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:PhysicalPort"
-                  id="3a3ff614-450e-4377-bf40-d305f275ad03" name="PP 2"/>
+                  id="3a3ff614-450e-4377-bf40-d305f275ad03" name="PP 2">
+                <ownedComponentPortAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentPortAllocation"
+                    id="baffafdd-d367-4765-9b78-096c5fc6c5a2" targetElement="#2babd4ff-fa78-4da4-8f0b-c952ef861c30"
+                    sourceElement="#3a3ff614-450e-4377-bf40-d305f275ad03"/>
+              </ownedFeatures>
               <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:PhysicalPort"
                   id="751b9ddf-6cff-4992-83da-840fb6e3d778" name="PP 3">
                 <ownedComponentPortAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentPortAllocation"
@@ -4889,7 +4897,11 @@
                 id="4bfb576e-6b2a-48df-a900-d4de7cc8bf39" name="Drain Valve" kind="HARDWARE"
                 nature="NODE">
               <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:PhysicalPort"
-                  id="087cedc5-8c5f-4f02-95c3-a10e3edfe8c6" name="PP 1"/>
+                  id="087cedc5-8c5f-4f02-95c3-a10e3edfe8c6" name="PP 1">
+                <ownedComponentPortAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentPortAllocation"
+                    id="1eca91b6-86ff-414e-b3af-ac25086e1f09" targetElement="#9ba61bba-a632-4c3a-8990-ae8ef795f61a"
+                    sourceElement="#087cedc5-8c5f-4f02-95c3-a10e3edfe8c6"/>
+              </ownedFeatures>
               <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:PhysicalPort"
                   id="110f557a-1330-4807-b22d-81b098f101d2" name="PP 2">
                 <ownedComponentPortAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentPortAllocation"
@@ -5181,7 +5193,11 @@
                 sourceElement="#947c1a4c-d1ee-473a-b46a-0647d70ffef3"/>
           </ownedFeatures>
           <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:PhysicalPort"
-              id="ffb9888b-0a01-4f6c-90c2-78bd5476d0da" name="PP 4"/>
+              id="ffb9888b-0a01-4f6c-90c2-78bd5476d0da" name="PP 4">
+            <ownedComponentPortAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentPortAllocation"
+                id="eee456ee-c3b4-4096-9c68-34aee8e258e6" targetElement="#af864982-aad7-4308-a7ae-6913e16b9dc8"
+                sourceElement="#ffb9888b-0a01-4f6c-90c2-78bd5476d0da"/>
+          </ownedFeatures>
           <ownedComponentRealizations xsi:type="org.polarsys.capella.core.data.cs:ComponentRealization"
               id="b19db3ed-91fc-4513-89c3-03936405dc25" targetElement="#39a38305-7033-45d0-8e66-5be9a03308c7"
               sourceElement="#d0305a2e-3edd-45e3-ab48-16d0f764b2a5"/>
@@ -5275,7 +5291,11 @@
                 sourceElement="#f0ec1afb-b96b-49e5-8f60-20d3780cc9f0"/>
           </ownedFeatures>
           <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:PhysicalPort"
-              id="3501975b-0dd9-49ce-aec3-6bbfc2dbbc66" name="PP 3"/>
+              id="3501975b-0dd9-49ce-aec3-6bbfc2dbbc66" name="PP 3">
+            <ownedComponentPortAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentPortAllocation"
+                id="f39e3e65-a7ef-4d34-ab16-2ed062cd8e83" targetElement="#f0ec1afb-b96b-49e5-8f60-20d3780cc9f0"
+                sourceElement="#3501975b-0dd9-49ce-aec3-6bbfc2dbbc66"/>
+          </ownedFeatures>
           <ownedComponentRealizations xsi:type="org.polarsys.capella.core.data.cs:ComponentRealization"
               id="9e5d924f-0f46-47e1-b0d6-9d51f6a8040d" targetElement="#91e447c8-67c7-46dc-bad1-385f741314ee"
               sourceElement="#8a1d15df-7fd5-40ab-a682-3dcfa1c39f18"/>
@@ -5335,7 +5355,11 @@
                 sourceElement="#a17261a1-46c3-4e45-bbb8-3a83961ea84f"/>
           </ownedFeatures>
           <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:PhysicalPort"
-              id="af867cff-adeb-49e0-89d8-ca993183c7a4" name="PP 2"/>
+              id="af867cff-adeb-49e0-89d8-ca993183c7a4" name="PP 2">
+            <ownedComponentPortAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentPortAllocation"
+                id="283e405b-be19-428f-8f08-d64590c7a74d" targetElement="#a17261a1-46c3-4e45-bbb8-3a83961ea84f"
+                sourceElement="#af867cff-adeb-49e0-89d8-ca993183c7a4"/>
+          </ownedFeatures>
           <ownedComponentRealizations xsi:type="org.polarsys.capella.core.data.cs:ComponentRealization"
               id="6a43e6d8-14b1-4c71-870e-b4c36bf848a3" targetElement="#dd444e3c-8338-4e5b-9343-f16dc3434fdf"
               sourceElement="#29d79e41-48b5-4503-84af-29958d820f1f"/>
