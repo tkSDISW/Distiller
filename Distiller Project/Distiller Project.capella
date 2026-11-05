@@ -807,7 +807,7 @@
           </ownedFunctionalExchanges>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="848c6d70-a521-4e76-b37f-db1f66a7d33f" name="Heating Power" target="#1201b032-d668-4687-8363-b8e30ed0568c"
-              source="#2b29c814-4ee1-4f71-8db9-17620ae32a86" exchangedItems="#d941e294-70b6-4608-9d92-47f0e1632484 #766dbe28-ace1-4567-af3e-02b2449d252a">
+              source="#2b29c814-4ee1-4f71-8db9-17620ae32a86" exchangedItems="#d941e294-70b6-4608-9d92-47f0e1632484">
             <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
                 id="a97c2ffa-c2e5-4a3d-9e2a-b137f6a4e6c1" targetElement="#a11e8a62-4729-4844-8562-bc5bcec732b5"
                 sourceElement="#848c6d70-a521-4e76-b37f-db1f66a7d33f"/>
