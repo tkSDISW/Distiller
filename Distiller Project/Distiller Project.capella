@@ -819,7 +819,7 @@
                 sourceElement="#ac813313-bca0-4595-8f85-f383afb2777d"/>
           </ownedFunctionalExchanges>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="3a30895d-4a5b-4709-8ffe-efaac4190c94" name="Safe Drinking Water"
+              id="3a30895d-4a5b-4709-8ffe-efaac4190c94" name="Stored Safe Drinking Water"
               target="#0a26b90a-1eaa-4b5f-b1c3-671d24a35706" source="#4c7bf946-5b9b-4e70-8f42-54de9202ac7a"
               exchangedItems="#4eadbd5f-a1d0-4538-9f32-e88a18f0a7ce">
             <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
@@ -827,7 +827,7 @@
                 sourceElement="#3a30895d-4a5b-4709-8ffe-efaac4190c94"/>
           </ownedFunctionalExchanges>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="81f67204-9e0d-4e9a-ad8e-292405c3a9d3" name="Safe Drinking Water"
+              id="81f67204-9e0d-4e9a-ad8e-292405c3a9d3" name="Delivered Safe Drinking Water"
               target="#23747ed5-590f-4f72-bee5-e01ded5f0934" source="#69bcc13f-dca9-48ac-9d35-1ef04a153f68"
               exchangedItems="#4eadbd5f-a1d0-4538-9f32-e88a18f0a7ce">
             <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
@@ -2341,7 +2341,7 @@
                 sourceElement="#495e683d-7b8f-4673-bf53-f31463b9f382"/>
           </ownedFunctionalExchanges>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="efb66b4c-a4a6-418e-81c0-add5fe6b5ca1" name="Safe Drinking Water"
+              id="efb66b4c-a4a6-418e-81c0-add5fe6b5ca1" name="Stored Safe Drinking Water"
               target="#9f321dda-e172-42cc-a11f-9a09cb9c09ed" source="#d6fd5c43-a245-45b4-a1e5-8fd7e2339251"
               exchangedItems="#4eadbd5f-a1d0-4538-9f32-e88a18f0a7ce">
             <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
@@ -2349,7 +2349,7 @@
                 sourceElement="#efb66b4c-a4a6-418e-81c0-add5fe6b5ca1"/>
           </ownedFunctionalExchanges>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="404da265-10b8-45b6-afe1-37adddb71c71" name="Safe Drinking Water"
+              id="404da265-10b8-45b6-afe1-37adddb71c71" name="Delivered Safe Drinking Water"
               target="#f91d98b1-d08b-48d2-8b3a-22bdbcd9aa12" source="#8995ba7b-a1c5-4c6c-a994-afa53a62bddc"
               exchangedItems="#4eadbd5f-a1d0-4538-9f32-e88a18f0a7ce">
             <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
@@ -2407,16 +2407,16 @@
           </ownedFunctionalExchanges>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="f63dc13b-839b-4a06-863a-bf7302dd583f" sid="f63dc13b-839b-4a06-863a-bf7302dd583f"
-              name="Hot Water" target="#69a6820f-8dd2-44ce-a1cf-14cc0353cf8e" source="#18eb543c-b736-4e31-83f7-f24f33b3ab18"
-              exchangedItems="#b90a6c0a-7c54-4243-b241-b6db3b28eddf">
+              name="Heated Dirty Water" target="#69a6820f-8dd2-44ce-a1cf-14cc0353cf8e"
+              source="#18eb543c-b736-4e31-83f7-f24f33b3ab18" exchangedItems="#b90a6c0a-7c54-4243-b241-b6db3b28eddf">
             <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
                 id="4bc80193-15d6-4389-98de-c3b1eac82d48" targetElement="#7e19530c-f0f6-4f68-a246-25a824431ce4"
                 sourceElement="#f63dc13b-839b-4a06-863a-bf7302dd583f"/>
           </ownedFunctionalExchanges>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="fabaeebd-3e11-4d73-913e-cc9d62e3caca" sid="fabaeebd-3e11-4d73-913e-cc9d62e3caca"
-              name="Hot Water" target="#49c5ac52-2e74-4cbc-86f8-362367c1d53a" source="#fa51849a-fc51-46f3-a723-8c4afd704747"
-              exchangedItems="#b90a6c0a-7c54-4243-b241-b6db3b28eddf">
+              name="Hot Dirty Water" target="#49c5ac52-2e74-4cbc-86f8-362367c1d53a"
+              source="#fa51849a-fc51-46f3-a723-8c4afd704747" exchangedItems="#b90a6c0a-7c54-4243-b241-b6db3b28eddf">
             <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
                 id="4c293b22-dd36-45bf-a6a4-ca37b4dc4be6" targetElement="#7e19530c-f0f6-4f68-a246-25a824431ce4"
                 sourceElement="#fabaeebd-3e11-4d73-913e-cc9d62e3caca"/>
@@ -2590,8 +2590,8 @@
                     sourceElement="#c3e29f93-3cee-4a6b-9ad0-9c908cc84506"/>
               </ownedFunctionalExchanges>
               <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-                  id="ee872da7-9446-4409-90e3-ee56f5e9292c" name="HotDirtyWater" target="#49c5ac52-2e74-4cbc-86f8-362367c1d53a"
-                  source="#18eb543c-b736-4e31-83f7-f24f33b3ab18"/>
+                  id="ee872da7-9446-4409-90e3-ee56f5e9292c" name="Hot Dirty Water"
+                  target="#49c5ac52-2e74-4cbc-86f8-362367c1d53a" source="#18eb543c-b736-4e31-83f7-f24f33b3ab18"/>
             </ownedLogicalFunctions>
             <ownedLogicalFunctions xsi:type="org.polarsys.capella.core.data.la:LogicalFunction"
                 id="593350ad-48e2-407c-8abb-2912c00515a8" name="Allow maintenance and service">
@@ -3714,7 +3714,7 @@
                 sourceElement="#4689b116-bb9c-4af2-a3ca-935679587f3b"/>
           </ownedFunctionalExchanges>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="d9cee39d-3bed-49ed-bc4c-f01c6560681a" name="Safe Drinking Water"
+              id="d9cee39d-3bed-49ed-bc4c-f01c6560681a" name="Stored Safe Drinking Water"
               target="#82a3965d-22fb-4f70-845c-5a0c8e57130e" source="#2a233698-4a98-4606-8b4f-186b99c15e30"
               exchangedItems="#4eadbd5f-a1d0-4538-9f32-e88a18f0a7ce">
             <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
@@ -3725,7 +3725,7 @@
               id="406cefff-802f-442d-8f92-ac38277f7136" name="Waste" target="#ff99dea9-94cc-4717-b7d7-440dd8438d04"
               source="#8d37ea6f-a96b-4183-a51b-62218edd0f89" exchangedItems="#2c59e714-4169-40fd-937e-e2cd350a0a01"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="d86eee53-1e17-472a-a454-779e07b4c76b" name="Safe Drinking Water"
+              id="d86eee53-1e17-472a-a454-779e07b4c76b" name="Delivered Safe Drinking Water"
               target="#ce93ed2e-2d88-41d2-a651-ada393f8e37e" source="#1a77c3a8-3acc-48f7-bd7e-8963df0e2202"
               exchangedItems="#4eadbd5f-a1d0-4538-9f32-e88a18f0a7ce">
             <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
