@@ -16,7 +16,7 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']"/>
         <target xmi:type="org.polarsys.capella.core.data.pa:PhysicalComponent" href="Distiller%20Project.capella#9c03a89f-fac4-43c3-879c-a66ebedf2414"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_sBtbsMx-EeqJDepFiRMcVQ" name="[PAB] Distiller Physical Architecture - physical links" repPath="#_sBXdccx-EeqJDepFiRMcVQ" changeId="1776180542743">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_sBtbsMx-EeqJDepFiRMcVQ" name="[PAB] Distiller Physical Architecture - physical links" repPath="#_sBXdccx-EeqJDepFiRMcVQ" changeId="1793911763135">
         <eAnnotations xmi:type="description:DAnnotation" uid="_sBXdcMx-EeqJDepFiRMcVQ" source="https://www.polarsys.org/capella/dannotation/DesactivatedFilters">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Jim7IjWOEeymMJ0A1Kqc5A" key="hide.computed.component.exchanges.filter" value="true"/>
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Jim7IzWOEeymMJ0A1Kqc5A" key="hide.computed.physical.links.filter" value="true"/>
@@ -100,7 +100,7 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/logical.odesign#//@ownedViewpoints[name='Logical%20Architecture']/@ownedRepresentations[name='Logical%20Architecture%20Blank']"/>
         <target xmi:type="org.polarsys.capella.core.data.la:LogicalComponent" href="Distiller%20Project.capella#5cfbda98-dcad-4d7f-8423-34b6f0692447"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_mKNbUMtWEeq9hthM_6BjLw" name="[LAB] Distiller Logical System - refined" repPath="#_mKB1IctWEeq9hthM_6BjLw" changeId="1793909753657">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_mKNbUMtWEeq9hthM_6BjLw" name="[LAB] Distiller Logical System - refined" repPath="#_mKB1IctWEeq9hthM_6BjLw" changeId="1793910684057">
         <eAnnotations xmi:type="description:DAnnotation" uid="_mKB1IMtWEeq9hthM_6BjLw" source="https://www.polarsys.org/capella/dannotation/DesactivatedFilters">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JiniMDWOEeymMJ0A1Kqc5A" key="hide.computed.component.exchanges.filter" value="true"/>
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JiniMTWOEeymMJ0A1Kqc5A" key="hide.computed.physical.links.filter" value="true"/>
@@ -169,7 +169,7 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/context.odesign#//@ownedViewpoints[name='System%20Analysis']/@ownedRepresentations[name='System%20Architecture%20Blank']"/>
         <target xmi:type="org.polarsys.capella.core.data.ctx:SystemComponent" href="Distiller%20Project.capella#d31ae82d-04dd-4807-885d-52fc30673887"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_-hCQ0MxJEeqKgOTRMsIF7g" name="[SAB] Distiller System - with requirements" repPath="#_-gzAQMxJEeqKgOTRMsIF7g" changeId="1776180542743">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_-hCQ0MxJEeqKgOTRMsIF7g" name="[SAB] Distiller System - with requirements" repPath="#_-gzAQMxJEeqKgOTRMsIF7g" changeId="1793911465747">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/context.odesign#//@ownedViewpoints[name='System%20Analysis']/@ownedRepresentations[name='System%20Architecture%20Blank']"/>
         <target xmi:type="org.polarsys.capella.core.data.ctx:SystemComponent" href="Distiller%20Project.capella#d31ae82d-04dd-4807-885d-52fc30673887"/>
       </ownedRepresentationDescriptors>
@@ -177,7 +177,7 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/context.odesign#//@ownedViewpoints[name='System%20Analysis']/@ownedRepresentations[name='System%20Architecture%20Blank']"/>
         <target xmi:type="org.polarsys.capella.core.data.ctx:SystemComponent" href="Distiller%20Project.capella#d31ae82d-04dd-4807-885d-52fc30673887"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_EumdgMzSEeqBnr1AZ3DERg" name="[SAB] Distiller System" repPath="#_EuaQQMzSEeqBnr1AZ3DERg" changeId="1776180542743">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_EumdgMzSEeqBnr1AZ3DERg" name="[SAB] Distiller System" repPath="#_EuaQQMzSEeqBnr1AZ3DERg" changeId="1793910684057">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/context.odesign#//@ownedViewpoints[name='System%20Analysis']/@ownedRepresentations[name='System%20Architecture%20Blank']"/>
         <target xmi:type="org.polarsys.capella.core.data.ctx:SystemComponent" href="Distiller%20Project.capella#d31ae82d-04dd-4807-885d-52fc30673887"/>
       </ownedRepresentationDescriptors>
@@ -20285,7 +20285,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/logical.odesign#//@ownedViewpoints[name='Logical%20Architecture']/@ownedRepresentations[name='Logical%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='LAB%20DataFlow%20between%20Function']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KiMBEd0aEe-Ji-BL19tYrg" name="Boiler Heat Control" sourceNode="_KiHvld0aEe-Ji-BL19tYrg" targetNode="_KiCQA90aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KiMBEd0aEe-Ji-BL19tYrg" name="Boiler Heat" sourceNode="_KiHvld0aEe-Ji-BL19tYrg" targetNode="_KiCQA90aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
       <target xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#e062898a-9114-495b-9505-4e71046a16b7"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#e062898a-9114-495b-9505-4e71046a16b7"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalChain" href="Distiller%20Project.capella#0ba89261-3c27-474a-81fe-bc7a661f18c5"/>
@@ -31146,87 +31146,6 @@
           <styles xmi:type="notation:ShapeStyle" xmi:id="_-g5vkcxJEeqKgOTRMsIF7g" fontName="Segoe UI" fontHeight="8"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-g5vksxJEeqKgOTRMsIF7g" x="840" y="54" width="20" height="20"/>
         </children>
-        <children xmi:type="notation:Node" xmi:id="_-g5vk8xJEeqKgOTRMsIF7g" visible="false" type="2003" element="_-g3Ry8xJEeqKgOTRMsIF7g">
-          <children xmi:type="notation:Node" xmi:id="_-g5vlMxJEeqKgOTRMsIF7g" type="5007"/>
-          <children xmi:type="notation:Node" xmi:id="_-g5vlcxJEeqKgOTRMsIF7g" type="7004">
-            <styles xmi:type="notation:SortingStyle" xmi:id="_-g5vmcxJEeqKgOTRMsIF7g"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_-g5vmsxJEeqKgOTRMsIF7g"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_-g5vm8xJEeqKgOTRMsIF7g" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-g5vnMxJEeqKgOTRMsIF7g" x="340" y="54" width="109" height="49"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_-g5vncxJEeqKgOTRMsIF7g" visible="false" type="2003" element="_-g3R0sxJEeqKgOTRMsIF7g">
-          <children xmi:type="notation:Node" xmi:id="_-g5vnsxJEeqKgOTRMsIF7g" type="5007"/>
-          <children xmi:type="notation:Node" xmi:id="_-g5vn8xJEeqKgOTRMsIF7g" type="7004">
-            <styles xmi:type="notation:SortingStyle" xmi:id="_-g5vo8xJEeqKgOTRMsIF7g"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_-g5vpMxJEeqKgOTRMsIF7g"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_-g5vpcxJEeqKgOTRMsIF7g" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-g5vpsxJEeqKgOTRMsIF7g" x="880" y="500" width="109" height="49"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_-g5vp8xJEeqKgOTRMsIF7g" visible="false" type="2003" element="_-g3R1sxJEeqKgOTRMsIF7g">
-          <children xmi:type="notation:Node" xmi:id="_-g5vqMxJEeqKgOTRMsIF7g" type="5007"/>
-          <children xmi:type="notation:Node" xmi:id="_-g5vqcxJEeqKgOTRMsIF7g" type="7004">
-            <styles xmi:type="notation:SortingStyle" xmi:id="_-g5vrcxJEeqKgOTRMsIF7g"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_-g5vrsxJEeqKgOTRMsIF7g"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_-g5vr8xJEeqKgOTRMsIF7g" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-g5vsMxJEeqKgOTRMsIF7g" x="690" y="490" width="109" height="49"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_-g5vscxJEeqKgOTRMsIF7g" visible="false" type="2003" element="_-g3R4MxJEeqKgOTRMsIF7g">
-          <children xmi:type="notation:Node" xmi:id="_-g5vssxJEeqKgOTRMsIF7g" type="5007"/>
-          <children xmi:type="notation:Node" xmi:id="_-g5vs8xJEeqKgOTRMsIF7g" type="7004">
-            <styles xmi:type="notation:SortingStyle" xmi:id="_-g5vt8xJEeqKgOTRMsIF7g"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_-g5vuMxJEeqKgOTRMsIF7g"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_-g5vucxJEeqKgOTRMsIF7g" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-g5vusxJEeqKgOTRMsIF7g" x="1050" y="483" width="154" height="63"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_-g5vu8xJEeqKgOTRMsIF7g" visible="false" type="2003" element="_-g3R58xJEeqKgOTRMsIF7g">
-          <children xmi:type="notation:Node" xmi:id="_-g5vvMxJEeqKgOTRMsIF7g" type="5007"/>
-          <children xmi:type="notation:Node" xmi:id="_-g5vvcxJEeqKgOTRMsIF7g" type="7004">
-            <styles xmi:type="notation:SortingStyle" xmi:id="_-g5vwcxJEeqKgOTRMsIF7g"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_-g5vwsxJEeqKgOTRMsIF7g"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_-g5vw8xJEeqKgOTRMsIF7g" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-g5vxMxJEeqKgOTRMsIF7g" x="1330" width="143" height="57"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_-g5vxcxJEeqKgOTRMsIF7g" visible="false" type="2003" element="_-g3R7sxJEeqKgOTRMsIF7g">
-          <children xmi:type="notation:Node" xmi:id="_-g5vxsxJEeqKgOTRMsIF7g" type="5007"/>
-          <children xmi:type="notation:Node" xmi:id="_-g6VAMxJEeqKgOTRMsIF7g" type="7004">
-            <styles xmi:type="notation:SortingStyle" xmi:id="_-g6VBMxJEeqKgOTRMsIF7g"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_-g6VBcxJEeqKgOTRMsIF7g"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_-g6VBsxJEeqKgOTRMsIF7g" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-g6VB8xJEeqKgOTRMsIF7g" x="420" y="483"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_-g6VCMxJEeqKgOTRMsIF7g" visible="false" type="2003" element="_-g3R9cxJEeqKgOTRMsIF7g">
-          <children xmi:type="notation:Node" xmi:id="_-g6VCcxJEeqKgOTRMsIF7g" type="5007"/>
-          <children xmi:type="notation:Node" xmi:id="_-g6VCsxJEeqKgOTRMsIF7g" type="7004">
-            <styles xmi:type="notation:SortingStyle" xmi:id="_-g6VDsxJEeqKgOTRMsIF7g"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_-g6VD8xJEeqKgOTRMsIF7g"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_-g6VEMxJEeqKgOTRMsIF7g" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-g6VEcxJEeqKgOTRMsIF7g" x="190" y="490"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_-g6VEsxJEeqKgOTRMsIF7g" visible="false" type="2003" element="_-g3R_MxJEeqKgOTRMsIF7g">
-          <children xmi:type="notation:Node" xmi:id="_-g6VE8xJEeqKgOTRMsIF7g" type="5007"/>
-          <children xmi:type="notation:Node" xmi:id="_-g6VFMxJEeqKgOTRMsIF7g" type="7004">
-            <styles xmi:type="notation:SortingStyle" xmi:id="_-g6VGMxJEeqKgOTRMsIF7g"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_-g6VGcxJEeqKgOTRMsIF7g"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_-g6VGsxJEeqKgOTRMsIF7g" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-g6VG8xJEeqKgOTRMsIF7g" x="480" width="123" height="63"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_-g6VHMxJEeqKgOTRMsIF7g" visible="false" type="2003" element="_-g3SA8xJEeqKgOTRMsIF7g">
-          <children xmi:type="notation:Node" xmi:id="_-g6VHcxJEeqKgOTRMsIF7g" type="5007"/>
-          <children xmi:type="notation:Node" xmi:id="_-g6VHsxJEeqKgOTRMsIF7g" type="7004">
-            <styles xmi:type="notation:SortingStyle" xmi:id="_-g6VIsxJEeqKgOTRMsIF7g"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_-g6VI8xJEeqKgOTRMsIF7g"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_-g6VJMxJEeqKgOTRMsIF7g" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-g6VJcxJEeqKgOTRMsIF7g" x="635" y="4" width="118" height="59"/>
-        </children>
         <children xmi:type="notation:Node" xmi:id="_nfvBoM24Eeqjo-bn_5WkJg" type="2001" element="_nbCH0M24Eeqjo-bn_5WkJg">
           <children xmi:type="notation:Node" xmi:id="_nfvBo824Eeqjo-bn_5WkJg" type="5002">
             <layoutConstraint xmi:type="notation:Location" xmi:id="_nfvBpM24Eeqjo-bn_5WkJg" y="5"/>
@@ -32486,7 +32405,7 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/context.odesign#//@ownedViewpoints[name='System%20Analysis']/@ownedRepresentations[name='System%20Architecture%20Blank']/@defaultLayer/@containerMappings[name='System%20Actors']/@subNodeMappings[name='CA%20System%20Function']"/>
       </ownedDiagramElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_-g2q_MxJEeqKgOTRMsIF7g" name="Water USer">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_-g2q_MxJEeqKgOTRMsIF7g" name="Water User">
       <target xmi:type="org.polarsys.capella.core.data.cs:Part" href="Distiller%20Project.capella#66de44b9-4e31-4e75-afcc-c86f01f011f1"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.cs:Part" href="Distiller%20Project.capella#66de44b9-4e31-4e75-afcc-c86f01f011f1"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.ctx:SystemComponent" href="Distiller%20Project.capella#711dc360-add7-41f5-a7a7-01233e18a7a5"/>
@@ -32586,105 +32505,6 @@
         <description xmi:type="style:SquareDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/context.odesign#//@ownedViewpoints[name='System%20Analysis']/@ownedRepresentations[name='System%20Architecture%20Blank']/@defaultLayer/@nodeMappings[name='CA_FunctionalChainEnd']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/context.odesign#//@ownedViewpoints[name='System%20Analysis']/@ownedRepresentations[name='System%20Architecture%20Blank']/@defaultLayer/@nodeMappings[name='CA_FunctionalChainEnd']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_-g3Ry8xJEeqKgOTRMsIF7g" visible="false">
-      <target xmi:type="Requirements:Requirement" href="Distiller%20Project.capella#3dc33bf1-6eb9-4902-a886-ec67a7599e3a"/>
-      <semanticElements xmi:type="Requirements:Requirement" href="Distiller%20Project.capella#3dc33bf1-6eb9-4902-a886-ec67a7599e3a"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_-g3RzMxJEeqKgOTRMsIF7g" borderSize="1" borderSizeComputationExpression="1" borderColor="114,73,110" backgroundColor="217,196,215" foregroundColor="217,196,215">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.polarsys.capella.vp.requirements.design/description/CapellaRequirements.odesign#//@ownedViewpoints[name='CapellaRequirements_ID']/@ownedRepresentationExtensions[name='CapellaViewpoints']/@layers[name='ReqVP_Requirements_Layer']/@containerMappings[name='ReqVP_Requirement']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.polarsys.capella.vp.requirements.design/description/CapellaRequirements.odesign#//@ownedViewpoints[name='CapellaRequirements_ID']/@ownedRepresentationExtensions[name='CapellaViewpoints']/@layers[name='ReqVP_Requirements_Layer']/@containerMappings[name='ReqVP_Requirement']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_-g3R0sxJEeqKgOTRMsIF7g" visible="false">
-      <target xmi:type="Requirements:Requirement" href="Distiller%20Project.capella#732ae3c3-322a-419f-a355-1a09ea22f3d3"/>
-      <semanticElements xmi:type="Requirements:Requirement" href="Distiller%20Project.capella#732ae3c3-322a-419f-a355-1a09ea22f3d3"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_-g3R08xJEeqKgOTRMsIF7g" borderSize="1" borderSizeComputationExpression="1" borderColor="114,73,110" backgroundColor="217,196,215" foregroundColor="217,196,215">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.polarsys.capella.vp.requirements.design/description/CapellaRequirements.odesign#//@ownedViewpoints[name='CapellaRequirements_ID']/@ownedRepresentationExtensions[name='CapellaViewpoints']/@layers[name='ReqVP_Requirements_Layer']/@containerMappings[name='ReqVP_Requirement']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.polarsys.capella.vp.requirements.design/description/CapellaRequirements.odesign#//@ownedViewpoints[name='CapellaRequirements_ID']/@ownedRepresentationExtensions[name='CapellaViewpoints']/@layers[name='ReqVP_Requirements_Layer']/@containerMappings[name='ReqVP_Requirement']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_-g3R1sxJEeqKgOTRMsIF7g" visible="false">
-      <target xmi:type="Requirements:Requirement" href="Distiller%20Project.capella#bf307458-d3f2-4094-a55a-73f94cf1970e"/>
-      <semanticElements xmi:type="Requirements:Requirement" href="Distiller%20Project.capella#bf307458-d3f2-4094-a55a-73f94cf1970e"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_-g3R18xJEeqKgOTRMsIF7g" borderSize="1" borderSizeComputationExpression="1" borderColor="114,73,110" backgroundColor="217,196,215" foregroundColor="217,196,215">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.polarsys.capella.vp.requirements.design/description/CapellaRequirements.odesign#//@ownedViewpoints[name='CapellaRequirements_ID']/@ownedRepresentationExtensions[name='CapellaViewpoints']/@layers[name='ReqVP_Requirements_Layer']/@containerMappings[name='ReqVP_Requirement']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.polarsys.capella.vp.requirements.design/description/CapellaRequirements.odesign#//@ownedViewpoints[name='CapellaRequirements_ID']/@ownedRepresentationExtensions[name='CapellaViewpoints']/@layers[name='ReqVP_Requirements_Layer']/@containerMappings[name='ReqVP_Requirement']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_-g3R4MxJEeqKgOTRMsIF7g" visible="false">
-      <target xmi:type="Requirements:Requirement" href="Distiller%20Project.capella#1d91fc62-3cc8-49fe-9fea-57426085e1ea"/>
-      <semanticElements xmi:type="Requirements:Requirement" href="Distiller%20Project.capella#1d91fc62-3cc8-49fe-9fea-57426085e1ea"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_-g3R4cxJEeqKgOTRMsIF7g" borderSize="1" borderSizeComputationExpression="1" borderColor="114,73,110" backgroundColor="217,196,215" foregroundColor="217,196,215">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.polarsys.capella.vp.requirements.design/description/CapellaRequirements.odesign#//@ownedViewpoints[name='CapellaRequirements_ID']/@ownedRepresentationExtensions[name='CapellaViewpoints']/@layers[name='ReqVP_Requirements_Layer']/@containerMappings[name='ReqVP_Requirement']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.polarsys.capella.vp.requirements.design/description/CapellaRequirements.odesign#//@ownedViewpoints[name='CapellaRequirements_ID']/@ownedRepresentationExtensions[name='CapellaViewpoints']/@layers[name='ReqVP_Requirements_Layer']/@containerMappings[name='ReqVP_Requirement']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_-g3R58xJEeqKgOTRMsIF7g" visible="false">
-      <target xmi:type="Requirements:Requirement" href="Distiller%20Project.capella#48a83190-83e4-412c-819c-4afcff0c2038"/>
-      <semanticElements xmi:type="Requirements:Requirement" href="Distiller%20Project.capella#48a83190-83e4-412c-819c-4afcff0c2038"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_-g3R6MxJEeqKgOTRMsIF7g" borderSize="1" borderSizeComputationExpression="1" borderColor="114,73,110" backgroundColor="217,196,215" foregroundColor="217,196,215">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.polarsys.capella.vp.requirements.design/description/CapellaRequirements.odesign#//@ownedViewpoints[name='CapellaRequirements_ID']/@ownedRepresentationExtensions[name='CapellaViewpoints']/@layers[name='ReqVP_Requirements_Layer']/@containerMappings[name='ReqVP_Requirement']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.polarsys.capella.vp.requirements.design/description/CapellaRequirements.odesign#//@ownedViewpoints[name='CapellaRequirements_ID']/@ownedRepresentationExtensions[name='CapellaViewpoints']/@layers[name='ReqVP_Requirements_Layer']/@containerMappings[name='ReqVP_Requirement']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_-g3R7sxJEeqKgOTRMsIF7g" visible="false">
-      <target xmi:type="Requirements:Requirement" href="Distiller%20Project.capella#79614c9b-8efb-491e-a177-0fd78981a79a"/>
-      <semanticElements xmi:type="Requirements:Requirement" href="Distiller%20Project.capella#79614c9b-8efb-491e-a177-0fd78981a79a"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_-g3R78xJEeqKgOTRMsIF7g" borderSize="1" borderSizeComputationExpression="1" borderColor="114,73,110" backgroundColor="217,196,215" foregroundColor="217,196,215">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.polarsys.capella.vp.requirements.design/description/CapellaRequirements.odesign#//@ownedViewpoints[name='CapellaRequirements_ID']/@ownedRepresentationExtensions[name='CapellaViewpoints']/@layers[name='ReqVP_Requirements_Layer']/@containerMappings[name='ReqVP_Requirement']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.polarsys.capella.vp.requirements.design/description/CapellaRequirements.odesign#//@ownedViewpoints[name='CapellaRequirements_ID']/@ownedRepresentationExtensions[name='CapellaViewpoints']/@layers[name='ReqVP_Requirements_Layer']/@containerMappings[name='ReqVP_Requirement']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_-g3R9cxJEeqKgOTRMsIF7g" visible="false">
-      <target xmi:type="Requirements:Requirement" href="Distiller%20Project.capella#879a20eb-1911-43d5-82a3-bce7269ee63f"/>
-      <semanticElements xmi:type="Requirements:Requirement" href="Distiller%20Project.capella#879a20eb-1911-43d5-82a3-bce7269ee63f"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_-g3R9sxJEeqKgOTRMsIF7g" borderSize="1" borderSizeComputationExpression="1" borderColor="114,73,110" backgroundColor="217,196,215" foregroundColor="217,196,215">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.polarsys.capella.vp.requirements.design/description/CapellaRequirements.odesign#//@ownedViewpoints[name='CapellaRequirements_ID']/@ownedRepresentationExtensions[name='CapellaViewpoints']/@layers[name='ReqVP_Requirements_Layer']/@containerMappings[name='ReqVP_Requirement']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.polarsys.capella.vp.requirements.design/description/CapellaRequirements.odesign#//@ownedViewpoints[name='CapellaRequirements_ID']/@ownedRepresentationExtensions[name='CapellaViewpoints']/@layers[name='ReqVP_Requirements_Layer']/@containerMappings[name='ReqVP_Requirement']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_-g3R_MxJEeqKgOTRMsIF7g" visible="false">
-      <target xmi:type="Requirements:Requirement" href="Distiller%20Project.capella#82aade05-fc77-4420-8509-6fc78384a792"/>
-      <semanticElements xmi:type="Requirements:Requirement" href="Distiller%20Project.capella#82aade05-fc77-4420-8509-6fc78384a792"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_-g3R_cxJEeqKgOTRMsIF7g" borderSize="1" borderSizeComputationExpression="1" borderColor="114,73,110" backgroundColor="217,196,215" foregroundColor="217,196,215">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.polarsys.capella.vp.requirements.design/description/CapellaRequirements.odesign#//@ownedViewpoints[name='CapellaRequirements_ID']/@ownedRepresentationExtensions[name='CapellaViewpoints']/@layers[name='ReqVP_Requirements_Layer']/@containerMappings[name='ReqVP_Requirement']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.polarsys.capella.vp.requirements.design/description/CapellaRequirements.odesign#//@ownedViewpoints[name='CapellaRequirements_ID']/@ownedRepresentationExtensions[name='CapellaViewpoints']/@layers[name='ReqVP_Requirements_Layer']/@containerMappings[name='ReqVP_Requirement']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_-g3SA8xJEeqKgOTRMsIF7g" visible="false">
-      <target xmi:type="Requirements:Requirement" href="Distiller%20Project.capella#432641ca-143f-4317-a488-9502a63a7355"/>
-      <semanticElements xmi:type="Requirements:Requirement" href="Distiller%20Project.capella#432641ca-143f-4317-a488-9502a63a7355"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_-g3SBMxJEeqKgOTRMsIF7g" borderSize="1" borderSizeComputationExpression="1" borderColor="114,73,110" backgroundColor="217,196,215" foregroundColor="217,196,215">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.polarsys.capella.vp.requirements.design/description/CapellaRequirements.odesign#//@ownedViewpoints[name='CapellaRequirements_ID']/@ownedRepresentationExtensions[name='CapellaViewpoints']/@layers[name='ReqVP_Requirements_Layer']/@containerMappings[name='ReqVP_Requirement']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.polarsys.capella.vp.requirements.design/description/CapellaRequirements.odesign#//@ownedViewpoints[name='CapellaRequirements_ID']/@ownedRepresentationExtensions[name='CapellaViewpoints']/@layers[name='ReqVP_Requirements_Layer']/@containerMappings[name='ReqVP_Requirement']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_nbCH0M24Eeqjo-bn_5WkJg" width="10" height="5" resizeKind="NSEW">
       <target xmi:type="org.polarsys.capella.core.data.capellacore:Constraint" href="Distiller%20Project.capella#f5f107ad-ed4b-4a9d-9e16-73053ad98775"/>
@@ -33020,6 +32840,7 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KsEVzN0aEe-Ji-BL19tYrg" name="Water Supply" sourceNode="_Kr9oF90aEe-Ji-BL19tYrg" targetNode="_Kr_dTd0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
       <target xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#547d85ad-580b-4bc2-9bec-9b50ae8b362e"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#547d85ad-580b-4bc2-9bec-9b50ae8b362e"/>
+      <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalChain" href="Distiller%20Project.capella#a85c9767-92fc-48c8-a159-f8bccd8875fd"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KsE81N0aEe-Ji-BL19tYrg" description="_KsE80N0aEe-Ji-BL19tYrg" targetArrow="NoDecoration" size="4" centered="Both" strokeColor="24,114,248">
         <customFeatures>strokeColor</customFeatures>
         <customFeatures>size</customFeatures>
@@ -33029,9 +32850,10 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/context.odesign#//@ownedViewpoints[name='System%20Analysis']/@ownedRepresentations[name='System%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='CA%20DataFlow%20between%20Function']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KsE83N0aEe-Ji-BL19tYrg" name="Heat Supply" sourceNode="_Kr9oG90aEe-Ji-BL19tYrg" targetNode="_Kr-2Nd0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KsE83N0aEe-Ji-BL19tYrg" name="Power Supply Control" sourceNode="_Kr9oG90aEe-Ji-BL19tYrg" targetNode="_Kr-2Nd0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
       <target xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#a54a5555-e490-4b1b-84e2-a4daf665e64e"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#a54a5555-e490-4b1b-84e2-a4daf665e64e"/>
+      <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalChain" href="Distiller%20Project.capella#a85c9767-92fc-48c8-a159-f8bccd8875fd"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KsFj4N0aEe-Ji-BL19tYrg" description="_KsE80N0aEe-Ji-BL19tYrg" targetArrow="NoDecoration" size="4" centered="Both" strokeColor="24,114,248">
         <customFeatures>strokeColor</customFeatures>
         <customFeatures>size</customFeatures>
@@ -33061,9 +32883,10 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/context.odesign#//@ownedViewpoints[name='System%20Analysis']/@ownedRepresentations[name='System%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='CA%20DataFlow%20between%20Function']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KsGK8N0aEe-Ji-BL19tYrg" name="Safe Drinking Water" sourceNode="_KsAraN0aEe-Ji-BL19tYrg" targetNode="_KsArbN0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KsGK8N0aEe-Ji-BL19tYrg" name="Stored Safe Drinking Water" sourceNode="_KsAraN0aEe-Ji-BL19tYrg" targetNode="_KsArbN0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
       <target xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#3a30895d-4a5b-4709-8ffe-efaac4190c94"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#3a30895d-4a5b-4709-8ffe-efaac4190c94"/>
+      <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalChain" href="Distiller%20Project.capella#a85c9767-92fc-48c8-a159-f8bccd8875fd"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KsGK8d0aEe-Ji-BL19tYrg" description="_KsE80N0aEe-Ji-BL19tYrg" targetArrow="NoDecoration" size="4" centered="Both" strokeColor="24,114,248">
         <customFeatures>strokeColor</customFeatures>
         <customFeatures>size</customFeatures>
@@ -33073,9 +32896,10 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/context.odesign#//@ownedViewpoints[name='System%20Analysis']/@ownedRepresentations[name='System%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='CA%20DataFlow%20between%20Function']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KsGK-d0aEe-Ji-BL19tYrg" name="Safe Drinking Water" sourceNode="_KsBSct0aEe-Ji-BL19tYrg" targetNode="_KsBSfN0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KsGK-d0aEe-Ji-BL19tYrg" name="Delivered Safe Drinking Water" sourceNode="_KsBSct0aEe-Ji-BL19tYrg" targetNode="_KsBSfN0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
       <target xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#81f67204-9e0d-4e9a-ad8e-292405c3a9d3"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#81f67204-9e0d-4e9a-ad8e-292405c3a9d3"/>
+      <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalChain" href="Distiller%20Project.capella#a85c9767-92fc-48c8-a159-f8bccd8875fd"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KsGK-t0aEe-Ji-BL19tYrg" description="_KsE80N0aEe-Ji-BL19tYrg" targetArrow="NoDecoration" size="4" centered="Both" strokeColor="24,114,248">
         <customFeatures>strokeColor</customFeatures>
         <customFeatures>size</customFeatures>
@@ -33393,9 +33217,10 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/context.odesign#//@ownedViewpoints[name='System%20Analysis']/@ownedRepresentations[name='System%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='CA_InternLink']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KvSB1N0aEe-Ji-BL19tYrg" name="Heat" sourceNode="_Kr-2Pd0aEe-Ji-BL19tYrg" targetNode="_KvD_bd0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KvSB1N0aEe-Ji-BL19tYrg" name="Heating Power" sourceNode="_Kr-2Pd0aEe-Ji-BL19tYrg" targetNode="_KvD_bd0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
       <target xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#848c6d70-a521-4e76-b37f-db1f66a7d33f"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#848c6d70-a521-4e76-b37f-db1f66a7d33f"/>
+      <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalChain" href="Distiller%20Project.capella#a85c9767-92fc-48c8-a159-f8bccd8875fd"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KvSB1d0aEe-Ji-BL19tYrg" description="_KsE80N0aEe-Ji-BL19tYrg" targetArrow="NoDecoration" size="4" centered="Both" strokeColor="24,114,248">
         <customFeatures>strokeColor</customFeatures>
         <customFeatures>size</customFeatures>
@@ -33405,9 +33230,10 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/context.odesign#//@ownedViewpoints[name='System%20Analysis']/@ownedRepresentations[name='System%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='CA%20DataFlow%20between%20Function']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KvSB3d0aEe-Ji-BL19tYrg" name="Heat" sourceNode="_Kr-2Qd0aEe-Ji-BL19tYrg" targetNode="_KvDYUd0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KvSB3d0aEe-Ji-BL19tYrg" name="Boiler Heat" sourceNode="_Kr-2Qd0aEe-Ji-BL19tYrg" targetNode="_KvDYUd0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
       <target xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#64b15f15-9e6b-45c9-a99d-4a9fc7c96498"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#64b15f15-9e6b-45c9-a99d-4a9fc7c96498"/>
+      <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalChain" href="Distiller%20Project.capella#a85c9767-92fc-48c8-a159-f8bccd8875fd"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KvSB3t0aEe-Ji-BL19tYrg" description="_KsE80N0aEe-Ji-BL19tYrg" targetArrow="NoDecoration" size="4" routingStyle="manhattan" centered="Both" strokeColor="24,114,248">
         <customFeatures>strokeColor</customFeatures>
         <customFeatures>size</customFeatures>
@@ -33421,6 +33247,7 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KvSB5t0aEe-Ji-BL19tYrg" name="Dirty Water" sourceNode="_KsAEVd0aEe-Ji-BL19tYrg" targetNode="_KvD_cN0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
       <target xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#9c6bf30a-a7b0-452a-9cf1-39b59b4f1164"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#9c6bf30a-a7b0-452a-9cf1-39b59b4f1164"/>
+      <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalChain" href="Distiller%20Project.capella#a85c9767-92fc-48c8-a159-f8bccd8875fd"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KvSo4N0aEe-Ji-BL19tYrg" description="_KsE80N0aEe-Ji-BL19tYrg" targetArrow="NoDecoration" size="4" centered="Both" strokeColor="24,114,248">
         <customFeatures>strokeColor</customFeatures>
         <customFeatures>size</customFeatures>
@@ -33433,6 +33260,7 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KvSo6N0aEe-Ji-BL19tYrg" name="Sludge" sourceNode="_KvDYV90aEe-Ji-BL19tYrg" targetNode="_KvEmed0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
       <target xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#1fb9e95d-b24c-4807-92c7-7b1a0c42c14e"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#1fb9e95d-b24c-4807-92c7-7b1a0c42c14e"/>
+      <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalChain" href="Distiller%20Project.capella#a85c9767-92fc-48c8-a159-f8bccd8875fd"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KvSo6d0aEe-Ji-BL19tYrg" description="_KsE80N0aEe-Ji-BL19tYrg" targetArrow="NoDecoration" size="4" centered="Both" strokeColor="24,114,248">
         <customFeatures>strokeColor</customFeatures>
         <customFeatures>size</customFeatures>
@@ -33445,6 +33273,7 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KvSo8d0aEe-Ji-BL19tYrg" name="Steam" sourceNode="_KvDYWt0aEe-Ji-BL19tYrg" targetNode="_KvD_Yt0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
       <target xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#560929ef-3d6b-436b-a8fe-65a61de8c3ca"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#560929ef-3d6b-436b-a8fe-65a61de8c3ca"/>
+      <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalChain" href="Distiller%20Project.capella#a85c9767-92fc-48c8-a159-f8bccd8875fd"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KvSo8t0aEe-Ji-BL19tYrg" description="_KsE80N0aEe-Ji-BL19tYrg" targetArrow="NoDecoration" size="4" centered="Both" strokeColor="24,114,248">
         <customFeatures>strokeColor</customFeatures>
         <customFeatures>size</customFeatures>
@@ -33457,6 +33286,7 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KvSo-t0aEe-Ji-BL19tYrg" name="Distilled Water" sourceNode="_KvD_Zd0aEe-Ji-BL19tYrg" targetNode="_KsArZN0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
       <target xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#ac813313-bca0-4595-8f85-f383afb2777d"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#ac813313-bca0-4595-8f85-f383afb2777d"/>
+      <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalChain" href="Distiller%20Project.capella#a85c9767-92fc-48c8-a159-f8bccd8875fd"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KvSo-90aEe-Ji-BL19tYrg" description="_KsE80N0aEe-Ji-BL19tYrg" targetArrow="NoDecoration" size="4" centered="Both" strokeColor="24,114,248">
         <customFeatures>strokeColor</customFeatures>
         <customFeatures>size</customFeatures>
@@ -33469,6 +33299,7 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KvTP8N0aEe-Ji-BL19tYrg" name="Recovered Heat" sourceNode="_KvD_aN0aEe-Ji-BL19tYrg" targetNode="_KvEmcd0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
       <target xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#d76fe349-15dc-4981-84a7-14aa89282482"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#d76fe349-15dc-4981-84a7-14aa89282482"/>
+      <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalChain" href="Distiller%20Project.capella#a85c9767-92fc-48c8-a159-f8bccd8875fd"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KvTP8d0aEe-Ji-BL19tYrg" description="_KsE80N0aEe-Ji-BL19tYrg" targetArrow="NoDecoration" size="4" centered="Both" strokeColor="24,114,248">
         <customFeatures>strokeColor</customFeatures>
         <customFeatures>size</customFeatures>
@@ -33481,6 +33312,7 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KvTP-d0aEe-Ji-BL19tYrg" name="Hot Water" sourceNode="_KvEmdN0aEe-Ji-BL19tYrg" targetNode="_KvDYVN0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
       <target xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#7e19530c-f0f6-4f68-a246-25a824431ce4"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#7e19530c-f0f6-4f68-a246-25a824431ce4"/>
+      <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalChain" href="Distiller%20Project.capella#a85c9767-92fc-48c8-a159-f8bccd8875fd"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KvTP-t0aEe-Ji-BL19tYrg" description="_KsE80N0aEe-Ji-BL19tYrg" targetArrow="NoDecoration" size="4" centered="Both" strokeColor="24,114,248">
         <customFeatures>strokeColor</customFeatures>
         <customFeatures>size</customFeatures>
@@ -33493,6 +33325,7 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KvTQAt0aEe-Ji-BL19tYrg" name="Residue" sourceNode="_KvFNgN0aEe-Ji-BL19tYrg" targetNode="_KsB5h90aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
       <target xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#8682b777-71ab-4c88-afb8-9fc1d147ef95"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#8682b777-71ab-4c88-afb8-9fc1d147ef95"/>
+      <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalChain" href="Distiller%20Project.capella#a85c9767-92fc-48c8-a159-f8bccd8875fd"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KvTQA90aEe-Ji-BL19tYrg" description="_KsE80N0aEe-Ji-BL19tYrg" targetArrow="NoDecoration" size="4" centered="Both" strokeColor="24,114,248">
         <customFeatures>strokeColor</customFeatures>
         <customFeatures>size</customFeatures>
@@ -38982,6 +38815,17 @@
                         <styles xmi:type="notation:ShapeStyle" xmi:id="_sBgn_sx-EeqJDepFiRMcVQ" fontName="Segoe UI"/>
                         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sBgn_8x-EeqJDepFiRMcVQ"/>
                       </children>
+                      <children xmi:type="notation:Node" xmi:id="_YX5-wNlaEfG3X6MQiHpWsA" visible="false" type="3001" element="_YW7uYtlaEfG3X6MQiHpWsA">
+                        <children xmi:type="notation:Node" xmi:id="_YX7M4NlaEfG3X6MQiHpWsA" visible="false" type="5001">
+                          <layoutConstraint xmi:type="notation:Location" xmi:id="_YX7M4dlaEfG3X6MQiHpWsA" x="11" y="-5"/>
+                        </children>
+                        <children xmi:type="notation:Node" xmi:id="_YYAscNlaEfG3X6MQiHpWsA" type="3005" element="_YW7uY9laEfG3X6MQiHpWsA">
+                          <styles xmi:type="notation:ShapeStyle" xmi:id="_YYAscdlaEfG3X6MQiHpWsA" fontName="Segoe UI"/>
+                          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YYAsctlaEfG3X6MQiHpWsA"/>
+                        </children>
+                        <styles xmi:type="notation:ShapeStyle" xmi:id="_YX5-wdlaEfG3X6MQiHpWsA" fontName="Segoe UI" fontHeight="8"/>
+                        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YX5-wtlaEfG3X6MQiHpWsA" x="-2" width="10" height="10"/>
+                      </children>
                       <styles xmi:type="notation:ShapeStyle" xmi:id="_sBgoAMx-EeqJDepFiRMcVQ" fontColor="3038217" fontName="Segoe UI" fontHeight="8"/>
                       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sBgoAcx-EeqJDepFiRMcVQ" x="15" y="34" width="201" height="121"/>
                     </children>
@@ -40591,22 +40435,6 @@
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sBh2icx-EeqJDepFiRMcVQ" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sBh2isx-EeqJDepFiRMcVQ" id="(0.5,0.5)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_sBh2i8x-EeqJDepFiRMcVQ" visible="false" type="4001" element="_KUVLQd0aEe-Ji-BL19tYrg" source="_sBgolMx-EeqJDepFiRMcVQ" target="_sBgoNsx-EeqJDepFiRMcVQ">
-          <children xmi:type="notation:Node" xmi:id="_sBh2jMx-EeqJDepFiRMcVQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sBh2jcx-EeqJDepFiRMcVQ" y="-10"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_sBh2jsx-EeqJDepFiRMcVQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sBh2j8x-EeqJDepFiRMcVQ" x="10"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_sBh2kMx-EeqJDepFiRMcVQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sBh2kcx-EeqJDepFiRMcVQ" y="8"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_sBh2ksx-EeqJDepFiRMcVQ" routing="Rectilinear"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_sBh2k8x-EeqJDepFiRMcVQ" fontColor="3038217" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_sBh2lMx-EeqJDepFiRMcVQ" points="[0, 5, -155, -55]$[0, 60, -155, 0]$[150, 60, -5, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sBh2lcx-EeqJDepFiRMcVQ" id="(0.5,0.5)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sBh2lsx-EeqJDepFiRMcVQ" id="(0.5,0.5)"/>
-        </edges>
         <edges xmi:type="notation:Edge" xmi:id="_sBh2l8x-EeqJDepFiRMcVQ" visible="false" type="4001" element="_KUVyQN0aEe-Ji-BL19tYrg" source="_sBgolMx-EeqJDepFiRMcVQ" target="_sBgoNsx-EeqJDepFiRMcVQ">
           <children xmi:type="notation:Node" xmi:id="_sBh2mMx-EeqJDepFiRMcVQ" type="6001">
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sBh2mcx-EeqJDepFiRMcVQ" x="-21" y="-10"/>
@@ -40782,38 +40610,6 @@
           <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_sBh2QMx-EeqJDepFiRMcVQ" points="[5, -3, -35, 17]$[35, -18, -5, 2]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sBh2Qcx-EeqJDepFiRMcVQ" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sBh2Qsx-EeqJDepFiRMcVQ" id="(0.5,0.5)"/>
-        </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_sBh2Q8x-EeqJDepFiRMcVQ" visible="false" type="4001" element="_KUNPe90aEe-Ji-BL19tYrg" source="_sBgos8x-EeqJDepFiRMcVQ" target="_sBgolMx-EeqJDepFiRMcVQ">
-          <children xmi:type="notation:Node" xmi:id="_sBh2RMx-EeqJDepFiRMcVQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sBh2Rcx-EeqJDepFiRMcVQ" x="8" y="-5"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_sBh2Rsx-EeqJDepFiRMcVQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sBh2R8x-EeqJDepFiRMcVQ" x="-9" y="7"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_sBh2SMx-EeqJDepFiRMcVQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sBh2Scx-EeqJDepFiRMcVQ" x="-8" y="7"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_sBh2Ssx-EeqJDepFiRMcVQ"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_sBh2S8x-EeqJDepFiRMcVQ" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_sBh2TMx-EeqJDepFiRMcVQ" points="[-4, 5, 26, -35]$[-27, 35, 3, -5]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sBh2Tcx-EeqJDepFiRMcVQ" id="(0.5,0.5)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sBh2Tsx-EeqJDepFiRMcVQ" id="(0.5,0.5)"/>
-        </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_sBh2T8x-EeqJDepFiRMcVQ" visible="false" type="4001" element="_KUN2ct0aEe-Ji-BL19tYrg" source="_sBgou8x-EeqJDepFiRMcVQ" target="_sBgolMx-EeqJDepFiRMcVQ">
-          <children xmi:type="notation:Node" xmi:id="_sBh2UMx-EeqJDepFiRMcVQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sBh2Ucx-EeqJDepFiRMcVQ" x="-9" y="1"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_sBh2Usx-EeqJDepFiRMcVQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sBh2U8x-EeqJDepFiRMcVQ" x="11" y="-2"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_sBh2VMx-EeqJDepFiRMcVQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sBh2Vcx-EeqJDepFiRMcVQ" x="10" y="-1"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_sBh2Vsx-EeqJDepFiRMcVQ"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_sBh2V8x-EeqJDepFiRMcVQ" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_sBh2WMx-EeqJDepFiRMcVQ" points="[3, -5, -30, 48]$[29, -48, -4, 5]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sBh2Wcx-EeqJDepFiRMcVQ" id="(0.5,0.5)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sBh2Wsx-EeqJDepFiRMcVQ" id="(0.5,0.5)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_sBh268x-EeqJDepFiRMcVQ" visible="false" type="4001" element="_KUVySd0aEe-Ji-BL19tYrg" source="_sBgonMx-EeqJDepFiRMcVQ" target="_sBgo_8x-EeqJDepFiRMcVQ">
           <children xmi:type="notation:Node" xmi:id="_sBh27Mx-EeqJDepFiRMcVQ" type="6001">
@@ -41391,6 +41187,134 @@
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_KaOX1N0aEe-Ji-BL19tYrg" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_KaOX1d0aEe-Ji-BL19tYrg" id="(0.5,0.5)"/>
         </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_YYAsc9laEfG3X6MQiHpWsA" visible="false" type="4001" element="_YXERsNlaEfG3X6MQiHpWsA" source="_sBgoDMx-EeqJDepFiRMcVQ" target="_YX5-wNlaEfG3X6MQiHpWsA">
+          <children xmi:type="notation:Node" xmi:id="_YYAsd9laEfG3X6MQiHpWsA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YYAseNlaEfG3X6MQiHpWsA" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_YYBTgNlaEfG3X6MQiHpWsA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YYBTgdlaEfG3X6MQiHpWsA" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_YYBTgtlaEfG3X6MQiHpWsA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YYBTg9laEfG3X6MQiHpWsA" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_YYAsdNlaEfG3X6MQiHpWsA" jumpLinkStatus="Above" jumpLinkType="Tunnel"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_YYAsddlaEfG3X6MQiHpWsA" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_YYAsdtlaEfG3X6MQiHpWsA" points="[-5, -2, 225, 64]$[-225, -65, 5, 1]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YYBThNlaEfG3X6MQiHpWsA" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YYBThdlaEfG3X6MQiHpWsA" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_YYBThtlaEfG3X6MQiHpWsA" visible="false" type="4001" element="_YXE4UtlaEfG3X6MQiHpWsA" source="_sBgos8x-EeqJDepFiRMcVQ" target="_sBgolMx-EeqJDepFiRMcVQ">
+          <children xmi:type="notation:Node" xmi:id="_YYBTitlaEfG3X6MQiHpWsA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YYBTi9laEfG3X6MQiHpWsA" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_YYBTjNlaEfG3X6MQiHpWsA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YYBTjdlaEfG3X6MQiHpWsA" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_YYBTjtlaEfG3X6MQiHpWsA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YYBTj9laEfG3X6MQiHpWsA" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_YYBTh9laEfG3X6MQiHpWsA" jumpLinkStatus="Above" jumpLinkType="Tunnel"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_YYBTiNlaEfG3X6MQiHpWsA" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_YYBTidlaEfG3X6MQiHpWsA" points="[-4, 5, 26, -35]$[-27, 35, 3, -5]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YYBTkNlaEfG3X6MQiHpWsA" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YYBTkdlaEfG3X6MQiHpWsA" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_YYBTktlaEfG3X6MQiHpWsA" visible="false" type="4001" element="_YXE4V9laEfG3X6MQiHpWsA" source="_sBgou8x-EeqJDepFiRMcVQ" target="_sBgolMx-EeqJDepFiRMcVQ">
+          <children xmi:type="notation:Node" xmi:id="_YYBTltlaEfG3X6MQiHpWsA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YYBTl9laEfG3X6MQiHpWsA" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_YYBTmNlaEfG3X6MQiHpWsA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YYBTmdlaEfG3X6MQiHpWsA" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_YYBTmtlaEfG3X6MQiHpWsA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YYBTm9laEfG3X6MQiHpWsA" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_YYBTk9laEfG3X6MQiHpWsA" jumpLinkStatus="Above" jumpLinkType="Tunnel"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_YYBTlNlaEfG3X6MQiHpWsA" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_YYBTldlaEfG3X6MQiHpWsA" points="[3, -5, -30, 48]$[29, -48, -4, 5]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YYBTnNlaEfG3X6MQiHpWsA" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YYBTndlaEfG3X6MQiHpWsA" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_YYBTntlaEfG3X6MQiHpWsA" type="4001" element="_YXFfnNlaEfG3X6MQiHpWsA" source="_sBgpZcx-EeqJDepFiRMcVQ" target="_sBgpXcx-EeqJDepFiRMcVQ">
+          <children xmi:type="notation:Node" xmi:id="_YYBTotlaEfG3X6MQiHpWsA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YYBTo9laEfG3X6MQiHpWsA" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_YYBTpNlaEfG3X6MQiHpWsA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YYBTpdlaEfG3X6MQiHpWsA" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_YYBTptlaEfG3X6MQiHpWsA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YYBTp9laEfG3X6MQiHpWsA" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_YYBTn9laEfG3X6MQiHpWsA" jumpLinkStatus="Above" jumpLinkType="Tunnel"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_YYBToNlaEfG3X6MQiHpWsA" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_YYBTodlaEfG3X6MQiHpWsA" points="[0, 5, 0, -25]$[0, 25, 0, -5]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YYBTqNlaEfG3X6MQiHpWsA" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YYBTqdlaEfG3X6MQiHpWsA" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_YYBTqtlaEfG3X6MQiHpWsA" type="4001" element="_YXFfodlaEfG3X6MQiHpWsA" source="_gzVpUMx_EeqJDepFiRMcVQ" target="_sBgp48x-EeqJDepFiRMcVQ">
+          <children xmi:type="notation:Node" xmi:id="_YYB6kNlaEfG3X6MQiHpWsA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YYB6kdlaEfG3X6MQiHpWsA" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_YYB6ktlaEfG3X6MQiHpWsA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YYB6k9laEfG3X6MQiHpWsA" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_YYB6lNlaEfG3X6MQiHpWsA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YYB6ldlaEfG3X6MQiHpWsA" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_YYBTq9laEfG3X6MQiHpWsA" jumpLinkStatus="Above" jumpLinkType="Tunnel"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_YYBTrNlaEfG3X6MQiHpWsA" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_YYBTrdlaEfG3X6MQiHpWsA" points="[0, 5, 0, -25]$[0, 25, 0, -5]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YYB6ltlaEfG3X6MQiHpWsA" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YYB6l9laEfG3X6MQiHpWsA" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_YYB6mNlaEfG3X6MQiHpWsA" type="4001" element="_YXFfptlaEfG3X6MQiHpWsA" source="_O9a74NBJEeq_NarlNBiVAA" target="_sBhOf8x-EeqJDepFiRMcVQ">
+          <children xmi:type="notation:Node" xmi:id="_YYB6nNlaEfG3X6MQiHpWsA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YYB6ndlaEfG3X6MQiHpWsA" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_YYB6ntlaEfG3X6MQiHpWsA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YYB6n9laEfG3X6MQiHpWsA" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_YYB6oNlaEfG3X6MQiHpWsA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YYB6odlaEfG3X6MQiHpWsA" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_YYB6mdlaEfG3X6MQiHpWsA" jumpLinkStatus="Above" jumpLinkType="Tunnel"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_YYB6mtlaEfG3X6MQiHpWsA" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_YYB6m9laEfG3X6MQiHpWsA" points="[0, -5, 0, 45]$[0, -45, 0, 5]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YYB6otlaEfG3X6MQiHpWsA" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YYB6o9laEfG3X6MQiHpWsA" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_YYB6pNlaEfG3X6MQiHpWsA" visible="false" type="4001" element="_YXGGdNlaEfG3X6MQiHpWsA" source="_sBgAsMx-EeqJDepFiRMcVQ" target="_sBgAhMx-EeqJDepFiRMcVQ">
+          <children xmi:type="notation:Node" xmi:id="_YYB6qNlaEfG3X6MQiHpWsA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YYB6qdlaEfG3X6MQiHpWsA" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_YYB6qtlaEfG3X6MQiHpWsA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YYB6q9laEfG3X6MQiHpWsA" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_YYB6rNlaEfG3X6MQiHpWsA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YYB6rdlaEfG3X6MQiHpWsA" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_YYB6pdlaEfG3X6MQiHpWsA" jumpLinkStatus="Above" jumpLinkType="Tunnel"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_YYB6ptlaEfG3X6MQiHpWsA" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_YYB6p9laEfG3X6MQiHpWsA" points="[5, -5, -25, 25]$[25, -25, -5, 5]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YYB6rtlaEfG3X6MQiHpWsA" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YYB6r9laEfG3X6MQiHpWsA" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_YYB6sNlaEfG3X6MQiHpWsA" visible="false" type="4001" element="_YXGGedlaEfG3X6MQiHpWsA" source="_sBgoGMx-EeqJDepFiRMcVQ" target="_sBgoBMx-EeqJDepFiRMcVQ">
+          <children xmi:type="notation:Node" xmi:id="_YYB6tNlaEfG3X6MQiHpWsA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YYB6tdlaEfG3X6MQiHpWsA" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_YYB6ttlaEfG3X6MQiHpWsA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YYB6t9laEfG3X6MQiHpWsA" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_YYB6uNlaEfG3X6MQiHpWsA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YYB6udlaEfG3X6MQiHpWsA" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_YYB6sdlaEfG3X6MQiHpWsA" jumpLinkStatus="Above" jumpLinkType="Tunnel"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_YYB6stlaEfG3X6MQiHpWsA" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_YYB6s9laEfG3X6MQiHpWsA" points="[-5, -4, 25, 16]$[-25, -17, 5, 3]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YYB6utlaEfG3X6MQiHpWsA" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YYB6u9laEfG3X6MQiHpWsA" id="(0.5,0.5)"/>
+        </edges>
       </data>
     </ownedAnnotationEntries>
     <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_sBbu4Mx-EeqJDepFiRMcVQ" name="Water Distiller">
@@ -41420,7 +41344,7 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@containerMappings[name='PAB_PC']/@borderedNodeMappings[name='PAB_Port']"/>
         </ownedBorderedNodes>
-        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KTqc2N0aEe-Ji-BL19tYrg" name="PP 2" outgoingEdges="_KUIW5N0aEe-Ji-BL19tYrg" width="1" height="1">
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KTqc2N0aEe-Ji-BL19tYrg" name="PP 2" outgoingEdges="_KUIW5N0aEe-Ji-BL19tYrg _YXGGdNlaEfG3X6MQiHpWsA" width="1" height="1">
           <target xmi:type="org.polarsys.capella.core.data.cs:PhysicalPort" href="Distiller%20Project.capella#3a3ff614-450e-4377-bf40-d305f275ad03"/>
           <semanticElements xmi:type="org.polarsys.capella.core.data.cs:PhysicalPort" href="Distiller%20Project.capella#3a3ff614-450e-4377-bf40-d305f275ad03"/>
           <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_KTrD4d0aEe-Ji-BL19tYrg"/>
@@ -41467,7 +41391,7 @@
           <graphicalFilters xmi:type="diagram:AppliedCompositeFilters" uid="_N2V-YMyAEeqJDepFiRMcVQ">
             <compositeFilterDescriptions xmi:type="filter:CompositeFilterDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@filters[name='hide.deployed.pcs.filter']"/>
           </graphicalFilters>
-          <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KTsSAd0aEe-Ji-BL19tYrg" name="bottom" visible="false" outgoingEdges="_KUEshN0aEe-Ji-BL19tYrg _KUMBUd0aEe-Ji-BL19tYrg" width="1" height="1">
+          <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KTsSAd0aEe-Ji-BL19tYrg" name="bottom" visible="false" outgoingEdges="_KUEshN0aEe-Ji-BL19tYrg _KUMBUd0aEe-Ji-BL19tYrg" incomingEdges="_YXGGdNlaEfG3X6MQiHpWsA" width="1" height="1">
             <target xmi:type="org.polarsys.capella.core.data.fa:ComponentPort" href="Distiller%20Project.capella#2babd4ff-fa78-4da4-8f0b-c952ef861c30"/>
             <semanticElements xmi:type="org.polarsys.capella.core.data.fa:ComponentPort" href="Distiller%20Project.capella#2babd4ff-fa78-4da4-8f0b-c952ef861c30"/>
             <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_KTsSBN0aEe-Ji-BL19tYrg"/>
@@ -41812,7 +41736,7 @@
         <target xmi:type="org.polarsys.capella.core.data.cs:Part" href="Distiller%20Project.capella#e860a4cb-fcdd-4fd4-a5bf-f9191ce3c73b"/>
         <semanticElements xmi:type="org.polarsys.capella.core.data.cs:Part" href="Distiller%20Project.capella#e860a4cb-fcdd-4fd4-a5bf-f9191ce3c73b"/>
         <semanticElements xmi:type="org.polarsys.capella.core.data.pa:PhysicalComponent" href="Distiller%20Project.capella#4bfb576e-6b2a-48df-a900-d4de7cc8bf39"/>
-        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KTxxkN0aEe-Ji-BL19tYrg" name="PP 1" incomingEdges="_KUIW5N0aEe-Ji-BL19tYrg" width="1" height="1">
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KTxxkN0aEe-Ji-BL19tYrg" name="PP 1" outgoingEdges="_YXGGedlaEfG3X6MQiHpWsA" incomingEdges="_KUIW5N0aEe-Ji-BL19tYrg" width="1" height="1">
           <target xmi:type="org.polarsys.capella.core.data.cs:PhysicalPort" href="Distiller%20Project.capella#087cedc5-8c5f-4f02-95c3-a10e3edfe8c6"/>
           <semanticElements xmi:type="org.polarsys.capella.core.data.cs:PhysicalPort" href="Distiller%20Project.capella#087cedc5-8c5f-4f02-95c3-a10e3edfe8c6"/>
           <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_KTxxk90aEe-Ji-BL19tYrg"/>
@@ -41850,7 +41774,7 @@
           <graphicalFilters xmi:type="diagram:AppliedCompositeFilters" uid="_N2WlcMyAEeqJDepFiRMcVQ">
             <compositeFilterDescriptions xmi:type="filter:CompositeFilterDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@filters[name='hide.deployed.pcs.filter']"/>
           </graphicalFilters>
-          <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KTyYot0aEe-Ji-BL19tYrg" name="in" visible="false" outgoingEdges="_KUMobd0aEe-Ji-BL19tYrg" incomingEdges="_KUEshN0aEe-Ji-BL19tYrg" width="1" height="1">
+          <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KTyYot0aEe-Ji-BL19tYrg" name="in" visible="false" outgoingEdges="_KUMobd0aEe-Ji-BL19tYrg" incomingEdges="_KUEshN0aEe-Ji-BL19tYrg _YXGGedlaEfG3X6MQiHpWsA" width="1" height="1">
             <target xmi:type="org.polarsys.capella.core.data.fa:ComponentPort" href="Distiller%20Project.capella#9ba61bba-a632-4c3a-8990-ae8ef795f61a"/>
             <semanticElements xmi:type="org.polarsys.capella.core.data.fa:ComponentPort" href="Distiller%20Project.capella#9ba61bba-a632-4c3a-8990-ae8ef795f61a"/>
             <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_KTyYpd0aEe-Ji-BL19tYrg"/>
@@ -41862,7 +41786,7 @@
             </ownedStyle>
             <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@containerMappings[name='PAB_PC']/@borderedNodeMappings[name='PAB_Port']"/>
           </ownedBorderedNodes>
-          <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KTyYpt0aEe-Ji-BL19tYrg" name="out" visible="false" outgoingEdges="_KUEFf90aEe-Ji-BL19tYrg _KUNPYt0aEe-Ji-BL19tYrg" incomingEdges="_KUPEn90aEe-Ji-BL19tYrg" width="1" height="1">
+          <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KTyYpt0aEe-Ji-BL19tYrg" name="out" visible="false" outgoingEdges="_KUEFf90aEe-Ji-BL19tYrg _KUNPYt0aEe-Ji-BL19tYrg _YXERsNlaEfG3X6MQiHpWsA" incomingEdges="_KUPEn90aEe-Ji-BL19tYrg" width="1" height="1">
             <target xmi:type="org.polarsys.capella.core.data.fa:ComponentPort" href="Distiller%20Project.capella#34845a2f-dbc4-4b79-82a9-64de8d6a2ab1"/>
             <semanticElements xmi:type="org.polarsys.capella.core.data.fa:ComponentPort" href="Distiller%20Project.capella#34845a2f-dbc4-4b79-82a9-64de8d6a2ab1"/>
             <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_KTy_sd0aEe-Ji-BL19tYrg"/>
@@ -41908,6 +41832,15 @@
               <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
               <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
               <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_KTy_ud0aEe-Ji-BL19tYrg" showIcon="false" hideLabelByDefault="true" workspacePath="/org.polarsys.capella.core.sirius.analysis/description/images/FunctionOutputPort.svg">
+                <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@nodeMappings[name='PAB_PhysicalFunction']/@borderedNodeMappings[name='PAB_Pin']/@conditionnalStyles.0/@style"/>
+              </ownedStyle>
+              <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@nodeMappings[name='PAB_PhysicalFunction']/@borderedNodeMappings[name='PAB_Pin']"/>
+            </ownedBorderedNodes>
+            <ownedBorderedNodes xmi:type="diagram:DNode" uid="_YW7uYtlaEfG3X6MQiHpWsA" name="outWaste" visible="false" incomingEdges="_YXERsNlaEfG3X6MQiHpWsA" width="1" height="1">
+              <target xmi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort" href="Distiller%20Project.capella#8d37ea6f-a96b-4183-a51b-62218edd0f89"/>
+              <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort" href="Distiller%20Project.capella#8d37ea6f-a96b-4183-a51b-62218edd0f89"/>
+              <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_YW7uZdlaEfG3X6MQiHpWsA"/>
+              <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_YW7uY9laEfG3X6MQiHpWsA" showIcon="false" hideLabelByDefault="true" workspacePath="/org.polarsys.capella.core.sirius.analysis/description/images/FunctionOutputPort.svg">
                 <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@nodeMappings[name='PAB_PhysicalFunction']/@borderedNodeMappings[name='PAB_Pin']/@conditionnalStyles.0/@style"/>
               </ownedStyle>
               <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@nodeMappings[name='PAB_PhysicalFunction']/@borderedNodeMappings[name='PAB_Pin']"/>
@@ -41996,7 +41929,7 @@
               </ownedStyle>
               <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@containerMappings[name='PAB_PC']/@borderedNodeMappings[name='PAB_Port']"/>
             </ownedBorderedNodes>
-            <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KT1b9t0aEe-Ji-BL19tYrg" name="CP 2" visible="false" outgoingEdges="_KUNPbN0aEe-Ji-BL19tYrg" incomingEdges="_KUFTld0aEe-Ji-BL19tYrg _KUPEpN0aEe-Ji-BL19tYrg" width="1" height="1">
+            <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KT1b9t0aEe-Ji-BL19tYrg" name="Main in" visible="false" outgoingEdges="_KUNPbN0aEe-Ji-BL19tYrg" incomingEdges="_KUFTld0aEe-Ji-BL19tYrg _KUPEpN0aEe-Ji-BL19tYrg" width="1" height="1">
               <target xmi:type="org.polarsys.capella.core.data.fa:ComponentPort" href="Distiller%20Project.capella#6aa42781-e835-4f58-9062-f4b74c1f08f3"/>
               <semanticElements xmi:type="org.polarsys.capella.core.data.fa:ComponentPort" href="Distiller%20Project.capella#6aa42781-e835-4f58-9062-f4b74c1f08f3"/>
               <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_KT2DAt0aEe-Ji-BL19tYrg"/>
@@ -42008,7 +41941,7 @@
               </ownedStyle>
               <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@containerMappings[name='PAB_PC']/@borderedNodeMappings[name='PAB_Port']"/>
             </ownedBorderedNodes>
-            <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KT2DA90aEe-Ji-BL19tYrg" name="CP 3" visible="false" outgoingEdges="_KUNPcd0aEe-Ji-BL19tYrg" incomingEdges="_KUFTmt0aEe-Ji-BL19tYrg _KUPEqd0aEe-Ji-BL19tYrg" width="1" height="1">
+            <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KT2DA90aEe-Ji-BL19tYrg" name="Back up In" visible="false" outgoingEdges="_KUNPcd0aEe-Ji-BL19tYrg" incomingEdges="_KUFTmt0aEe-Ji-BL19tYrg _KUPEqd0aEe-Ji-BL19tYrg" width="1" height="1">
               <target xmi:type="org.polarsys.capella.core.data.fa:ComponentPort" href="Distiller%20Project.capella#54e57a28-d100-470d-8458-e59758fc41d5"/>
               <semanticElements xmi:type="org.polarsys.capella.core.data.fa:ComponentPort" href="Distiller%20Project.capella#54e57a28-d100-470d-8458-e59758fc41d5"/>
               <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_KT2DBt0aEe-Ji-BL19tYrg"/>
@@ -42031,7 +41964,7 @@
               <graphicalFilters xmi:type="diagram:AppliedCompositeFilters" uid="_5ONSMMx-EeqJDepFiRMcVQ">
                 <compositeFilterDescriptions xmi:type="filter:CompositeFilterDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@filters[name='hide.functions.filter']"/>
               </graphicalFilters>
-              <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KT2DCd0aEe-Ji-BL19tYrg" name="FIP 1" visible="false" incomingEdges="_KUNPbN0aEe-Ji-BL19tYrg _KUNPcd0aEe-Ji-BL19tYrg _KUVLQd0aEe-Ji-BL19tYrg _KUVyQN0aEe-Ji-BL19tYrg" width="1" height="1">
+              <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KT2DCd0aEe-Ji-BL19tYrg" name="FIP 1" visible="false" incomingEdges="_KUNPbN0aEe-Ji-BL19tYrg _KUNPcd0aEe-Ji-BL19tYrg _KUVyQN0aEe-Ji-BL19tYrg" width="1" height="1">
                 <target xmi:type="org.polarsys.capella.core.data.fa:FunctionInputPort" href="Distiller%20Project.capella#f8507e9e-6d37-48c7-80af-10d7e19a5e68"/>
                 <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionInputPort" href="Distiller%20Project.capella#f8507e9e-6d37-48c7-80af-10d7e19a5e68"/>
                 <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_KT2qEt0aEe-Ji-BL19tYrg"/>
@@ -42066,7 +41999,7 @@
           <target xmi:type="org.polarsys.capella.core.data.cs:Part" href="Distiller%20Project.capella#00397096-be9d-4b1f-aa65-999d948809fb"/>
           <semanticElements xmi:type="org.polarsys.capella.core.data.cs:Part" href="Distiller%20Project.capella#00397096-be9d-4b1f-aa65-999d948809fb"/>
           <semanticElements xmi:type="org.polarsys.capella.core.data.pa:PhysicalComponent" href="Distiller%20Project.capella#e9503545-713f-4445-8442-c0d2399339d4"/>
-          <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KT2qF90aEe-Ji-BL19tYrg" name="PP 1" outgoingEdges="_KUI9-d0aEe-Ji-BL19tYrg _KUPEs90aEe-Ji-BL19tYrg" width="1" height="1">
+          <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KT2qF90aEe-Ji-BL19tYrg" name="Feed Valve Out" outgoingEdges="_KUI9-d0aEe-Ji-BL19tYrg _KUPEs90aEe-Ji-BL19tYrg" width="1" height="1">
             <target xmi:type="org.polarsys.capella.core.data.cs:PhysicalPort" href="Distiller%20Project.capella#5a7088e3-6c8d-4da5-a65d-392757394a3f"/>
             <semanticElements xmi:type="org.polarsys.capella.core.data.cs:PhysicalPort" href="Distiller%20Project.capella#5a7088e3-6c8d-4da5-a65d-392757394a3f"/>
             <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_KT2qGt0aEe-Ji-BL19tYrg"/>
@@ -42078,7 +42011,7 @@
             </ownedStyle>
             <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@containerMappings[name='PAB_PC']/@borderedNodeMappings[name='PAB_Port']"/>
           </ownedBorderedNodes>
-          <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KT2qG90aEe-Ji-BL19tYrg" name="PP 2" outgoingEdges="_KUI98N0aEe-Ji-BL19tYrg _KUPrpN0aEe-Ji-BL19tYrg _KUuz0N0aEe-Ji-BL19tYrg" incomingEdges="_KXTmsN0aEe-Ji-BL19tYrg" width="1" height="1">
+          <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KT2qG90aEe-Ji-BL19tYrg" name="Backup to Feed Valve" outgoingEdges="_KUI98N0aEe-Ji-BL19tYrg _KUPrpN0aEe-Ji-BL19tYrg _KUuz0N0aEe-Ji-BL19tYrg" incomingEdges="_KXTmsN0aEe-Ji-BL19tYrg" width="1" height="1">
             <target xmi:type="org.polarsys.capella.core.data.cs:PhysicalPort" href="Distiller%20Project.capella#2549ac8e-e074-4497-81f6-14f0a31a1c98"/>
             <semanticElements xmi:type="org.polarsys.capella.core.data.cs:PhysicalPort" href="Distiller%20Project.capella#2549ac8e-e074-4497-81f6-14f0a31a1c98"/>
             <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_KT3RId0aEe-Ji-BL19tYrg"/>
@@ -42128,7 +42061,7 @@
             <graphicalFilters xmi:type="diagram:AppliedCompositeFilters" uid="_N2WlcsyAEeqJDepFiRMcVQ">
               <compositeFilterDescriptions xmi:type="filter:CompositeFilterDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@filters[name='hide.deployed.pcs.filter']"/>
             </graphicalFilters>
-            <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KT34Mt0aEe-Ji-BL19tYrg" name="main2" visible="false" outgoingEdges="_KUNPdt0aEe-Ji-BL19tYrg" incomingEdges="_KUFTkN0aEe-Ji-BL19tYrg _KUPrqd0aEe-Ji-BL19tYrg" width="1" height="1">
+            <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KT34Mt0aEe-Ji-BL19tYrg" name="Condenser In" visible="false" outgoingEdges="_KUNPdt0aEe-Ji-BL19tYrg" incomingEdges="_KUFTkN0aEe-Ji-BL19tYrg _KUPrqd0aEe-Ji-BL19tYrg" width="1" height="1">
               <target xmi:type="org.polarsys.capella.core.data.fa:ComponentPort" href="Distiller%20Project.capella#1b3d32b9-7d58-40da-a317-0c67d610f718"/>
               <semanticElements xmi:type="org.polarsys.capella.core.data.fa:ComponentPort" href="Distiller%20Project.capella#1b3d32b9-7d58-40da-a317-0c67d610f718"/>
               <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_KT34Nd0aEe-Ji-BL19tYrg"/>
@@ -42140,7 +42073,7 @@
               </ownedStyle>
               <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@containerMappings[name='PAB_PC']/@borderedNodeMappings[name='PAB_Port']"/>
             </ownedBorderedNodes>
-            <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KT34Nt0aEe-Ji-BL19tYrg" name="port3" visible="false" outgoingEdges="_KUFTld0aEe-Ji-BL19tYrg _KUNPe90aEe-Ji-BL19tYrg" incomingEdges="_KUPEs90aEe-Ji-BL19tYrg" width="1" height="1">
+            <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KT34Nt0aEe-Ji-BL19tYrg" name="To Feed Valve" visible="false" outgoingEdges="_KUFTld0aEe-Ji-BL19tYrg _YXE4UtlaEfG3X6MQiHpWsA" incomingEdges="_KUPEs90aEe-Ji-BL19tYrg" width="1" height="1">
               <target xmi:type="org.polarsys.capella.core.data.fa:ComponentPort" href="Distiller%20Project.capella#2be03be3-69cc-4b96-8d25-117782a3e1c2"/>
               <semanticElements xmi:type="org.polarsys.capella.core.data.fa:ComponentPort" href="Distiller%20Project.capella#2be03be3-69cc-4b96-8d25-117782a3e1c2"/>
               <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_KT4fQt0aEe-Ji-BL19tYrg"/>
@@ -42152,7 +42085,7 @@
               </ownedStyle>
               <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@containerMappings[name='PAB_PC']/@borderedNodeMappings[name='PAB_Port']"/>
             </ownedBorderedNodes>
-            <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KT4fQ90aEe-Ji-BL19tYrg" name="port3" visible="false" outgoingEdges="_KUFTmt0aEe-Ji-BL19tYrg _KUN2ct0aEe-Ji-BL19tYrg" incomingEdges="_KUPrpN0aEe-Ji-BL19tYrg" width="1" height="1">
+            <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KT4fQ90aEe-Ji-BL19tYrg" name="Backup to Feed Valve" visible="false" outgoingEdges="_KUFTmt0aEe-Ji-BL19tYrg _YXE4V9laEfG3X6MQiHpWsA" incomingEdges="_KUPrpN0aEe-Ji-BL19tYrg" width="1" height="1">
               <target xmi:type="org.polarsys.capella.core.data.fa:ComponentPort" href="Distiller%20Project.capella#d332e99c-7ccb-4ac8-b779-4af1707df118"/>
               <semanticElements xmi:type="org.polarsys.capella.core.data.fa:ComponentPort" href="Distiller%20Project.capella#d332e99c-7ccb-4ac8-b779-4af1707df118"/>
               <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_KT4fRt0aEe-Ji-BL19tYrg"/>
@@ -42164,7 +42097,7 @@
               </ownedStyle>
               <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@containerMappings[name='PAB_PC']/@borderedNodeMappings[name='PAB_Port']"/>
             </ownedBorderedNodes>
-            <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KT4fR90aEe-Ji-BL19tYrg" name="port2" visible="false" outgoingEdges="_KUC3UN0aEe-Ji-BL19tYrg _KUN2d90aEe-Ji-BL19tYrg" incomingEdges="_KUPrrt0aEe-Ji-BL19tYrg" width="1" height="1">
+            <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KT4fR90aEe-Ji-BL19tYrg" name="Splitter Excess" visible="false" outgoingEdges="_KUC3UN0aEe-Ji-BL19tYrg _KUN2d90aEe-Ji-BL19tYrg" incomingEdges="_KUPrrt0aEe-Ji-BL19tYrg" width="1" height="1">
               <target xmi:type="org.polarsys.capella.core.data.fa:ComponentPort" href="Distiller%20Project.capella#3fb080a4-a539-4b2b-aa09-e6dbb6bb5593"/>
               <semanticElements xmi:type="org.polarsys.capella.core.data.fa:ComponentPort" href="Distiller%20Project.capella#3fb080a4-a539-4b2b-aa09-e6dbb6bb5593"/>
               <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_KT4fSt0aEe-Ji-BL19tYrg"/>
@@ -42187,7 +42120,7 @@
               <graphicalFilters xmi:type="diagram:AppliedCompositeFilters" uid="_5ONSMcx-EeqJDepFiRMcVQ">
                 <compositeFilterDescriptions xmi:type="filter:CompositeFilterDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@filters[name='hide.functions.filter']"/>
               </graphicalFilters>
-              <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KT5GUt0aEe-Ji-BL19tYrg" name="FIP 2" visible="false" incomingEdges="_KUNPdt0aEe-Ji-BL19tYrg _KUUkLd0aEe-Ji-BL19tYrg" width="1" height="1">
+              <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KT5GUt0aEe-Ji-BL19tYrg" name="Condensor In" visible="false" incomingEdges="_KUNPdt0aEe-Ji-BL19tYrg _KUUkLd0aEe-Ji-BL19tYrg" width="1" height="1">
                 <target xmi:type="org.polarsys.capella.core.data.fa:FunctionInputPort" href="Distiller%20Project.capella#9c1575c6-1ed7-4058-ac3e-62e757a3c219"/>
                 <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionInputPort" href="Distiller%20Project.capella#9c1575c6-1ed7-4058-ac3e-62e757a3c219"/>
                 <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_KT5GVd0aEe-Ji-BL19tYrg"/>
@@ -42199,7 +42132,7 @@
                 </ownedStyle>
                 <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@nodeMappings[name='PAB_PhysicalFunction']/@borderedNodeMappings[name='PAB_Pin']"/>
               </ownedBorderedNodes>
-              <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KT5GVt0aEe-Ji-BL19tYrg" name="FOP 1" visible="false" outgoingEdges="_KUVLQd0aEe-Ji-BL19tYrg _KUVyQN0aEe-Ji-BL19tYrg" incomingEdges="_KUNPe90aEe-Ji-BL19tYrg _KUN2ct0aEe-Ji-BL19tYrg" width="1" height="1">
+              <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KT5GVt0aEe-Ji-BL19tYrg" name="Main Out" visible="false" outgoingEdges="_KUVyQN0aEe-Ji-BL19tYrg" incomingEdges="_YXE4UtlaEfG3X6MQiHpWsA _YXE4V9laEfG3X6MQiHpWsA" width="1" height="1">
                 <target xmi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort" href="Distiller%20Project.capella#4e1edfbe-37eb-4fcd-8beb-d6f842a23fd9"/>
                 <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort" href="Distiller%20Project.capella#4e1edfbe-37eb-4fcd-8beb-d6f842a23fd9"/>
                 <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_KT5GWd0aEe-Ji-BL19tYrg"/>
@@ -42307,7 +42240,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@containerMappings[name='PAB_PC']/@borderedNodeMappings[name='PAB_Port']"/>
       </ownedBorderedNodes>
-      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KT67hd0aEe-Ji-BL19tYrg" name="CP 3" outgoingEdges="_KUKzJd0aEe-Ji-BL19tYrg" incomingEdges="_KUDeZ90aEe-Ji-BL19tYrg" width="1" height="1">
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KT67hd0aEe-Ji-BL19tYrg" name="CP 3" outgoingEdges="_KUKzJd0aEe-Ji-BL19tYrg" incomingEdges="_KUDeZ90aEe-Ji-BL19tYrg _YXFfnNlaEfG3X6MQiHpWsA" width="1" height="1">
         <target xmi:type="org.polarsys.capella.core.data.fa:ComponentPort" href="Distiller%20Project.capella#f0ec1afb-b96b-49e5-8f60-20d3780cc9f0"/>
         <semanticElements xmi:type="org.polarsys.capella.core.data.fa:ComponentPort" href="Distiller%20Project.capella#f0ec1afb-b96b-49e5-8f60-20d3780cc9f0"/>
         <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_KT67iN0aEe-Ji-BL19tYrg"/>
@@ -42316,7 +42249,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@containerMappings[name='PAB_PC']/@borderedNodeMappings[name='PAB_Port']"/>
       </ownedBorderedNodes>
-      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KT67id0aEe-Ji-BL19tYrg" name="PP 3" incomingEdges="_KUGhvN0aEe-Ji-BL19tYrg" width="1" height="1">
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KT67id0aEe-Ji-BL19tYrg" name="PP 3" outgoingEdges="_YXFfnNlaEfG3X6MQiHpWsA" incomingEdges="_KUGhvN0aEe-Ji-BL19tYrg" width="1" height="1">
         <target xmi:type="org.polarsys.capella.core.data.cs:PhysicalPort" href="Distiller%20Project.capella#3501975b-0dd9-49ce-aec3-6bbfc2dbbc66"/>
         <semanticElements xmi:type="org.polarsys.capella.core.data.cs:PhysicalPort" href="Distiller%20Project.capella#3501975b-0dd9-49ce-aec3-6bbfc2dbbc66"/>
         <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_KT7ikN0aEe-Ji-BL19tYrg"/>
@@ -42542,7 +42475,7 @@
       <target xmi:type="org.polarsys.capella.core.data.cs:Part" href="Distiller%20Project.capella#4e58e1db-8a0c-4519-814d-a52980807841"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.cs:Part" href="Distiller%20Project.capella#4e58e1db-8a0c-4519-814d-a52980807841"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.pa:PhysicalComponent" href="Distiller%20Project.capella#d0305a2e-3edd-45e3-ab48-16d0f764b2a5"/>
-      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KT9-1t0aEe-Ji-BL19tYrg" name="dirty" outgoingEdges="_KUEFdd0aEe-Ji-BL19tYrg _KULaMt0aEe-Ji-BL19tYrg" width="1" height="1">
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KT9-1t0aEe-Ji-BL19tYrg" name="dirty" outgoingEdges="_KUEFdd0aEe-Ji-BL19tYrg _KULaMt0aEe-Ji-BL19tYrg" incomingEdges="_YXFfodlaEfG3X6MQiHpWsA" width="1" height="1">
         <target xmi:type="org.polarsys.capella.core.data.fa:ComponentPort" href="Distiller%20Project.capella#af864982-aad7-4308-a7ae-6913e16b9dc8"/>
         <semanticElements xmi:type="org.polarsys.capella.core.data.fa:ComponentPort" href="Distiller%20Project.capella#af864982-aad7-4308-a7ae-6913e16b9dc8"/>
         <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_KT9-2d0aEe-Ji-BL19tYrg"/>
@@ -42566,7 +42499,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@containerMappings[name='PAB_PC']/@borderedNodeMappings[name='PAB_Port']"/>
       </ownedBorderedNodes>
-      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KT-l490aEe-Ji-BL19tYrg" name="PP 4" outgoingEdges="_KUGhxd0aEe-Ji-BL19tYrg" width="1" height="1">
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KT-l490aEe-Ji-BL19tYrg" name="PP 4" outgoingEdges="_KUGhxd0aEe-Ji-BL19tYrg _YXFfodlaEfG3X6MQiHpWsA" width="1" height="1">
         <target xmi:type="org.polarsys.capella.core.data.cs:PhysicalPort" href="Distiller%20Project.capella#ffb9888b-0a01-4f6c-90c2-78bd5476d0da"/>
         <semanticElements xmi:type="org.polarsys.capella.core.data.cs:PhysicalPort" href="Distiller%20Project.capella#ffb9888b-0a01-4f6c-90c2-78bd5476d0da"/>
         <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_KT-l5t0aEe-Ji-BL19tYrg"/>
@@ -42722,7 +42655,7 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@nodeMappings[name='PAB_PhysicalFunction']"/>
       </ownedDiagramElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_sBcWjcx-EeqJDepFiRMcVQ" name="Water USer">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_sBcWjcx-EeqJDepFiRMcVQ" name="Water User">
       <target xmi:type="org.polarsys.capella.core.data.cs:Part" href="Distiller%20Project.capella#49dcd966-0044-4de4-b21f-2bc98a592321"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.cs:Part" href="Distiller%20Project.capella#49dcd966-0044-4de4-b21f-2bc98a592321"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.pa:PhysicalComponent" href="Distiller%20Project.capella#252a19de-cc1d-4897-9639-930a64a425a7"/>
@@ -42773,7 +42706,7 @@
       <target xmi:type="org.polarsys.capella.core.data.cs:Part" href="Distiller%20Project.capella#3392f3ee-ab42-40d5-884a-3b1f2e595101"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.cs:Part" href="Distiller%20Project.capella#3392f3ee-ab42-40d5-884a-3b1f2e595101"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.pa:PhysicalComponent" href="Distiller%20Project.capella#29d79e41-48b5-4503-84af-29958d820f1f"/>
-      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KUBpMt0aEe-Ji-BL19tYrg" name="sludge" outgoingEdges="_KUMBTN0aEe-Ji-BL19tYrg" incomingEdges="_KUEFf90aEe-Ji-BL19tYrg" width="1" height="1">
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KUBpMt0aEe-Ji-BL19tYrg" name="sludge" outgoingEdges="_KUMBTN0aEe-Ji-BL19tYrg" incomingEdges="_KUEFf90aEe-Ji-BL19tYrg _YXFfptlaEfG3X6MQiHpWsA" width="1" height="1">
         <target xmi:type="org.polarsys.capella.core.data.fa:ComponentPort" href="Distiller%20Project.capella#a17261a1-46c3-4e45-bbb8-3a83961ea84f"/>
         <semanticElements xmi:type="org.polarsys.capella.core.data.fa:ComponentPort" href="Distiller%20Project.capella#a17261a1-46c3-4e45-bbb8-3a83961ea84f"/>
         <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_KUBpNd0aEe-Ji-BL19tYrg"/>
@@ -42785,7 +42718,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@containerMappings[name='PAB_PC']/@borderedNodeMappings[name='PAB_Port']"/>
       </ownedBorderedNodes>
-      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KUBpNt0aEe-Ji-BL19tYrg" name="PP 2" incomingEdges="_KUHI0d0aEe-Ji-BL19tYrg" width="1" height="1">
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_KUBpNt0aEe-Ji-BL19tYrg" name="PP 2" outgoingEdges="_YXFfptlaEfG3X6MQiHpWsA" incomingEdges="_KUHI0d0aEe-Ji-BL19tYrg" width="1" height="1">
         <target xmi:type="org.polarsys.capella.core.data.cs:PhysicalPort" href="Distiller%20Project.capella#af867cff-adeb-49e0-89d8-ca993183c7a4"/>
         <semanticElements xmi:type="org.polarsys.capella.core.data.cs:PhysicalPort" href="Distiller%20Project.capella#af867cff-adeb-49e0-89d8-ca993183c7a4"/>
         <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_KUBpOd0aEe-Ji-BL19tYrg"/>
@@ -42952,7 +42885,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='PAB_Exchange']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KUFTld0aEe-Ji-BL19tYrg" name="Dirt Water Feed" visible="false" sourceNode="_KT34Nt0aEe-Ji-BL19tYrg" targetNode="_KT1b9t0aEe-Ji-BL19tYrg">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KUFTld0aEe-Ji-BL19tYrg" name="Dirty Water Feed" visible="false" sourceNode="_KT34Nt0aEe-Ji-BL19tYrg" targetNode="_KT1b9t0aEe-Ji-BL19tYrg">
       <target xmi:type="org.polarsys.capella.core.data.fa:ComponentExchange" href="Distiller%20Project.capella#99161e49-e6a0-421d-954a-926fdda252f3"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.fa:ComponentExchange" href="Distiller%20Project.capella#99161e49-e6a0-421d-954a-926fdda252f3"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KUFTlt0aEe-Ji-BL19tYrg" targetArrow="NoDecoration" routingStyle="manhattan" centered="Both" strokeColor="74,74,151">
@@ -43025,6 +42958,7 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KUHv2N0aEe-Ji-BL19tYrg" name="Feed-Boiler Pipeline" sourceNode="_KT005t0aEe-Ji-BL19tYrg" targetNode="_KTrq8d0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
       <target xmi:type="org.polarsys.capella.core.data.cs:PhysicalLink" href="Distiller%20Project.capella#3a8d76f7-572e-4c8b-a722-fead78941a42"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.cs:PhysicalLink" href="Distiller%20Project.capella#3a8d76f7-572e-4c8b-a722-fead78941a42"/>
+      <semanticElements xmi:type="org.polarsys.capella.core.data.cs:PhysicalPath" href="Distiller%20Project.capella#e7b0289a-e031-4e16-ad7b-0f245bfff30b"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KUHv2d0aEe-Ji-BL19tYrg" description="_KUGhsN0aEe-Ji-BL19tYrg" targetArrow="NoDecoration" size="4" routingStyle="manhattan" centered="Both" strokeColor="24,114,248">
         <customFeatures>strokeColor</customFeatures>
         <customFeatures>size</customFeatures>
@@ -43060,6 +42994,7 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KUIW7d0aEe-Ji-BL19tYrg" name="Condenser-Splitter Pipe" sourceNode="_KT3RIt0aEe-Ji-BL19tYrg" targetNode="_KTuuQt0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
       <target xmi:type="org.polarsys.capella.core.data.cs:PhysicalLink" href="Distiller%20Project.capella#16f1f463-4068-4754-b761-c013629c789e"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.cs:PhysicalLink" href="Distiller%20Project.capella#16f1f463-4068-4754-b761-c013629c789e"/>
+      <semanticElements xmi:type="org.polarsys.capella.core.data.cs:PhysicalPath" href="Distiller%20Project.capella#e7b0289a-e031-4e16-ad7b-0f245bfff30b"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KUIW7t0aEe-Ji-BL19tYrg" description="_KUGhsN0aEe-Ji-BL19tYrg" targetArrow="NoDecoration" size="4" centered="Both" strokeColor="24,114,248">
         <customFeatures>strokeColor</customFeatures>
         <customFeatures>size</customFeatures>
@@ -43072,6 +43007,7 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KUI98N0aEe-Ji-BL19tYrg" name="Backup Pipeline" sourceNode="_KT2qG90aEe-Ji-BL19tYrg" targetNode="_KT004t0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
       <target xmi:type="org.polarsys.capella.core.data.cs:PhysicalLink" href="Distiller%20Project.capella#3702f33d-19cb-46c0-ba5e-fc513590d7ae"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.cs:PhysicalLink" href="Distiller%20Project.capella#3702f33d-19cb-46c0-ba5e-fc513590d7ae"/>
+      <semanticElements xmi:type="org.polarsys.capella.core.data.cs:PhysicalPath" href="Distiller%20Project.capella#e7b0289a-e031-4e16-ad7b-0f245bfff30b"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KUI98d0aEe-Ji-BL19tYrg" description="_KUGhsN0aEe-Ji-BL19tYrg" targetArrow="NoDecoration" size="4" centered="Both" strokeColor="24,114,248">
         <customFeatures>strokeColor</customFeatures>
         <customFeatures>size</customFeatures>
@@ -43362,20 +43298,6 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='PAB%20PortRealization']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KUNPe90aEe-Ji-BL19tYrg" visible="false" sourceNode="_KT34Nt0aEe-Ji-BL19tYrg" targetNode="_KT5GVt0aEe-Ji-BL19tYrg">
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KUNPfN0aEe-Ji-BL19tYrg" lineStyle="dash" targetArrow="NoDecoration" size="2" centered="Both" strokeColor="39,76,114">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='PAB%20PortRealization']/@conditionnalStyles.0/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_KUNPfd0aEe-Ji-BL19tYrg" showIcon="false"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='PAB%20PortRealization']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KUN2ct0aEe-Ji-BL19tYrg" visible="false" sourceNode="_KT4fQ90aEe-Ji-BL19tYrg" targetNode="_KT5GVt0aEe-Ji-BL19tYrg">
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KUN2c90aEe-Ji-BL19tYrg" lineStyle="dash" targetArrow="NoDecoration" size="2" centered="Both" strokeColor="39,76,114">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='PAB%20PortRealization']/@conditionnalStyles.0/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_KUN2dN0aEe-Ji-BL19tYrg" showIcon="false"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='PAB%20PortRealization']"/>
-    </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KUN2d90aEe-Ji-BL19tYrg" visible="false" sourceNode="_KT4fR90aEe-Ji-BL19tYrg" targetNode="_KT5GWt0aEe-Ji-BL19tYrg">
       <target xmi:type="org.polarsys.capella.core.data.information:PortAllocation" href="Distiller%20Project.capella#178f0d38-0701-49d4-984a-bc11e4750d58"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.information:PortAllocation" href="Distiller%20Project.capella#178f0d38-0701-49d4-984a-bc11e4750d58"/>
@@ -43520,7 +43442,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='PAB_ComponentPortAllocation']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KUQSsN0aEe-Ji-BL19tYrg" name="Safe Drinking Water" visible="false" sourceNode="_KT7imd0aEe-Ji-BL19tYrg" targetNode="_KT8Jo90aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KUQSsN0aEe-Ji-BL19tYrg" name="Stored Safe Drinking Water" visible="false" sourceNode="_KT7imd0aEe-Ji-BL19tYrg" targetNode="_KT8Jo90aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
       <target xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#d9cee39d-3bed-49ed-bc4c-f01c6560681a"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#d9cee39d-3bed-49ed-bc4c-f01c6560681a"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KUQ5xN0aEe-Ji-BL19tYrg" description="_KUQ5wN0aEe-Ji-BL19tYrg" targetArrow="NoDecoration" centered="Both" strokeColor="9,92,46">
@@ -43530,7 +43452,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='PAB_FunctionExchange']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KUQ5zN0aEe-Ji-BL19tYrg" name="Safe Drinking Water" visible="false" sourceNode="_KT8Jp90aEe-Ji-BL19tYrg" targetNode="_KUBCJt0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KUQ5zN0aEe-Ji-BL19tYrg" name="Delivered Safe Drinking Water" visible="false" sourceNode="_KT8Jp90aEe-Ji-BL19tYrg" targetNode="_KUBCJt0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
       <target xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#d86eee53-1e17-472a-a454-779e07b4c76b"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#d86eee53-1e17-472a-a454-779e07b4c76b"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KURg0N0aEe-Ji-BL19tYrg" description="_KUQ5wN0aEe-Ji-BL19tYrg" targetArrow="NoDecoration" centered="Both" strokeColor="9,92,46">
@@ -43590,7 +43512,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='PAB_FunctionExchange']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KUTWEd0aEe-Ji-BL19tYrg" name="Heat" visible="false" sourceNode="_KUAbGt0aEe-Ji-BL19tYrg" targetNode="_KTtgIt0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KUTWEd0aEe-Ji-BL19tYrg" name="Boiler Heat" visible="false" sourceNode="_KUAbGt0aEe-Ji-BL19tYrg" targetNode="_KTtgIt0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
       <target xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#fbf93101-8edf-4ee0-9a61-b7a8209c30ee"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#fbf93101-8edf-4ee0-9a61-b7a8209c30ee"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KUTWEt0aEe-Ji-BL19tYrg" description="_KUQ5wN0aEe-Ji-BL19tYrg" targetArrow="NoDecoration" centered="Both" strokeColor="9,92,46">
@@ -43640,7 +43562,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='PAB_FunctionExchange']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KUUkLd0aEe-Ji-BL19tYrg" name="Hot Water CS" visible="false" sourceNode="_KTxKit0aEe-Ji-BL19tYrg" targetNode="_KT5GUt0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KUUkLd0aEe-Ji-BL19tYrg" name="Heated Dirty Water" visible="false" sourceNode="_KTxKit0aEe-Ji-BL19tYrg" targetNode="_KT5GUt0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
       <target xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#2b1b287f-82fd-4aa3-bc91-41164bfa7f1c"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#2b1b287f-82fd-4aa3-bc91-41164bfa7f1c"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KUUkLt0aEe-Ji-BL19tYrg" description="_KUQ5wN0aEe-Ji-BL19tYrg" targetArrow="NoDecoration" centered="Both" strokeColor="9,92,46">
@@ -43660,22 +43582,13 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='PAB_FunctionExchange']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KUVLON0aEe-Ji-BL19tYrg" name="Hot Water FE" visible="false" sourceNode="_KT2qE90aEe-Ji-BL19tYrg" targetNode="_KTtgJt0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KUVLON0aEe-Ji-BL19tYrg" name="Throttled Dirty Water" visible="false" sourceNode="_KT2qE90aEe-Ji-BL19tYrg" targetNode="_KTtgJt0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
       <target xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#1e0bb105-78e7-4461-b461-3815eebe0022"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#1e0bb105-78e7-4461-b461-3815eebe0022"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KUVLOd0aEe-Ji-BL19tYrg" description="_KUQ5wN0aEe-Ji-BL19tYrg" targetArrow="NoDecoration" centered="Both" strokeColor="9,92,46">
         <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_KUVLOt0aEe-Ji-BL19tYrg" showIcon="false" labelColor="255,255,255"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_KUVLPN0aEe-Ji-BL19tYrg" labelColor="9,92,46"/>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_KUVLO90aEe-Ji-BL19tYrg" showIcon="false" labelColor="255,255,255"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='PAB_FunctionExchange']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KUVLQd0aEe-Ji-BL19tYrg" name="Hot Dirty Water" visible="false" sourceNode="_KT5GVt0aEe-Ji-BL19tYrg" targetNode="_KT2DCd0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KUVLQt0aEe-Ji-BL19tYrg" description="_KUQ5wN0aEe-Ji-BL19tYrg" targetArrow="NoDecoration" routingStyle="manhattan" centered="Both" strokeColor="9,92,46">
-        <customFeatures>routingStyle</customFeatures>
-        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_KUVLQ90aEe-Ji-BL19tYrg" showIcon="false" labelColor="255,255,255"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_KUVLRd0aEe-Ji-BL19tYrg" labelColor="9,92,46"/>
-        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_KUVLRN0aEe-Ji-BL19tYrg" showIcon="false" labelColor="255,255,255"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='PAB_FunctionExchange']"/>
     </ownedDiagramElements>
@@ -43744,6 +43657,78 @@
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_KXUNwt0aEe-Ji-BL19tYrg" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='PAB_InternPhysicalPathLink']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_YXERsNlaEfG3X6MQiHpWsA" visible="false" sourceNode="_KTyYpt0aEe-Ji-BL19tYrg" targetNode="_YW7uYtlaEfG3X6MQiHpWsA">
+      <target xmi:type="org.polarsys.capella.core.data.information:PortAllocation" href="Distiller%20Project.capella#f8fff004-1d3a-43d9-8fd9-0af1f20b02b8"/>
+      <semanticElements xmi:type="org.polarsys.capella.core.data.information:PortAllocation" href="Distiller%20Project.capella#f8fff004-1d3a-43d9-8fd9-0af1f20b02b8"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_YXERsdlaEfG3X6MQiHpWsA" lineStyle="dash" targetArrow="NoDecoration" size="2" centered="Both" strokeColor="39,76,114">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='PAB%20PortRealization']/@conditionnalStyles.0/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_YXERstlaEfG3X6MQiHpWsA" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='PAB%20PortRealization']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_YXE4UtlaEfG3X6MQiHpWsA" visible="false" sourceNode="_KT34Nt0aEe-Ji-BL19tYrg" targetNode="_KT5GVt0aEe-Ji-BL19tYrg">
+      <target xmi:type="org.polarsys.capella.core.data.information:PortAllocation" href="Distiller%20Project.capella#06ba949c-90a3-44a4-bcbf-03a7254c82e7"/>
+      <semanticElements xmi:type="org.polarsys.capella.core.data.information:PortAllocation" href="Distiller%20Project.capella#06ba949c-90a3-44a4-bcbf-03a7254c82e7"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_YXE4U9laEfG3X6MQiHpWsA" lineStyle="dash" targetArrow="NoDecoration" size="2" centered="Both" strokeColor="39,76,114">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='PAB%20PortRealization']/@conditionnalStyles.0/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_YXE4VNlaEfG3X6MQiHpWsA" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='PAB%20PortRealization']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_YXE4V9laEfG3X6MQiHpWsA" visible="false" sourceNode="_KT4fQ90aEe-Ji-BL19tYrg" targetNode="_KT5GVt0aEe-Ji-BL19tYrg">
+      <target xmi:type="org.polarsys.capella.core.data.information:PortAllocation" href="Distiller%20Project.capella#daedf7cd-9ae9-4199-a3f2-7b3d60b1fd5d"/>
+      <semanticElements xmi:type="org.polarsys.capella.core.data.information:PortAllocation" href="Distiller%20Project.capella#daedf7cd-9ae9-4199-a3f2-7b3d60b1fd5d"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_YXE4WNlaEfG3X6MQiHpWsA" lineStyle="dash" targetArrow="NoDecoration" size="2" centered="Both" strokeColor="39,76,114">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='PAB%20PortRealization']/@conditionnalStyles.0/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_YXE4WdlaEfG3X6MQiHpWsA" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='PAB%20PortRealization']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_YXFfnNlaEfG3X6MQiHpWsA" sourceNode="_KT67id0aEe-Ji-BL19tYrg" targetNode="_KT67hd0aEe-Ji-BL19tYrg">
+      <target xmi:type="org.polarsys.capella.core.data.fa:ComponentPortAllocation" href="Distiller%20Project.capella#f39e3e65-a7ef-4d34-ab16-2ed062cd8e83"/>
+      <semanticElements xmi:type="org.polarsys.capella.core.data.fa:ComponentPortAllocation" href="Distiller%20Project.capella#f39e3e65-a7ef-4d34-ab16-2ed062cd8e83"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_YXFfndlaEfG3X6MQiHpWsA" targetArrow="NoDecoration" centered="Both" strokeColor="39,76,114">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='PAB_ComponentPortAllocation']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_YXFfntlaEfG3X6MQiHpWsA" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='PAB_ComponentPortAllocation']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_YXFfodlaEfG3X6MQiHpWsA" sourceNode="_KT-l490aEe-Ji-BL19tYrg" targetNode="_KT9-1t0aEe-Ji-BL19tYrg">
+      <target xmi:type="org.polarsys.capella.core.data.fa:ComponentPortAllocation" href="Distiller%20Project.capella#eee456ee-c3b4-4096-9c68-34aee8e258e6"/>
+      <semanticElements xmi:type="org.polarsys.capella.core.data.fa:ComponentPortAllocation" href="Distiller%20Project.capella#eee456ee-c3b4-4096-9c68-34aee8e258e6"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_YXFfotlaEfG3X6MQiHpWsA" targetArrow="NoDecoration" centered="Both" strokeColor="39,76,114">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='PAB_ComponentPortAllocation']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_YXFfo9laEfG3X6MQiHpWsA" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='PAB_ComponentPortAllocation']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_YXFfptlaEfG3X6MQiHpWsA" sourceNode="_KUBpNt0aEe-Ji-BL19tYrg" targetNode="_KUBpMt0aEe-Ji-BL19tYrg">
+      <target xmi:type="org.polarsys.capella.core.data.fa:ComponentPortAllocation" href="Distiller%20Project.capella#283e405b-be19-428f-8f08-d64590c7a74d"/>
+      <semanticElements xmi:type="org.polarsys.capella.core.data.fa:ComponentPortAllocation" href="Distiller%20Project.capella#283e405b-be19-428f-8f08-d64590c7a74d"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_YXGGcNlaEfG3X6MQiHpWsA" targetArrow="NoDecoration" centered="Both" strokeColor="39,76,114">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='PAB_ComponentPortAllocation']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_YXGGcdlaEfG3X6MQiHpWsA" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='PAB_ComponentPortAllocation']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_YXGGdNlaEfG3X6MQiHpWsA" visible="false" sourceNode="_KTqc2N0aEe-Ji-BL19tYrg" targetNode="_KTsSAd0aEe-Ji-BL19tYrg">
+      <target xmi:type="org.polarsys.capella.core.data.fa:ComponentPortAllocation" href="Distiller%20Project.capella#baffafdd-d367-4765-9b78-096c5fc6c5a2"/>
+      <semanticElements xmi:type="org.polarsys.capella.core.data.fa:ComponentPortAllocation" href="Distiller%20Project.capella#baffafdd-d367-4765-9b78-096c5fc6c5a2"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_YXGGddlaEfG3X6MQiHpWsA" targetArrow="NoDecoration" centered="Both" strokeColor="39,76,114">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='PAB_ComponentPortAllocation']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_YXGGdtlaEfG3X6MQiHpWsA" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='PAB_ComponentPortAllocation']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_YXGGedlaEfG3X6MQiHpWsA" visible="false" sourceNode="_KTxxkN0aEe-Ji-BL19tYrg" targetNode="_KTyYot0aEe-Ji-BL19tYrg">
+      <target xmi:type="org.polarsys.capella.core.data.fa:ComponentPortAllocation" href="Distiller%20Project.capella#1eca91b6-86ff-414e-b3af-ac25086e1f09"/>
+      <semanticElements xmi:type="org.polarsys.capella.core.data.fa:ComponentPortAllocation" href="Distiller%20Project.capella#1eca91b6-86ff-414e-b3af-ac25086e1f09"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_YXGGetlaEfG3X6MQiHpWsA" targetArrow="NoDecoration" centered="Both" strokeColor="39,76,114">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='PAB_ComponentPortAllocation']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_YXGGe9laEfG3X6MQiHpWsA" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='PAB_ComponentPortAllocation']"/>
     </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']"/>
     <activatedFilters xmi:type="filter:CompositeFilterDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@filters[name='hide.functions.filter']"/>
@@ -48456,7 +48441,7 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/context.odesign#//@ownedViewpoints[name='System%20Analysis']/@ownedRepresentations[name='System%20Architecture%20Blank']/@defaultLayer/@containerMappings[name='System%20Actors']/@subNodeMappings[name='CA%20System%20Function']"/>
       </ownedDiagramElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_Eueh8czSEeqBnr1AZ3DERg" name="Water USer">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_Eueh8czSEeqBnr1AZ3DERg" name="Water User">
       <target xmi:type="org.polarsys.capella.core.data.cs:Part" href="Distiller%20Project.capella#66de44b9-4e31-4e75-afcc-c86f01f011f1"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.cs:Part" href="Distiller%20Project.capella#66de44b9-4e31-4e75-afcc-c86f01f011f1"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.ctx:SystemComponent" href="Distiller%20Project.capella#711dc360-add7-41f5-a7a7-01233e18a7a5"/>
@@ -48891,6 +48876,7 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KsyHcN0aEe-Ji-BL19tYrg" name="Water Supply" sourceNode="_KsqLq90aEe-Ji-BL19tYrg" targetNode="_KstO8d0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
       <target xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#547d85ad-580b-4bc2-9bec-9b50ae8b362e"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#547d85ad-580b-4bc2-9bec-9b50ae8b362e"/>
+      <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalChain" href="Distiller%20Project.capella#a85c9767-92fc-48c8-a159-f8bccd8875fd"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KsyHdd0aEe-Ji-BL19tYrg" description="_KsyHcd0aEe-Ji-BL19tYrg" targetArrow="NoDecoration" size="4" centered="Both" strokeColor="24,114,248">
         <customFeatures>strokeColor</customFeatures>
         <customFeatures>size</customFeatures>
@@ -48900,9 +48886,10 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/context.odesign#//@ownedViewpoints[name='System%20Analysis']/@ownedRepresentations[name='System%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='CA%20DataFlow%20between%20Function']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KsyHfd0aEe-Ji-BL19tYrg" name="Heat Supply" sourceNode="_Ksqyst0aEe-Ji-BL19tYrg" targetNode="_KssA0t0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KsyHfd0aEe-Ji-BL19tYrg" name="Power Supply Control" sourceNode="_Ksqyst0aEe-Ji-BL19tYrg" targetNode="_KssA0t0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
       <target xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#a54a5555-e490-4b1b-84e2-a4daf665e64e"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#a54a5555-e490-4b1b-84e2-a4daf665e64e"/>
+      <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalChain" href="Distiller%20Project.capella#a85c9767-92fc-48c8-a159-f8bccd8875fd"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KsyHft0aEe-Ji-BL19tYrg" description="_KsyHcd0aEe-Ji-BL19tYrg" targetArrow="NoDecoration" size="4" centered="Both" strokeColor="24,114,248">
         <customFeatures>strokeColor</customFeatures>
         <customFeatures>size</customFeatures>
@@ -48932,9 +48919,10 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/context.odesign#//@ownedViewpoints[name='System%20Analysis']/@ownedRepresentations[name='System%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='CA%20DataFlow%20between%20Function']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Ksyukd0aEe-Ji-BL19tYrg" name="Safe Drinking Water" sourceNode="_KsudEd0aEe-Ji-BL19tYrg" targetNode="_KsudFd0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Ksyukd0aEe-Ji-BL19tYrg" name="Stored Safe Drinking Water" sourceNode="_KsudEd0aEe-Ji-BL19tYrg" targetNode="_KsudFd0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
       <target xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#3a30895d-4a5b-4709-8ffe-efaac4190c94"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#3a30895d-4a5b-4709-8ffe-efaac4190c94"/>
+      <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalChain" href="Distiller%20Project.capella#a85c9767-92fc-48c8-a159-f8bccd8875fd"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_Ksyukt0aEe-Ji-BL19tYrg" description="_KsyHcd0aEe-Ji-BL19tYrg" targetArrow="NoDecoration" size="4" centered="Both" strokeColor="24,114,248">
         <customFeatures>strokeColor</customFeatures>
         <customFeatures>size</customFeatures>
@@ -48944,9 +48932,10 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/context.odesign#//@ownedViewpoints[name='System%20Analysis']/@ownedRepresentations[name='System%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='CA%20DataFlow%20between%20Function']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Ksyumt0aEe-Ji-BL19tYrg" name="Safe Drinking Water" sourceNode="_KsudGd0aEe-Ji-BL19tYrg" targetNode="_KsvEIt0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Ksyumt0aEe-Ji-BL19tYrg" name="Delivered Safe Drinking Water" sourceNode="_KsudGd0aEe-Ji-BL19tYrg" targetNode="_KsvEIt0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
       <target xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#81f67204-9e0d-4e9a-ad8e-292405c3a9d3"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#81f67204-9e0d-4e9a-ad8e-292405c3a9d3"/>
+      <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalChain" href="Distiller%20Project.capella#a85c9767-92fc-48c8-a159-f8bccd8875fd"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KszVkN0aEe-Ji-BL19tYrg" description="_KsyHcd0aEe-Ji-BL19tYrg" targetArrow="NoDecoration" size="4" centered="Both" strokeColor="24,114,248">
         <customFeatures>strokeColor</customFeatures>
         <customFeatures>size</customFeatures>
@@ -49264,9 +49253,10 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/context.odesign#//@ownedViewpoints[name='System%20Analysis']/@ownedRepresentations[name='System%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='CA_InternLink']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KwKLlN0aEe-Ji-BL19tYrg" name="Heat" sourceNode="_KssA2t0aEe-Ji-BL19tYrg" targetNode="_Kv8JIt0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KwKLlN0aEe-Ji-BL19tYrg" name="Heating Power" sourceNode="_KssA2t0aEe-Ji-BL19tYrg" targetNode="_Kv8JIt0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
       <target xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#848c6d70-a521-4e76-b37f-db1f66a7d33f"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#848c6d70-a521-4e76-b37f-db1f66a7d33f"/>
+      <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalChain" href="Distiller%20Project.capella#a85c9767-92fc-48c8-a159-f8bccd8875fd"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KwKLld0aEe-Ji-BL19tYrg" description="_KsyHcd0aEe-Ji-BL19tYrg" targetArrow="NoDecoration" size="4" centered="Both" strokeColor="24,114,248">
         <customFeatures>strokeColor</customFeatures>
         <customFeatures>size</customFeatures>
@@ -49276,9 +49266,10 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/context.odesign#//@ownedViewpoints[name='System%20Analysis']/@ownedRepresentations[name='System%20Architecture%20Blank']/@defaultLayer/@edgeMappings[name='CA%20DataFlow%20between%20Function']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KwKyoN0aEe-Ji-BL19tYrg" name="Heat" sourceNode="_KssA3t0aEe-Ji-BL19tYrg" targetNode="_Kv67At0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KwKyoN0aEe-Ji-BL19tYrg" name="Boiler Heat" sourceNode="_KssA3t0aEe-Ji-BL19tYrg" targetNode="_Kv67At0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
       <target xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#64b15f15-9e6b-45c9-a99d-4a9fc7c96498"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#64b15f15-9e6b-45c9-a99d-4a9fc7c96498"/>
+      <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalChain" href="Distiller%20Project.capella#a85c9767-92fc-48c8-a159-f8bccd8875fd"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KwKyod0aEe-Ji-BL19tYrg" description="_KsyHcd0aEe-Ji-BL19tYrg" targetArrow="NoDecoration" size="4" routingStyle="manhattan" centered="Both" strokeColor="24,114,248">
         <customFeatures>strokeColor</customFeatures>
         <customFeatures>size</customFeatures>
@@ -49292,6 +49283,7 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KwKyqd0aEe-Ji-BL19tYrg" name="Dirty Water" sourceNode="_KstO-d0aEe-Ji-BL19tYrg" targetNode="_Kv8JJd0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
       <target xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#9c6bf30a-a7b0-452a-9cf1-39b59b4f1164"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#9c6bf30a-a7b0-452a-9cf1-39b59b4f1164"/>
+      <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalChain" href="Distiller%20Project.capella#a85c9767-92fc-48c8-a159-f8bccd8875fd"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KwKyqt0aEe-Ji-BL19tYrg" description="_KsyHcd0aEe-Ji-BL19tYrg" targetArrow="NoDecoration" size="4" centered="Both" strokeColor="24,114,248">
         <customFeatures>strokeColor</customFeatures>
         <customFeatures>size</customFeatures>
@@ -49304,6 +49296,7 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KwLZtN0aEe-Ji-BL19tYrg" name="Sludge" sourceNode="_Kv67CN0aEe-Ji-BL19tYrg" targetNode="_Kv8wMt0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
       <target xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#1fb9e95d-b24c-4807-92c7-7b1a0c42c14e"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#1fb9e95d-b24c-4807-92c7-7b1a0c42c14e"/>
+      <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalChain" href="Distiller%20Project.capella#a85c9767-92fc-48c8-a159-f8bccd8875fd"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KwLZtd0aEe-Ji-BL19tYrg" description="_KsyHcd0aEe-Ji-BL19tYrg" targetArrow="NoDecoration" size="4" centered="Both" strokeColor="24,114,248">
         <customFeatures>strokeColor</customFeatures>
         <customFeatures>size</customFeatures>
@@ -49316,6 +49309,7 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KwLZvd0aEe-Ji-BL19tYrg" name="Steam" sourceNode="_Kv67C90aEe-Ji-BL19tYrg" targetNode="_Kv7iEt0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
       <target xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#560929ef-3d6b-436b-a8fe-65a61de8c3ca"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#560929ef-3d6b-436b-a8fe-65a61de8c3ca"/>
+      <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalChain" href="Distiller%20Project.capella#a85c9767-92fc-48c8-a159-f8bccd8875fd"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KwLZvt0aEe-Ji-BL19tYrg" description="_KsyHcd0aEe-Ji-BL19tYrg" targetArrow="NoDecoration" size="4" centered="Both" strokeColor="24,114,248">
         <customFeatures>strokeColor</customFeatures>
         <customFeatures>size</customFeatures>
@@ -49328,6 +49322,7 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KwMAxN0aEe-Ji-BL19tYrg" name="Distilled Water" sourceNode="_Kv7iFd0aEe-Ji-BL19tYrg" targetNode="_Kst2C90aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
       <target xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#ac813313-bca0-4595-8f85-f383afb2777d"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#ac813313-bca0-4595-8f85-f383afb2777d"/>
+      <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalChain" href="Distiller%20Project.capella#a85c9767-92fc-48c8-a159-f8bccd8875fd"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KwMAxd0aEe-Ji-BL19tYrg" description="_KsyHcd0aEe-Ji-BL19tYrg" targetArrow="NoDecoration" size="4" centered="Both" strokeColor="24,114,248">
         <customFeatures>strokeColor</customFeatures>
         <customFeatures>size</customFeatures>
@@ -49340,6 +49335,7 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KwMAzd0aEe-Ji-BL19tYrg" name="Recovered Heat" sourceNode="_Kv7iGN0aEe-Ji-BL19tYrg" targetNode="_Kv8JKN0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
       <target xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#d76fe349-15dc-4981-84a7-14aa89282482"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#d76fe349-15dc-4981-84a7-14aa89282482"/>
+      <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalChain" href="Distiller%20Project.capella#a85c9767-92fc-48c8-a159-f8bccd8875fd"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KwMn0N0aEe-Ji-BL19tYrg" description="_KsyHcd0aEe-Ji-BL19tYrg" targetArrow="NoDecoration" size="4" centered="Both" strokeColor="24,114,248">
         <customFeatures>strokeColor</customFeatures>
         <customFeatures>size</customFeatures>
@@ -49352,6 +49348,7 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KwMn2N0aEe-Ji-BL19tYrg" name="Hot Water" sourceNode="_Kv8JK90aEe-Ji-BL19tYrg" targetNode="_Kv67Bd0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
       <target xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#7e19530c-f0f6-4f68-a246-25a824431ce4"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#7e19530c-f0f6-4f68-a246-25a824431ce4"/>
+      <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalChain" href="Distiller%20Project.capella#a85c9767-92fc-48c8-a159-f8bccd8875fd"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KwMn2d0aEe-Ji-BL19tYrg" description="_KsyHcd0aEe-Ji-BL19tYrg" targetArrow="NoDecoration" size="4" centered="Both" strokeColor="24,114,248">
         <customFeatures>strokeColor</customFeatures>
         <customFeatures>size</customFeatures>
@@ -49364,6 +49361,7 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KwMn4d0aEe-Ji-BL19tYrg" name="Residue" sourceNode="_Kv8wNd0aEe-Ji-BL19tYrg" targetNode="_KsvELN0aEe-Ji-BL19tYrg" beginLabel="." endLabel=".">
       <target xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#8682b777-71ab-4c88-afb8-9fc1d147ef95"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalExchange" href="Distiller%20Project.capella#8682b777-71ab-4c88-afb8-9fc1d147ef95"/>
+      <semanticElements xmi:type="org.polarsys.capella.core.data.fa:FunctionalChain" href="Distiller%20Project.capella#a85c9767-92fc-48c8-a159-f8bccd8875fd"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KwMn4t0aEe-Ji-BL19tYrg" description="_KsyHcd0aEe-Ji-BL19tYrg" targetArrow="NoDecoration" size="4" centered="Both" strokeColor="24,114,248">
         <customFeatures>strokeColor</customFeatures>
         <customFeatures>size</customFeatures>
