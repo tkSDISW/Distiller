@@ -857,9 +857,8 @@
                 sourceElement="#7fe37648-029a-4dc9-959e-79098d30f707"/>
           </ownedFunctionalExchanges>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="64b15f15-9e6b-45c9-a99d-4a9fc7c96498" name="Boiler Heat Control"
-              target="#f2bc3f47-18a7-4674-b54d-0b0f40d03966" source="#84fbd8d0-1952-407d-a6d0-57735d47bd53"
-              exchangedItems="#766dbe28-ace1-4567-af3e-02b2449d252a">
+              id="64b15f15-9e6b-45c9-a99d-4a9fc7c96498" name="Boiler Heat" target="#f2bc3f47-18a7-4674-b54d-0b0f40d03966"
+              source="#84fbd8d0-1952-407d-a6d0-57735d47bd53" exchangedItems="#6be015bd-601f-4879-8882-86dbf93a4870">
             <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
                 id="dae8d582-849c-4adf-99da-f0883911c37f" targetElement="#e25691cf-a326-4b93-b084-c875be4e957f"
                 sourceElement="#64b15f15-9e6b-45c9-a99d-4a9fc7c96498"/>
@@ -2380,9 +2379,8 @@
                 sourceElement="#8d29ec83-4928-4007-9887-b84efebfc041"/>
           </ownedFunctionalExchanges>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="e062898a-9114-495b-9505-4e71046a16b7" name="Boiler Heat Control"
-              target="#d291a56a-252a-4f95-aee3-8f2bec6da1f4" source="#cda6f027-1d6c-42a1-b2ab-e5b5118004b6"
-              exchangedItems="#766dbe28-ace1-4567-af3e-02b2449d252a">
+              id="e062898a-9114-495b-9505-4e71046a16b7" name="Boiler Heat" target="#d291a56a-252a-4f95-aee3-8f2bec6da1f4"
+              source="#cda6f027-1d6c-42a1-b2ab-e5b5118004b6" exchangedItems="#6be015bd-601f-4879-8882-86dbf93a4870">
             <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
                 id="16209de6-55e5-41f7-83f6-cd5d39c05d7c" targetElement="#64b15f15-9e6b-45c9-a99d-4a9fc7c96498"
                 sourceElement="#e062898a-9114-495b-9505-4e71046a16b7"/>
