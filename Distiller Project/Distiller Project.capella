@@ -791,8 +791,9 @@
                 sourceElement="#547d85ad-580b-4bc2-9bec-9b50ae8b362e"/>
           </ownedFunctionalExchanges>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="a54a5555-e490-4b1b-84e2-a4daf665e64e" name="Heat Supply" target="#563f27b1-e52e-4860-9c2f-fdadcb9a6ad8"
-              source="#e1e2cbe8-4bea-412d-988a-51cb73cb8ba4" exchangedItems="#6ce5a8b7-6bfc-4daa-88a9-bebb14934177">
+              id="a54a5555-e490-4b1b-84e2-a4daf665e64e" name="Power Supply Control"
+              target="#563f27b1-e52e-4860-9c2f-fdadcb9a6ad8" source="#e1e2cbe8-4bea-412d-988a-51cb73cb8ba4"
+              exchangedItems="#6ce5a8b7-6bfc-4daa-88a9-bebb14934177">
             <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
                 id="6518f3be-8a91-4bac-a096-5c111fcb81b8" targetElement="#e25691cf-a326-4b93-b084-c875be4e957f"
                 sourceElement="#a54a5555-e490-4b1b-84e2-a4daf665e64e"/>
@@ -805,7 +806,7 @@
                 sourceElement="#9c6bf30a-a7b0-452a-9cf1-39b59b4f1164"/>
           </ownedFunctionalExchanges>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="848c6d70-a521-4e76-b37f-db1f66a7d33f" name="Heat" target="#1201b032-d668-4687-8363-b8e30ed0568c"
+              id="848c6d70-a521-4e76-b37f-db1f66a7d33f" name="Heating Power" target="#1201b032-d668-4687-8363-b8e30ed0568c"
               source="#2b29c814-4ee1-4f71-8db9-17620ae32a86" exchangedItems="#d941e294-70b6-4608-9d92-47f0e1632484 #766dbe28-ace1-4567-af3e-02b2449d252a">
             <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
                 id="a97c2ffa-c2e5-4a3d-9e2a-b137f6a4e6c1" targetElement="#a11e8a62-4729-4844-8562-bc5bcec732b5"
@@ -856,8 +857,9 @@
                 sourceElement="#7fe37648-029a-4dc9-959e-79098d30f707"/>
           </ownedFunctionalExchanges>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="64b15f15-9e6b-45c9-a99d-4a9fc7c96498" name="Heat" target="#f2bc3f47-18a7-4674-b54d-0b0f40d03966"
-              source="#84fbd8d0-1952-407d-a6d0-57735d47bd53" exchangedItems="#766dbe28-ace1-4567-af3e-02b2449d252a">
+              id="64b15f15-9e6b-45c9-a99d-4a9fc7c96498" name="Boiler Heat Control"
+              target="#f2bc3f47-18a7-4674-b54d-0b0f40d03966" source="#84fbd8d0-1952-407d-a6d0-57735d47bd53"
+              exchangedItems="#766dbe28-ace1-4567-af3e-02b2449d252a">
             <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
                 id="dae8d582-849c-4adf-99da-f0883911c37f" targetElement="#e25691cf-a326-4b93-b084-c875be4e957f"
                 sourceElement="#64b15f15-9e6b-45c9-a99d-4a9fc7c96498"/>
@@ -2378,8 +2380,9 @@
                 sourceElement="#8d29ec83-4928-4007-9887-b84efebfc041"/>
           </ownedFunctionalExchanges>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="e062898a-9114-495b-9505-4e71046a16b7" name="Heat" target="#d291a56a-252a-4f95-aee3-8f2bec6da1f4"
-              source="#cda6f027-1d6c-42a1-b2ab-e5b5118004b6" exchangedItems="#766dbe28-ace1-4567-af3e-02b2449d252a">
+              id="e062898a-9114-495b-9505-4e71046a16b7" name="Boiler Heat Control"
+              target="#d291a56a-252a-4f95-aee3-8f2bec6da1f4" source="#cda6f027-1d6c-42a1-b2ab-e5b5118004b6"
+              exchangedItems="#766dbe28-ace1-4567-af3e-02b2449d252a">
             <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
                 id="16209de6-55e5-41f7-83f6-cd5d39c05d7c" targetElement="#64b15f15-9e6b-45c9-a99d-4a9fc7c96498"
                 sourceElement="#e062898a-9114-495b-9505-4e71046a16b7"/>
@@ -2415,7 +2418,7 @@
           </ownedFunctionalExchanges>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="fabaeebd-3e11-4d73-913e-cc9d62e3caca" sid="fabaeebd-3e11-4d73-913e-cc9d62e3caca"
-              name="Hot Dirty Water" target="#49c5ac52-2e74-4cbc-86f8-362367c1d53a"
+              name="Diverted Dirty Water" target="#49c5ac52-2e74-4cbc-86f8-362367c1d53a"
               source="#fa51849a-fc51-46f3-a723-8c4afd704747" exchangedItems="#b90a6c0a-7c54-4243-b241-b6db3b28eddf">
             <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
                 id="4c293b22-dd36-45bf-a6a4-ca37b4dc4be6" targetElement="#7e19530c-f0f6-4f68-a246-25a824431ce4"
@@ -3754,8 +3757,9 @@
                 sourceElement="#e9598749-2eae-478f-9ab5-3c00d8ba0952"/>
           </ownedFunctionalExchanges>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="fbf93101-8edf-4ee0-9a61-b7a8209c30ee" name="Heat" target="#81f90468-03be-4908-9a9a-d15de1255dd9"
-              source="#0ccbbd28-e0f7-43b1-b29b-4c2a1294759f" exchangedItems="#766dbe28-ace1-4567-af3e-02b2449d252a">
+              id="fbf93101-8edf-4ee0-9a61-b7a8209c30ee" name="Boiler Heat Control"
+              target="#81f90468-03be-4908-9a9a-d15de1255dd9" source="#0ccbbd28-e0f7-43b1-b29b-4c2a1294759f"
+              exchangedItems="#766dbe28-ace1-4567-af3e-02b2449d252a">
             <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
                 id="f1d31b32-e0d8-4868-b34f-129d78ed39c3" targetElement="#e062898a-9114-495b-9505-4e71046a16b7"
                 sourceElement="#fbf93101-8edf-4ee0-9a61-b7a8209c30ee"/>
@@ -3792,8 +3796,9 @@
               id="4babf37b-7c92-4d8e-b68f-bb3643e0d97c" name="Hot Dirty Water" target="#f8507e9e-6d37-48c7-80af-10d7e19a5e68"
               source="#4e1edfbe-37eb-4fcd-8beb-d6f842a23fd9" exchangedItems="#b90a6c0a-7c54-4243-b241-b6db3b28eddf"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="2b1b287f-82fd-4aa3-bc91-41164bfa7f1c" name="Hot Water CS" target="#9c1575c6-1ed7-4058-ac3e-62e757a3c219"
-              source="#0ca66c33-c15a-4484-8b67-2534bb7bcbba" exchangedItems="#b90a6c0a-7c54-4243-b241-b6db3b28eddf">
+              id="2b1b287f-82fd-4aa3-bc91-41164bfa7f1c" name="Heated Dirty Water"
+              target="#9c1575c6-1ed7-4058-ac3e-62e757a3c219" source="#0ca66c33-c15a-4484-8b67-2534bb7bcbba"
+              exchangedItems="#b90a6c0a-7c54-4243-b241-b6db3b28eddf">
             <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
                 id="172fef3b-d89e-4175-862a-28306a17a2ff" targetElement="#f63dc13b-839b-4a06-863a-bf7302dd583f"
                 sourceElement="#2b1b287f-82fd-4aa3-bc91-41164bfa7f1c"/>
@@ -3802,8 +3807,9 @@
               id="887d30a2-1d82-47f5-8cd6-b59f75bf6218" name="Bypass Water" target="#2f00b5f5-e9da-4181-a484-bbb75d4b30b4"
               source="#601957bc-67ef-4b8f-9b09-5ac70b7d573d" exchangedItems="#b90a6c0a-7c54-4243-b241-b6db3b28eddf"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="1e0bb105-78e7-4461-b461-3815eebe0022" name="Hot Water FE" target="#07878083-7d56-495f-81fe-72b0d4365e8a"
-              source="#9f549a2f-cf52-493c-9e92-22a7bac723a4" exchangedItems="#b90a6c0a-7c54-4243-b241-b6db3b28eddf"/>
+              id="1e0bb105-78e7-4461-b461-3815eebe0022" name="Throttled Dirty Water"
+              target="#07878083-7d56-495f-81fe-72b0d4365e8a" source="#9f549a2f-cf52-493c-9e92-22a7bac723a4"
+              exchangedItems="#b90a6c0a-7c54-4243-b241-b6db3b28eddf"/>
           <ownedPhysicalFunctionPkgs xsi:type="org.polarsys.capella.core.data.pa:PhysicalFunctionPkg"
               id="8592f463-e505-43e4-a1ef-c19214a93a0e" name="System Functions">
             <ownedPhysicalFunctions xsi:type="org.polarsys.capella.core.data.pa:PhysicalFunction"
