@@ -3757,9 +3757,8 @@
                 sourceElement="#e9598749-2eae-478f-9ab5-3c00d8ba0952"/>
           </ownedFunctionalExchanges>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="fbf93101-8edf-4ee0-9a61-b7a8209c30ee" name="Boiler Heat Control"
-              target="#81f90468-03be-4908-9a9a-d15de1255dd9" source="#0ccbbd28-e0f7-43b1-b29b-4c2a1294759f"
-              exchangedItems="#766dbe28-ace1-4567-af3e-02b2449d252a">
+              id="fbf93101-8edf-4ee0-9a61-b7a8209c30ee" name="Boiler Heat" target="#81f90468-03be-4908-9a9a-d15de1255dd9"
+              source="#0ccbbd28-e0f7-43b1-b29b-4c2a1294759f" exchangedItems="#6be015bd-601f-4879-8882-86dbf93a4870">
             <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
                 id="f1d31b32-e0d8-4868-b34f-129d78ed39c3" targetElement="#e062898a-9114-495b-9505-4e71046a16b7"
                 sourceElement="#fbf93101-8edf-4ee0-9a61-b7a8209c30ee"/>
